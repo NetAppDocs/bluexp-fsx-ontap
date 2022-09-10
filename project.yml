@@ -46,8 +46,4 @@ sidebar:
 product-family:
     name: Cloud Manager
     repo: cloud-manager-family
-<<<<<<< HEAD
     sidebar_label: All Cloud Manager documentation  
-=======
-    sidebar_label: All Cloud Manager documentation
->>>>>>> 9fcf15228322ec5fc0d40c37bd7af01585894daf
