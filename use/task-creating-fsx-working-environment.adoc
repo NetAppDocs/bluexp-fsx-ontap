@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar
 permalink: use/task-creating-fsx-working-environment.html
-keywords: amazon fsx for ontap, fsx, volumes, create working environment, delete working environment, access key, secret key, region, working environment, availability zones, discover
+keywords: amazon fsx for ontap, fsx, volumes, create working environment, delete working environment, access key, secret key, region, working environment, availability zones, discover, storage capacity, iops, throughput
 summary: Using Cloud Manager you can create or discover an FSx for ONTAP working environments to add and manage volumes and additional data services.
 ---
 
@@ -87,8 +87,8 @@ image:screenshot_add_fsx_encryption.png[A screenshot of setting the default mast
 
 . Configure your storage:
 
-.. Select the throughput, capacity, and unit. You can change the throughput capacity at any time. 
-.. You can optionally specify an IOPS value. If you don't specify an IOPS value, Cloud Manager will set a default value based on 3 IOPS per GiB of the total capacity entered. For example, if you enter 2000 GiB for the total capacity and no value for the IOPS, the effective IOPS value will be set to 6000.
+.. Select the throughput, capacity, and unit. You can change the throughput and storage capacity value at any time. 
+.. You can optionally specify an IOPS value. If you don't specify an IOPS value, Cloud Manager will set a default value based on 3 IOPS per GiB of the total capacity entered. For example, if you enter 2000 GiB for the total capacity and no value for the IOPS, the effective IOPS value will be set to 6000. You can change the IOPS value at any time.
 +
 WARNING: If you specify an IOPS value that does not meet the minimum requirements, you'll receive an error when adding the working environment.
 image:screenshot_fsx_working_environment_failed_iops.png[A screenshot of error message if incorrect IOPS value is set.]
