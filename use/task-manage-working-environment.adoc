@@ -2,7 +2,7 @@
 sidebar: sidebar
 permalink: use/task-manage-working-environment.html
 keywords: amazon fsx for ontap, fsx, manage working environment, delete working environment, remove working environment, throughput capacity, change throughput, 
-summary: Cloud Manager enables you to manage your FSx for ONTAP working environment. You can change throuhgput capcity and remove or delete the working environment.
+summary: Cloud Manager enables you to manage your FSx for ONTAP working environment. You can change throughput and storage capacity and IOPS and remove or delete the working environment.
 ---
 
 = Manage an Amazon FSx for ONTAP working environment
@@ -13,7 +13,7 @@ summary: Cloud Manager enables you to manage your FSx for ONTAP working environm
 :imagesdir: ../media/
 
 [.lead]
-Cloud Manager enables you to manage your FSx for ONTAP working environment. You can change throuhgput capcity and remove or delete the working environment.
+Cloud Manager enables you to manage your FSx for ONTAP working environment. You can change throughput and storage capacity and IOPS and remove or delete the working environment.
 
 == Change throughput capacity
 
@@ -49,7 +49,7 @@ You need an active https://docs.netapp.com/us-en/cloud-manager-setup-admin/task-
 image:screenshot-change-iops.png[A screenshot of the location of the change storage capacity and IOPS menu.]
 . You can change the storage capacity and IOPS once every six hours. If you attempt to make changes more frequently, you will receive an error.
 +
-image:screenshot-configure-iops.png[A screenshot of the page to shange the storage capacity and IOPS values.]
+image:screenshot-configure-iops.png[A screenshot of the page to change the storage capacity and IOPS values.]
 +
 [NOTE]
 ================

@@ -130,8 +130,11 @@ Access mounting instructions from within Cloud Manager so you can mount the volu
 
 . Open the working environment.
 
-. Open the volume menu and select *Mount the volume*.
+. Select the *Volume* tab and *Manage Volume* to open the *Volume Actions* menu. 
 +
-image:screenshot_fsx_volume_actions.png[A screenshot of available operations available when you open the volume menu.]
+image:screenshot_fsx_volume_actions.png[A screenshot of how to open the Volume Actions menu.]
 
-. Follow the instructions to mount the volume.
+. Select *Mount command* and follow the instructions to mount the volume.
+
+.Result
+Your volume is now mounted to the host.
