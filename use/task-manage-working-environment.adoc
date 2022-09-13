@@ -49,7 +49,7 @@ You need an active https://docs.netapp.com/us-en/cloud-manager-setup-admin/task-
 image:screenshot-change-iops.png[A screenshot of the location of the change storage capacity and IOPS menu.]
 . You can change the storage capacity and IOPS once every six hours. If you attempt to make changes more frequently, you will receive an error.
 +
-image:screenshot-configure-iops.png[A screenshot of the page to shange the storage capacity and IOPS values.]
+image:screenshot-configure-iops.png[A screenshot of the page to change the storage capacity and IOPS values.]
 +
 [NOTE]
 ================
