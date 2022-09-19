@@ -13,7 +13,17 @@ summary: You can manage volumes, clones, and snapshots, and change tiering polic
 :imagesdir: ../media/
 
 [.lead]
-You can manage volumes, clones, and snapshots, and change tiering policies for FSx for ONTAP using Cloud Manager.
+You can view and manage volumes, clones, and snapshots, and change tiering policies for FSx for ONTAP using Cloud Manager.
+
+== View volume details
+After you create a volume, you can view the configuration details. 
+
+. Open the working environment.
++
+NOTE: You can hover over the volume name to display the volume type.
+
+. Open the volume tab and select *Manage Volume* to open the *Volume Actions* menu.
+. Select *View volume details*.
 
 == Edit volumes
 
@@ -23,11 +33,12 @@ After you create a volume, you can modify it at any time.
 
 . Open the working environment.
 
-. Open the volume menu and select *Edit*.
+. Open the volume tab and select *Manage Volume* to open the *Volume Actions* menu.
+. Select *Edit volume settings*.
 .. For NFS, you can modify the size and tags.
 .. For CIFS, you can modify the share name, users, permissions, and Snapshot policy as needed.
 
-. Click *Apply*.
+. Select *Apply*.
 
 == Clone volumes
 
@@ -37,11 +48,13 @@ After you create a volume, you can create a new read-write volume from a new Sna
 
 . Open the working environment.
 
-. Open the volume menu and select *Clone*.
+. Open the volume tab and select *Manage Volume* to open the *Volume Actions* menu.
+
+. Select *Clone the volume*.
 
 . Enter a name for the cloned volume.
 
-. Click *Clone*.
+. Select *Clone*.
 
 == Manage Snapshot copies
 
@@ -51,7 +64,9 @@ Snapshot copies provide a point-in-time copy of your volume. Create Snapshot cop
 
 . Open the working environment.
 
-. Open the volume menu and choose one of the available options to manage Snapshot copies:
+. Open the volume tab and select *Manage Volume* to open the *Protection Actions* menu.
+
+. Select one of the available options to manage Snapshot copies:
 
 * *Create a Snapshot copy*
 * *Restore from a Snapshot copy*
@@ -66,7 +81,9 @@ Change the tiering policy for the volume.
 
 . Open the working environment.
 
-. Open the volume menu and select *Change Tiering policy*.
+. Open the volume tab and select *Manage Volume* to open the *Advanced Actions* menu.
+
+. Select *Change Tiering policy*.
 
 . Select a new volume tiering policy and click *Change*.
 
@@ -88,7 +105,9 @@ You cannot delete a volume that was previously part of a SnapMirror relationship
 
 . Open the working environment.
 
-. Open the volume menu and select *Delete*.
+. Open the volume tab and select *Manage Volume* to open the *Volume Actions* menu.
+
+. Select *Delete the volume*.
 
 . Enter the working environment name and confirm that you want to delete the volume. It can take up to an hour before the volume is completely removed from Cloud Manager.
 

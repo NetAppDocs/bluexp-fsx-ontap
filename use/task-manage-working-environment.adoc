@@ -2,7 +2,7 @@
 sidebar: sidebar
 permalink: use/task-manage-working-environment.html
 keywords: amazon fsx for ontap, fsx, manage working environment, delete working environment, remove working environment, throughput capacity, change throughput, 
-summary: Cloud Manager enables you to manage your FSx for ONTAP working environment. You can change throuhgput capcity and remove or delete the working environment.
+summary: Cloud Manager enables you to manage your FSx for ONTAP working environment. You can change throughput and storage capacity and IOPS and remove or delete the working environment.
 ---
 
 = Manage an Amazon FSx for ONTAP working environment
@@ -13,7 +13,7 @@ summary: Cloud Manager enables you to manage your FSx for ONTAP working environm
 :imagesdir: ../media/
 
 [.lead]
-Cloud Manager enables you to manage your FSx for ONTAP working environment. You can change throuhgput capcity and remove or delete the working environment.
+Cloud Manager enables you to manage your FSx for ONTAP working environment. You can change throughput and storage capacity and IOPS and remove or delete the working environment.
 
 == Change throughput capacity
 
@@ -26,11 +26,38 @@ You need an active https://docs.netapp.com/us-en/cloud-manager-setup-admin/task-
 .Steps
 
 . Open the FSx for ONTAP working environment. 
-. From the *Overview* tab, click *Features*. 
+. From the *Overview* tab, select *Features*. 
+. Select the pencil icon (image:icon-pencil.png[Image of the pencil edit icon.]) to open the *Throughput Capacity* edit page.
 +
-image:screenshot-change-thruput.png[A screenshot of the location of the change throuhgput capacity menu.]
-. Click the pencil icon (image:icon-pencil.png[Image of the pencil edit icon.]) to open the *Throughput Capacity* edit page.
-. Select a new throughput capacity from the dropdown and click *Update*. This change can take up to 25 minutes to take effect and does not disrupt data access.
+image:screenshot-change-thruput.png[A screenshot of the location of the change throughput capacity menu.]
+. Select a new throughput capacity from the dropdown and select *Update*. This change can take up to 25 minutes to take effect and does not disrupt data access.
+
+== Change storage capacity and IOPS
+
+You can change the storage capacity and IOPS at any time after you create the FSx for ONTAP working environment. 
+
+.Before you begin
+
+You need an active https://docs.netapp.com/us-en/cloud-manager-setup-admin/task-creating-connectors-aws.html[Connector in AWS^].
+
+.Steps
+
+. Open the FSx for ONTAP working environment. 
+. From the *Overview* tab, select *Features*. 
+. Select the pencil icon (image:icon-pencil.png[Image of the pencil edit icon.]) to open the *Storage Capacity & IOPS* edit page.
++
+image:screenshot-change-iops.png[A screenshot of the location of the change storage capacity and IOPS menu.]
+. You can change the storage capacity and IOPS once every six hours. If you attempt to make changes more frequently, you will receive an error.
++
+image:screenshot-configure-iops.png[A screenshot of the page to change the storage capacity and IOPS values.]
++
+[NOTE]
+================
+* The recommended maximum storage capacity utilization is 80% to maintain Data Tiering performance and allow capacity for additional data.
+* Selecting *Automatic* IOPS maintains a ratio of three provisioned SSD IOPS per GiB of primary storage up to 80,000. You cannot manually provision an IOPS value of 80,000 or greater.
+================
+. Select the checkbox to confirm you understand changing storage capacity impacts the cost of the FSx for ONTAP service and that additional changes cannot be made for six hours. 
+. Select *Update* to confirm your changes. 
 
 
 == Remove FSx for ONTAP from the workspace
@@ -41,11 +68,11 @@ You can remove FSx for ONTAP from Cloud Manager without deleting your FSx for ON
 
 . Open the working environment. If you don't have a Connector in AWS, you will see the prompt screen. You can ignore this and proceed with removing the working environment.
 
-. At the top right of the page, select the actions menu and click *Remove from workspace*.
+. At the top right of the page, select the actions menu and select *Remove from workspace*.
 +
 image:screenshot_fsx_working_environment_remove.png[A screenshot of remove option for FSx for ONTAP from the Cloud Manager interface.]
 
-. Click *Remove* to remove FSx for ONTAP from Cloud Manager.
+. Select *Remove* to remove FSx for ONTAP from Cloud Manager.
 
 == Delete the FSx for ONTAP working environment
 
@@ -65,8 +92,8 @@ WARNING: This action will delete all resources associated with the working envir
 
 . Open the working environment. If you don't have a Connector in AWS, you will see the prompt screen. You can ignore this and proceed to deleting the working environment.
 
-. At the top right of the page, select the actions menu and click *Delete*.
+. At the top right of the page, select the actions menu and select *Delete*.
 +
 image:screenshot_fsx_working_environment_delete.png[A screenshot of delete option for FSx for ONTAP from the Cloud Manager interface.]
 
-. Enter the name of the working environment and click *Delete*.
+. Enter the name of the working environment and select *Delete*.
