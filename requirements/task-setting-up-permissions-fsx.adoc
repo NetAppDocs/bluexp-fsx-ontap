@@ -17,7 +17,7 @@ To create or manage an Amazon FSx for ONTAP working environment, you need to add
 
 == Set up the IAM role
 
-Set up an IAM role that enables the BlueXP to assume the role.
+Set up an IAM role that enables BlueXP to assume the role.
 
 .Steps
 
