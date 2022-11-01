@@ -2,7 +2,7 @@
 sidebar: sidebar
 permalink: use/task-creating-fsx-working-environment.html
 keywords: amazon fsx for ontap, fsx, volumes, create working environment, delete working environment, access key, secret key, region, working environment, availability zones, discover, storage capacity, iops, throughput
-summary: Using Cloud Manager you can create or discover an FSx for ONTAP working environments to add and manage volumes and additional data services.
+summary: Using BlueXP you can create or discover an FSx for ONTAP working environments to add and manage volumes and additional data services.
 ---
 
 = Create or discover an Amazon FSx for ONTAP working environment
@@ -13,35 +13,35 @@ summary: Using Cloud Manager you can create or discover an FSx for ONTAP working
 :imagesdir: ../media/
 
 [.lead]
-Using Cloud Manager you can create or discover an FSx for ONTAP working environment to add and manage volumes and additional data services.
+Using BlueXP you can create or discover an FSx for ONTAP working environment to add and manage volumes and additional data services.
 
 == Create an Amazon FSx for ONTAP working environment
 
-The first step is to create an FSx for ONTAP working environment. If you already created an FSx for ONTAP file system in the AWS Management Console, you can link:task-creating-fsx-working-environment.html#discover-an-existing-fsx-for-ontap-file-system[discover it using Cloud Manager].
+The first step is to create an FSx for ONTAP working environment. If you already created an FSx for ONTAP file system in the AWS Management Console, you can link:task-creating-fsx-working-environment.html#discover-an-existing-fsx-for-ontap-file-system[discover it using BlueXP].
 
 .Before you begin
 
-Before creating your FSx for ONTAP working environment in Cloud Manager, you will need:
+Before creating your FSx for ONTAP working environment in BlueXP, you will need:
 
-* The ARN of an IAM role that gives Cloud Manager the permissions needed to create an FSx for ONTAP working environment. See link:../requirements/task-setting-up-permissions-fsx.html[adding AWS credentials to Cloud Manager] for details.
+* The ARN of an IAM role that gives BlueXP the permissions needed to create an FSx for ONTAP working environment. See link:../requirements/task-setting-up-permissions-fsx.html[adding AWS credentials to BlueXP] for details.
 
 * The region and VPN information for where you will create the FSx for ONTAP instance.
 
 .Steps
 
-. In Cloud Manager, add a new Working Environment, select the location *Amazon Web Services*, and click *Next*.
+. In BlueXP, add a new Working Environment, select the location *Amazon Web Services*, and click *Next*.
 
 . Select *Amazon FSx for ONTAP* and click *Next*.
 +
 image:screenshot_add_fsx_working_env.png[A screenshot of adding a working environment for Amazon FSx for ONTAP]
 
-. Authenticate FSx for ONTAP in Cloud Manager.
+. Authenticate FSx for ONTAP in BlueXP.
 
 .. If there is an existing IAM role in your account with the correct AWS permissions for FSx for ONTAP, select it from the dropdown.
 +
 image:screenshot-fsx-assume-role-present.png[A screenshot showing dropdown for AWS roles]
 
-.. If there is no IAM role in your account, click *Credentials Page* and follow the steps in the wizard to add an ARN for an AWS IAM role with FSx for ONTAP credentials. See link:../requirements/task-setting-up-permissions-fsx.html[adding AWS credentials to Cloud Manager] for details.
+.. If there is no IAM role in your account, click *Credentials Page* and follow the steps in the wizard to add an ARN for an AWS IAM role with FSx for ONTAP credentials. See link:../requirements/task-setting-up-permissions-fsx.html[adding AWS credentials to BlueXP] for details.
 +
 image:screenshot-fsx-assume-role-not-present.png[A screenshot of the steps to add the ARN for an AWS IAM role with FSx for ONTAP permission.]
 
@@ -77,7 +77,7 @@ image:screenshot_add_fsx_region.png[A screenshot of adding region and VPC for FS
 +
 image:screenshot_add_fsx_floatingIP.png[A screenshot of adding region and VPC for FSx for ONTAP]
 
-. Select route tables that include routes to the floating IP addresses. If you have just one route table for the subnets in your VPC (the main route table), Cloud Manager automatically adds the floating IP addresses to that route table. Click *Next* to continue.
+. Select route tables that include routes to the floating IP addresses. If you have just one route table for the subnets in your VPC (the main route table), BlueXP automatically adds the floating IP addresses to that route table. Click *Next* to continue.
 +
 image:screenshot_add_fsx_route_table.png[A screenshot of selecting a route table for FSx for ONTAP]
 
@@ -88,7 +88,7 @@ image:screenshot_add_fsx_encryption.png[A screenshot of setting the default mast
 . Configure your storage:
 
 .. Select the throughput, capacity, and unit. You can change the throughput and storage capacity value at any time. 
-.. You can optionally specify an IOPS value. If you don't specify an IOPS value, Cloud Manager will set a default value based on 3 IOPS per GiB of the total capacity entered. For example, if you enter 2000 GiB for the total capacity and no value for the IOPS, the effective IOPS value will be set to 6000. You can change the IOPS value at any time.
+.. You can optionally specify an IOPS value. If you don't specify an IOPS value, BlueXP will set a default value based on 3 IOPS per GiB of the total capacity entered. For example, if you enter 2000 GiB for the total capacity and no value for the IOPS, the effective IOPS value will be set to 6000. You can change the IOPS value at any time.
 +
 WARNING: If you specify an IOPS value that does not meet the minimum requirements, you'll receive an error when adding the working environment.
 image:screenshot_fsx_working_environment_failed_iops.png[A screenshot of error message if incorrect IOPS value is set.]
@@ -106,11 +106,11 @@ image:screenshot_add_fsx_review.png[A screenshot of reviewing the settings for F
 
 .Result
 
-Cloud Manager displays your FSx for ONTAP configuration on the Canvas page.
+BlueXP displays your FSx for ONTAP configuration on the Canvas page.
 
 image:screenshot_add_fsx_cloud.png[A screenshot of Amazon FSx for ONTAP on the working environments page.]
 
-You can now add volumes to your FSx for ONTAP working environment using Cloud Manager.
+You can now add volumes to your FSx for ONTAP working environment using BlueXP.
 
 == Discover an existing FSx for ONTAP file system 
 
@@ -118,11 +118,11 @@ If you created an FSx for ONTAP file system using the AWS Management Console or 
 
 === Discover using My Opportunities
 
-If you previously provided your AWS credentials to Cloud Manager, *My Opportunities* can automatically discover and suggest FSx for ONTAP file systems to add and manage using Cloud Manager. You can also review available data services. 
+If you previously provided your AWS credentials to BlueXP, *My Opportunities* can automatically discover and suggest FSx for ONTAP file systems to add and manage using BlueXP. You can also review available data services. 
 
 .Steps
 
-. In Cloud Manager, click the *My Opportunities* tab. 
+. In BlueXP, click the *My Opportunities* tab. 
 
 . The count of discovered FSx for ONTAP file systems displays. Click *Discover*.  
 +
@@ -134,15 +134,15 @@ image:screenshot-opportunities.png[A screenshot of the My Opportunities page for
 ===============================
 * If you select an un-named cluster, you will receive a prompt to enter a name for the cluster.
 
-* If you select a cluster that doesn't have the credentials required to allow Cloud Manager to manage the FSx for ONTAP file system, you'll receive a prompt to select credentials with the required permissions. 
+* If you select a cluster that doesn't have the credentials required to allow BlueXP to manage the FSx for ONTAP file system, you'll receive a prompt to select credentials with the required permissions. 
 ===============================
 
 === Discover manually
-You can manually discover an FSx for ONTAP file system you added using the AWS Management Console or that you previously removed from Cloud Manager. 
+You can manually discover an FSx for ONTAP file system you added using the AWS Management Console or that you previously removed from BlueXP. 
 
 .Steps
 
-. In Cloud Manager, click *Add Working Environment*, select *Amazon Web Services*.
+. In BlueXP, click *Add Working Environment*, select *Amazon Web Services*.
 
 . Select *Amazon FSx for ONTAP* and click *Click Here*.
 +
@@ -156,6 +156,6 @@ image:screenshot_fsx_working_environment_discover.png[A screenshot of discoverin
 
 .Result
 
-Cloud Manager displays your discovered FSx for ONTAP file system.
+BlueXP displays your discovered FSx for ONTAP file system.
 
 image:screenshot_fsx_working_environment_select.png[A screenshot of selecting the AWS region and working environment]
