@@ -2,7 +2,7 @@
 sidebar: sidebar
 permalink: requirements/reference-security-groups-fsx.html
 keywords: security group, security groups, rules, ports, fsx, inbound, outbound, rules
-summary: Cloud Manager creates AWS security groups that include the inbound and outbound rules that Cloud Manager and FSx for ONTAP need to operate successfully. You might want to refer to the ports for testing purposes or if you need to use your own.
+summary: BlueXP creates AWS security groups that include the inbound and outbound rules that BlueXP and FSx for ONTAP need to operate successfully. You might want to refer to the ports for testing purposes or if you need to use your own.
 ---
 
 = Security group rules for FSx for ONTAP
@@ -13,7 +13,7 @@ summary: Cloud Manager creates AWS security groups that include the inbound and 
 :imagesdir: ../media/
 
 [.lead]
-Cloud Manager creates AWS security groups that include the inbound and outbound rules that Cloud Manager and FSx for ONTAP need to operate successfully. You might want to refer to the ports for testing purposes or if you need to use your own.
+BlueXP creates AWS security groups that include the inbound and outbound rules that BlueXP and FSx for ONTAP need to operate successfully. You might want to refer to the ports for testing purposes or if you need to use your own.
 
 == Rules for FSx for ONTAP
 
@@ -209,6 +209,6 @@ NOTE: The source IP address is the Connector host.
 | UDP	| 464 | Active Directory forest | Kerberos key administration
 | API calls and AutoSupport | HTTPS | 443 | Outbound internet and ONTAP cluster management LIF | API calls to AWS and ONTAP, and sending AutoSupport messages to NetApp
 | API calls | TCP | 8088 | Backup to S3 | API calls to Backup to S3
-| DNS | UDP	| 53 | DNS | Used for DNS resolve by Cloud Manager
+| DNS | UDP	| 53 | DNS | Used for DNS resolve by BlueXP
 | Cloud Data Sense | HTTP | 80 | Cloud Data Sense instance | Cloud Data Sense for Cloud Volumes ONTAP
 |===
