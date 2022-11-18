@@ -1,8 +1,8 @@
 ---
 sidebar: sidebar
 permalink: use/task-manage-working-environment.html
-keywords: amazon fsx for ontap, fsx, manage working environment, delete working environment, remove working environment, throughput capacity, change throughput, 
-summary: BlueXP enables you to manage your FSx for ONTAP working environment. You can change throughput and storage capacity and IOPS and remove or delete the working environment.
+keywords: amazon fsx for ontap, fsx, manage working environment, delete working environment, remove working environment, throughput capacity, change throughput, automatic capacity management, capacity management, storage capacity
+summary: BlueXP enables you to manage your FSx for ONTAP working environment. You can enable automatic capacity management, change throughput and storage capacity and IOPS, and remove or delete the working environment.
 ---
 
 = Manage an Amazon FSx for ONTAP working environment
@@ -13,7 +13,42 @@ summary: BlueXP enables you to manage your FSx for ONTAP working environment. Yo
 :imagesdir: ../media/
 
 [.lead]
-BlueXP enables you to manage your FSx for ONTAP working environment. You can change throughput and storage capacity and IOPS and remove or delete the working environment.
+BlueXP enables you to manage your FSx for ONTAP working environment. You can enable automatic capacity management, change throughput and storage capacity and IOPS, and remove or delete the working environment.
+
+== Manage automatic capacity
+You can choose to enable automatic capacity management to add incremental storage  based on demand. Automatic capacity management polls the cluster at regular intervals to assess demand and automatically increases storage capacity in increments of 10% up to 80% of the the cluster's maximum capacity. 
+
+NOTE: If you did not manually specify an IOPS value when creating the working environment, BlueXP will increase the IOPS by 3 IOPS per GiB of the new total capacity. If you specified an IOPS value, BlueXP will not adjust the IOPS. For details on configuring IOPS, refer to link:task-creating-fsx-working-environment.html#create-an-amazon-fsx-for-ontap-working-environment[create a working environment].
+
+Automatic capacity management is disabled by default. You can manage automatic capacity with or without an active Connector in AWS. 
+
+=== Manage automatic capacity without an active Connector
+You can manage automatic capacity without an active Connector in AWS. 
+
+.Steps
+
+. Open the FSx for ONTAP working environment. 
+. Select the menu icon (image:icon-three-dots.png[Image of three dots menu icon.]) and select *Manage Automatic Capacity*.
++
+image:screenshot-auto-capacity-no-connector.png[Screenshot of the Manage Automatic Capacity menu.]
+. On the *Automatic capacity management* page: 
+* Select the box to enable automatic capacity management. 
+* Deselect the box to disable automatic capacity management if it was previously enabled.
+. Select *Apply*.
+
+
+=== Manage automatic capacity with an active Connector
+You can manage automatic capacity with an active Connector in AWS. 
+
+.Steps
+
+. Open the FSx for ONTAP working environment. 
+. From the *Overview* tab, select *Features*. 
+. Select the pencil icon (image:icon-pencil.png[Image of the pencil edit icon.]) to open the *Automatic capacity management* page.
+. On the *Automatic capacity management* page: 
+* Select the box to enable automatic capacity management. 
+* Deselect the box to disable automatic capacity management if it was previously enabled.. 
+. Select *Apply*.
 
 == Change throughput capacity
 
