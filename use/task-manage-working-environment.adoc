@@ -47,7 +47,7 @@ You can manage automatic capacity with an active Connector in AWS.
 . Select the pencil icon (image:icon-pencil.png[Image of the pencil edit icon.]) to open the *Automatic capacity management* page.
 . On the *Automatic capacity management* page: 
 * Select the box to enable automatic capacity management. 
-* Deselect the box to disable automatic capacity management if it was previously enabled.. 
+* Deselect the box to disable automatic capacity management if it was previously enabled. 
 . Select *Apply*.
 
 == Change throughput capacity
