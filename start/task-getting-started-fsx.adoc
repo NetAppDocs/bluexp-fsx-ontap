@@ -30,7 +30,7 @@ You must link:../use/task-creating-fsx-working-environment.html[create an Amazon
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-2.png[Two] Create a Connector for AWS
 
 [role="quick-margin-para"]
-You must have a https://docs.netapp.com/us-en/cloud-manager-setup-admin/task-creating-connectors-aws.html[Connector for AWS^] to open the FSx for ONTAP working environment, create volumes, or perform other actions. When a Connector is required, BlueXP will prompt you if one is not already active.
+You must have a https://docs.netapp.com/us-en/cloud-manager-setup-admin/concept-connectors.html#how-to-create-a-connector[Connector for AWS^] to open the FSx for ONTAP working environment, create volumes, or perform other actions. When a Connector is required, BlueXP will prompt you if one is not already active.
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-3.png[Three] Add and mount a volume
 
@@ -39,9 +39,3 @@ You can link:../use/task-add-fsx-volumes.html[create and mount FSx for ONTAP vol
 
 .Results
 You can now use BlueXP to manage your volumes and configure additional services such as replication, Cloud Sync, and Data Sense.
-
-== Related links
-
-* https://docs.netapp.com/us-en/cloud-manager-setup-admin/task-creating-connectors-aws.html[Creating a Connector from BlueXP^]
-* https://docs.netapp.com/us-en/cloud-manager-setup-admin/task-launching-aws-mktp.html[Launching a Connector from the AWS Marketplace^]
-* https://docs.netapp.com/us-en/cloud-manager-setup-admin/task-installing-linux.html[Installing the Connector software on a Linux host^]
