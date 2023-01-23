@@ -12,10 +12,10 @@ summary: Learn what's new in Amazon FSx for ONTAP.
 :linkattrs:
 :imagesdir: ./media/
 
-[.lead^]
+[.lead]
 Learn what's new in Amazon FSx for ONTAP.
 
-//tag::whats-new[^]
+//tag::whats-new[]
 == 01 January 2023
 You can now choose to enable link:https://docs.netapp.com/us-en/cloud-manager-fsx-ontap/use/task-manage-working-environment.html#manage-automatic-capacity[automatic capacity management^] to add incremental storage based on demand. Automatic capacity management polls the cluster at regular intervals to assess demand and automatically increases storage capacity in increments of 10% up to 80% of the the cluster’s maximum capacity.
 
@@ -35,7 +35,7 @@ link:https://docs.netapp.com/us-en/cloud-manager-fsx-ontap/use/task-creating-fsx
 
 * You can now link:https://docs.netapp.com/us-en/cloud-manager-fsx-ontap/use/task-add-fsx-volumes.html#creating-volumes[create iSCSI volumes in FSx for ONTAP using Cloud Manager^]. 
 
-//end::whats-new[^]
+//end::whats-new[]
 == 3 July 2022
 
 * You can now select a single or multiple Availability Zone HA deployment model.
