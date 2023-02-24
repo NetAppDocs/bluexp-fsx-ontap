@@ -19,55 +19,53 @@ After you set up your working environment, you can create and mount FSx for ONTA
 
 You can create and manage NFS, CIFS, and iSCSI volumes from your FSx for ONTAP working environment in BlueXP. Volumes created using ONTAP CLI will also be visible in your FSx for ONTAP working environment.
 
-.Before you begin
-
-You need:
+.What you'll need
 
 * An active https://docs.netapp.com/us-en/cloud-manager-setup-admin/task-creating-connectors-aws.html[Connector in AWS^].
 
 * If you want to use SMB, you must have set up DNS and Active Directory. For more information on DNS and Active Directory network configuration, see link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/self-manage-prereqs.html[AWS: Prerequisites for using a self-managed Microsoft AD^].
 
+.About this task
+You can add volumes by opening the working environment and selecting the *Volumes* tab or simply using working environment *Details* panel from the Canvas. This task describes adding volumes using the *Details* panel. 
+
 .Steps
 
-. Open the FSx for ONTAP working environment.
+. Select the FSx for ONTAP working environment on the Canvas. If you don't have a Connector enabled, you'll be prompted to add one.
 
-. If you don't have a Connector enabled, you'll be prompted to add one.
+. In the *Details* panel, use the image:icon-three-dots.png[icon of three dots ellipses] to open the options menu. Click *Add Volume*.
 +
-image:screenshot_fsx_connector_prompt.png[A screenshot of the FSx for ONTAP Connector prompt.]
+image:screenshot-add-volume.png[A screenshot of the add volume option on the Details panel.]
 
-. Click the *Volumes* tab
-
-. Click *Add Volume*.
-+
-image:screenshot_fsx_volume_new.png[A screenshot of the FSx for ONTAP volume tab.]
-
-. *Volume Details and Protection*:
+. *Volume Details and Protection*
 
 .. Enter a name for your new volume.
 .. The Storage VM (SVM) fields auto-populates the SVM based on the name of your working environment.
 .. Enter the volume size and select a unit (GiB or TiB). Note that the volume size will grow with usage.
 .. Select a snapshot policy. By default, a snapshot is taken every hour (keeping the last six copies), every day (keeping the last two copies), and every week (keeping the last two copies).
 
-.. Click *Next*.
+. *Volumes Protocol*: Select an NFS, CIFS, or iSCSI volume protocol.
 +
-image:screenshot_fsx_volume_details.png[A screenshot of the volume details and protection fields for FSx for ONTAP volume creation.]
-
-. *Protocol*: Select an NFS, CIFS, or iSCSI volume protocol.
-.. For NFS:
-* Select an Access Control policy.
-* Select the NFS versions.
-* Select a Custom Export Policy. Click the information icon for valid value criteria.
+[role="tabbed-block"]
+====
+.NFS
+--
+. Select an Access Control policy.
+. Select the NFS versions.
+. Select a Custom Export Policy. Click the information icon for valid value criteria.
 +
 image:screenshot_fsx_volume_protocol_nfs.png[A screenshot of the NFS configuration FSx for ONTAP volume creation.]
-.. For CIFS:
-* Enter a Share Name.
-* Enter users or groups separated by a semicolon.
-* Select the permission level for the volume.
+--
+.CIFS
+--
+. Enter a Share Name.
+. Enter users or groups separated by a semicolon.
+. Select the permission level for the volume.
 +
 image:screenshot_fsx_volume_protocol_cifs.png[A screenshot of the NFS configuration FSx for ONTAP volume creation.]
-+
-TIP: If this is the first CIFS volume for this working environment, you will be prompted to configure CIFS connectivity using an _Active Directory_ or _Workgroup_ setup.
 
+. If this is the first CIFS volume for this working environment, you will be prompted to configure CIFS connectivity using an _Active Directory_ or _Workgroup_ setup.
+
+* If you select a Workgroup setup, enter the server and workgroup name for a workgroup configured for CIFS.
 * If you select an Active Directory setup, you'll need to provide the following configuration information.
 +
 [cols=2*,options="header",cols="25,75"]
@@ -90,28 +88,26 @@ The listed DNS server must contain the service location records (SRV) needed to 
 
 | NTP Server | Select *Enable NTP Server Configuration* to configure an NTP server using the Active Directory DNS. If you need to configure an NTP server using a different address, then you should use the API. See the https://docs.netapp.com/us-en/cloud-manager-automation/index.html[BlueXP automation docs^] for details.
 |===
-
-* If you select a Workgroup setup, enter the server and workgroup name for a workgroup configured for CIFS.
-
-.. For iSCSI:
+--
+.iSCSI:
+--
 You can connect your LUN using an existing initiator group or by creating a new one. To map an existing initiator group, select your operating system and one or more initiator groups. 
-+
+
 To create a new initiator group:
 
-... Select **Create new**.
-... Select your operating system.
-... Click to add one or more host iSCSI qualified names (IQN). You can select existing IQNs or add new IQNs. For details on how to find the IQN for a volume, see link:https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/task-connect-lun.html[Connect a host to a LUN^].
-... Enter an **Initiator Group Name**.
+. Select **Create new**.
+. Select your operating system.
+. Click to add one or more host iSCSI qualified names (IQN). You can select existing IQNs or add new IQNs. For details on how to find the IQN for a volume, see link:https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/task-connect-lun.html[Connect a host to a LUN^].
+. Enter an **Initiator Group Name**.
 +
 image:screenshot-volume-protocol-iscsi.png[A screenshot of the iSCSI configuration FSx for ONTAP volume creation.]
+--
+====
 
-.. Click *Next*.
-
-. *Usage Profile and Tiering*:
+. *Usage Profile and Tiering*
 
 .. By default, *Storage Efficiency* is disabled. You can change this setting to enable deduplication and compression.
 .. By default, *Tiering Policy* is set to *Snapshot Only*. You can select a different tiering policy based on your needs.
-.. Click *Next*.
 +
 image:screenshot_fsx_volume_usage_tiering.png[A screenshot of the Usage Profile and Tiering Configuration for FSx for ONTAP volume creation.]
 
@@ -126,15 +122,20 @@ The new volume is added to the working environment.
 
 Access mounting instructions from within BlueXP so you can mount the volume to a host.
 
+.About this task
+You can mount volumes by opening the working environment and selecting the *Volumes* tab or simply using working environment *Details* panel from the Canvas. This task describes adding volumes using the *Details* panel. 
+
 .Steps
 
-. Open the working environment.
+. Select the FSx for ONTAP working environment on the Canvas. 
 
-. Select the *Volume* tab and *Manage Volume* to open the *Volume Actions* menu. 
+. In the *Details* panel, use the image:icon-three-dots.png[icon of three dots ellipses] to open the options menu. Click *View Volumes*.
 +
-image:screenshot_fsx_volume_actions.png[A screenshot of how to open the Volume Actions menu.]
+image:screenshot-view-volume.png[A screenshot of how to open the Volume Actions menu.]
 
-. Select *Mount command* and follow the instructions to mount the volume.
+. Use *Manage Volumes* to open the *Volume Actions* menu. Click *Mount command* and follow the instructions to mount the volume.
++
+image:screenshot-mount-volume.png[A screenshot of the mount volume command.]
 
 .Result
 Your volume is now mounted to the host.

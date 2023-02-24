@@ -27,8 +27,9 @@ You can manage automatic capacity without an active Connector in AWS.
 
 .Steps
 
-. Open the FSx for ONTAP working environment. 
-. Select the menu icon (image:icon-three-dots.png[Image of three dots menu icon.]) and select *Manage Automatic Capacity*.
+. Select the FSx for ONTAP working environment on the Canvas. 
+
+. In the *Details* panel, use the image:icon-three-dots.png[icon of three dots ellipses] to open the options menu. Click *Manage Automatic Capacity*.
 +
 image:screenshot-auto-capacity-no-connector.png[Screenshot of the Manage Automatic Capacity menu.]
 . On the *Automatic capacity management* page: 
@@ -89,7 +90,7 @@ image:screenshot-configure-iops.png[A screenshot of the page to change the stora
 [NOTE]
 ================
 * The recommended maximum storage capacity utilization is 80% to maintain Data Tiering performance and allow capacity for additional data.
-* Selecting *Automatic* IOPS maintains a ratio of three provisioned SSD IOPS per GiB of primary storage up to 80,000. You cannot manually provision an IOPS value of 80,000 or greater.
+* Selecting *Automatic* IOPS maintains a ratio of three provisioned SSD IOPS per GiB of primary storage up to 160,000. You cannot manually provision an IOPS value of 160,000 or greater.
 ================
 . Select the checkbox to confirm you understand changing storage capacity impacts the cost of the FSx for ONTAP service and that additional changes cannot be made for six hours. 
 . Select *Update* to confirm your changes. 
