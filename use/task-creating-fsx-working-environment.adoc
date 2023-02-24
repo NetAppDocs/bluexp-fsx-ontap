@@ -76,9 +76,12 @@ Accept the default AWS master key or click *Change Key* to select a different AW
 . *Storage Configuration*
 
 .. Select the throughput, capacity, and unit. You can change throughput, storage capacity, and IOPS at any time. 
+
 .. You can optionally specify an IOPS value. If you don't specify an IOPS value, BlueXP will set a default value based on 3 IOPS per GiB of the total capacity entered. For example, if you enter 2000 GiB for the total capacity and no value for the IOPS, the effective IOPS value will be set to 6000. You can change the IOPS value at any time. 
 +
 image:screenshot-storage-config.png[A screenshot of setting storage configuration for FSx for ONTAP]
++
+NOTE: If you specify an IOPS value that does not meet the minimum requirements, you’ll receive an error when adding the working environment.
 
 . *Review*
 
