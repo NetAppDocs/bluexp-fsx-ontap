@@ -32,7 +32,7 @@ You can add volumes by opening the working environment and selecting the *Volume
 
 . Select the FSx for ONTAP working environment on the Canvas. If you don't have a Connector enabled, you'll be prompted to add one.
 
-. In the *Details* panel, use the image:icon-three-dots.png[icon of three dots ellipses] to open the options menu. Click *Add Volume*.
+. In the *Details* panel, use the three dots  (image:icon-three-dots.png[icon of three dots]) to open the options menu. Click *Add Volume*.
 +
 image:screenshot-add-volume.png[A screenshot of the add volume option on the Details panel.]
 
@@ -42,6 +42,7 @@ image:screenshot-add-volume.png[A screenshot of the add volume option on the Det
 .. The Storage VM (SVM) fields auto-populates the SVM based on the name of your working environment.
 .. Enter the volume size and select a unit (GiB or TiB). Note that the volume size will grow with usage.
 .. Select a snapshot policy. By default, a snapshot is taken every hour (keeping the last six copies), every day (keeping the last two copies), and every week (keeping the last two copies).
+.. Optionally, select optimization to distribute volume data across the cluster using a FlexGroup. 
 
 . *Volumes Protocol*: Select an NFS, CIFS, or iSCSI volume protocol.
 +
@@ -129,7 +130,7 @@ You can mount volumes by opening the working environment and selecting the *Volu
 
 . Select the FSx for ONTAP working environment on the Canvas. 
 
-. In the *Details* panel, use the image:icon-three-dots.png[icon of three dots ellipses] to open the options menu. Click *View Volumes*.
+. In the *Details* panel, use the three dots icon (image:icon-three-dots.png[icon of three dots]) to open the options menu. Click *View Volumes*.
 +
 image:screenshot-view-volume.png[A screenshot of how to open the Volume Actions menu.]
 

@@ -29,7 +29,7 @@ You can manage automatic capacity without an active Connector in AWS.
 
 . Select the FSx for ONTAP working environment on the Canvas. 
 
-. In the *Details* panel, use the image:icon-three-dots.png[icon of three dots ellipses] to open the options menu. Click *Manage Automatic Capacity*.
+. In the *Details* panel, use the three dots icon (image:icon-three-dots.png[icon of three dots]) to open the options menu. Click *Manage Automatic Capacity*.
 +
 image:screenshot-auto-capacity-no-connector.png[Screenshot of the Manage Automatic Capacity menu.]
 . On the *Automatic capacity management* page: 

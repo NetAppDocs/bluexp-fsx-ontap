@@ -48,16 +48,9 @@ image:screenshot_add_fsx_working_env.png[A screenshot of adding a working enviro
 
 . *Region and VPC*
 
-.. Select a *Single Availability Zone* or *Multiple Availability Zones* HA deployment model.
-
-.. Select a region and VPC. 
+.. Select a *Single Availability Zone* or *Multiple Availability Zones* HA deployment model. For multiple Availability Zones, select subnets in at least two Availability Zones so each node is in a dedicated Availability Zone.
 +
-[NOTE] 
-================
-For multiple Availability Zones, select subnets in at least two Availability Zones so each node is in a dedicated Availability Zone.
-
 image:screenshot_add_fsx_region.png[A screenshot of adding region and VPC for FSx for ONTAP]
-================
 
 .. Accept the default security group or select a different one. link:https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/security-group-rules.html[AWS security groups^] control inbound and outbound traffic. These are configured by your AWS admin and are associated with your link:https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/using-eni.html[AWS elastic network interface (ENI)^].
 
