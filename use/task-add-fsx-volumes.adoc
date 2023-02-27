@@ -91,7 +91,7 @@ The listed DNS server must contain the service location records (SRV) needed to 
 | NTP Server | Select *Enable NTP Server Configuration* to configure an NTP server using the Active Directory DNS. If you need to configure an NTP server using a different address, then you should use the API. See the https://docs.netapp.com/us-en/cloud-manager-automation/index.html[BlueXP automation docs^] for details.
 |===
 --
-.iSCSI:
+.iSCSI
 --
 You can connect your LUN using an existing initiator group or by creating a new one. To map an existing initiator group, select your operating system and one or more initiator groups. 
 
