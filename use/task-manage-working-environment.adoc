@@ -27,8 +27,9 @@ You can manage automatic capacity without an active Connector in AWS.
 
 .Steps
 
-. Open the FSx for ONTAP working environment. 
-. Select the menu icon (image:icon-three-dots.png[Image of three dots menu icon.]) and select *Manage Automatic Capacity*.
+. Select the FSx for ONTAP working environment on the Canvas. 
+
+. In the *Details* panel, use the three dots icon (image:icon-three-dots.png[icon of three dots]) to open the options menu. Click *Manage Automatic Capacity*.
 +
 image:screenshot-auto-capacity-no-connector.png[Screenshot of the Manage Automatic Capacity menu.]
 . On the *Automatic capacity management* page: 
@@ -89,7 +90,7 @@ image:screenshot-configure-iops.png[A screenshot of the page to change the stora
 [NOTE]
 ================
 * The recommended maximum storage capacity utilization is 80% to maintain Data Tiering performance and allow capacity for additional data.
-* Selecting *Automatic* IOPS maintains a ratio of three provisioned SSD IOPS per GiB of primary storage up to 80,000. You cannot manually provision an IOPS value of 80,000 or greater.
+* Selecting *Automatic* IOPS maintains a ratio of three provisioned SSD IOPS per GiB of primary storage up to 160,000. You cannot manually provision an IOPS value of 160,000 or greater.
 ================
 . Select the checkbox to confirm you understand changing storage capacity impacts the cost of the FSx for ONTAP service and that additional changes cannot be made for six hours. 
 . Select *Update* to confirm your changes. 
@@ -113,15 +114,15 @@ image:screenshot_fsx_working_environment_remove.png[A screenshot of remove optio
 
 You can delete the FSx for ONTAP from BlueXP.
 
-.Before you begin
-
-* You must link:task-manage-fsx-volumes.html#delete-volumes[delete all volumes] associated with the file system.
-
-NOTE: You will need an active Connector in AWS to remove or delete volumes.
-
-* You cannot delete a working environment that contains failed volumes. Failed volumes must be deleted using the AWS Management Console or CLI prior to deleting FSx for ONTAP files system.
-
 WARNING: This action will delete all resources associated with the working environment. This action cannot be undone.
+
+.Before you begin
+Before deleting the working environment, you must: 
+
+* Break all replication relationships with this working environment.
+* link:task-manage-fsx-volumes.html#delete-volumes[Delete all volumes] associated with the file system. You will need an active Connector in AWS to remove or delete volumes.
++
+NOTE: Failed volumes must be deleted using the AWS Management Console or CLI. 
 
 .Steps
 
