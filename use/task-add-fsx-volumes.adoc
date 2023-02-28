@@ -44,7 +44,8 @@ image:screenshot-add-volume.png[A screenshot of the add volume option on the Det
 .. Select a snapshot policy. By default, a snapshot is taken every hour (keeping the last six copies), every day (keeping the last two copies), and every week (keeping the last two copies).
 .. Optionally, select optimization to distribute volume data across the cluster using a FlexGroup. 
 
-. *Volumes Protocol*: Select an NFS, CIFS, or iSCSI volume protocol.
+. *Volumes Protocol*: 
+.. Select an NFS, CIFS, or iSCSI volume protocol.
 +
 [role="tabbed-block"]
 ====
@@ -90,7 +91,7 @@ The listed DNS server must contain the service location records (SRV) needed to 
 | NTP Server | Select *Enable NTP Server Configuration* to configure an NTP server using the Active Directory DNS. If you need to configure an NTP server using a different address, then you should use the API. See the https://docs.netapp.com/us-en/cloud-manager-automation/index.html[BlueXP automation docs^] for details.
 |===
 --
-.iSCSI:
+.iSCSI
 --
 You can connect your LUN using an existing initiator group or by creating a new one. To map an existing initiator group, select your operating system and one or more initiator groups. 
 
@@ -104,6 +105,9 @@ To create a new initiator group:
 image:screenshot-volume-protocol-iscsi.png[A screenshot of the iSCSI configuration FSx for ONTAP volume creation.]
 --
 ====
+.. Optionally, select the optimization option to create a FlexGroup and distribute volume data across the cluster.
++
+image:screenshot-optimize.png[A screenshot of te selection box to enable FlexGroup selection for data distribution.]
 
 . *Usage Profile and Tiering*
 
@@ -111,8 +115,11 @@ image:screenshot-volume-protocol-iscsi.png[A screenshot of the iSCSI configurati
 .. By default, *Tiering Policy* is set to *Snapshot Only*. You can select a different tiering policy based on your needs.
 +
 image:screenshot_fsx_volume_usage_tiering.png[A screenshot of the Usage Profile and Tiering Configuration for FSx for ONTAP volume creation.]
+.. If you selected optimization (FlexGroup), you must specify the number of constituents to distribute volume data across. We strongly recommend using an even number of constituents to ensure even data distribution. 
++
+image:screenshot-constituents.png[A screenshot of the field to specify the number of constituents to  distribute volume data across.]
 
-. *Review*: Review your volume configuration. Click *Previous* to change settings or click *Add* to create the volume.
+. *Review*: Review your volume configuration. Click *Previous* to change settings or *Add* to create the volume.
 
 
 .Result
