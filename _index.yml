@@ -20,7 +20,7 @@ indexpage:
       links:
         - title: Create or discover a working environment
           url: /use/task-creating-fsx-working-environment.html
-        - title: Manage the working envionment
+        - title: Manage the working environment
           url: /use/task-manage-working-environment.html
         - title: Create and mount volumes
           url: /use/task-add-fsx-volumes.html
