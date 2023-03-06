@@ -17,7 +17,7 @@ Learn what's new in Amazon FSx for ONTAP.
 
 //tag::whats-new[]
 == 05 March 2023
-You can now link:https://docs.netapp.com/us-en/cloud-manager-fsx-ontap/use/task-add-fsx-volumes.html#create-volumes[create a FlexGroup on FSx for ONTAP^] volumes to distribute volume data across the cluster.  
+User interface improvements have been made and screenshots have been updated in the documentation. 
 
 == 01 January 2023
 You can now choose to enable link:https://docs.netapp.com/us-en/cloud-manager-fsx-ontap/use/task-manage-working-environment.html#manage-automatic-capacity[automatic capacity management^] to add incremental storage based on demand. Automatic capacity management polls the cluster at regular intervals to assess demand and automatically increases storage capacity in increments of 10% up to 80% of the the cluster’s maximum capacity.
