@@ -1,11 +1,11 @@
 ---
 sidebar: sidebar
 permalink: use/task-creating-fsx-working-environment.html
-keywords: amazon fsx for ontap, fsx, volumes, create working environment, delete working environment, access key, secret key, region, working environment, availability zones, discover, storage capacity, iops, throughput
+keywords: Amazon FSx for NetApp ONTAP, fsx, volumes, create working environment, delete working environment, access key, secret key, region, working environment, availability zones, discover, storage capacity, iops, throughput
 summary: Using BlueXP you can create or discover an FSx for ONTAP working environments to add and manage volumes and additional data services.
 ---
 
-= Create or discover an Amazon FSx for ONTAP working environment
+= Create or discover an Amazon FSx for NetApp ONTAP working environment
 :hardbreaks:
 :nofooter:
 :icons: font
@@ -15,7 +15,7 @@ summary: Using BlueXP you can create or discover an FSx for ONTAP working enviro
 [.lead]
 Using BlueXP you can create or discover an FSx for ONTAP working environment to add and manage volumes and additional data services.
 
-== Create an Amazon FSx for ONTAP working environment
+== Create an Amazon FSx for NetApp ONTAP working environment
 
 The first step is to create an FSx for ONTAP working environment. If you already created an FSx for ONTAP file system in the AWS Management Console, you can link:task-creating-fsx-working-environment.html#discover-an-existing-fsx-for-ontap-file-system[discover it using BlueXP].
 
@@ -29,9 +29,9 @@ Before creating your FSx for ONTAP working environment in BlueXP, you will need:
 
 .Steps
 
-. In BlueXP, add a new Working Environment, select *Amazon Web Services*, and click *Add new* for Amazon FSx for ONTAP.
+. In BlueXP, add a new Working Environment, select *Amazon Web Services*, and click *Add new* for Amazon FSx for NetApp ONTAP.
 +
-image:screenshot_add_fsx_working_env.png[A screenshot of adding a working environment for Amazon FSx for ONTAP]
+image:screenshot_add_fsx_working_env.png[A screenshot of adding a working environment for Amazon FSx for NetApp ONTAP]
 
 . *FSx for ONTAP Authentication* 
 
@@ -85,7 +85,7 @@ NOTE: If you specify an IOPS value that does not meet the minimum requirements, 
 
 BlueXP displays your FSx for ONTAP configuration on the Canvas. You can now add volumes to your FSx for ONTAP working environment using BlueXP.
 
-image:screenshot_add_fsx_cloud.png[A screenshot of Amazon FSx for ONTAP on the working environments page.]
+image:screenshot_add_fsx_cloud.png[A screenshot of Amazon FSx for NetApp ONTAP on the working environments page.]
 
 == Discover an existing FSx for ONTAP file system 
 

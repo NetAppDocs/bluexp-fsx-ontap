@@ -1,5 +1,5 @@
 settings:
-  name: Amazon FSx for ONTAP
+  name: Amazon FSx for NetApp ONTAP
   platform: cloud
   internal:
     pdf_enabled: true
@@ -9,7 +9,7 @@ settings:
   rss_page: "whats-new.html"
 sidebar:
   entries:
-    - title: Amazon FSx for ONTAP docs
+    - title: Amazon FSx for NetApp ONTAP docs
       url: /index.html
     - title: Release notes
       url: /whats-new.html
@@ -25,7 +25,7 @@ sidebar:
           url: /requirements/task-setting-up-permissions-fsx.html
         - title: Security group rules for FSx for ONTAP
           url: /requirements/reference-security-groups-fsx.html
-    - title: Use Amazon FSx for ONTAP
+    - title: Use Amazon FSx for NetApp ONTAP
       entries:
         - title: Create or discover a working environment
           url: /use/task-creating-fsx-working-environment.html
