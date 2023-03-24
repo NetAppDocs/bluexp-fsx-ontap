@@ -43,6 +43,7 @@ image:screenshot_add_fsx_working_env.png[A screenshot of adding a working enviro
 
 .. Enter the working environment name you want to use.
 .. Optionally, you can create tags by clicking the plus sign and entering a tag name and value.
+.. Optionally, you can specify the start time for Amazon FSx for NetApp ONTAP to perform 30-minute weekly maintenance. This can be used to ensure maintenance does not coincide with critical business activities. 
 .. Enter and confirm the ONTAP Cluster password you want to use.
 .. Optionally, deselect the option to use the same password for your SVM user and set a different password.
 
