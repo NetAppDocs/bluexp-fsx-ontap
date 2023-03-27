@@ -6,7 +6,7 @@ indexpage:
       links:
         - title: Release notes
           url: /whats-new.html
-        - title: Learn about Amazon FSx for ONTAP
+        - title: Learn about Amazon FSx for NetApp ONTAP
           url: /start/concept-fsx-aws.html
         - title: Quick start
           url: /start/task-getting-started-fsx.html
@@ -16,11 +16,11 @@ indexpage:
           url: /requirements/task-setting-up-permissions-fsx.html
         - title: Security group rules 
           url: /requirements/reference-security-groups-fsx.html
-    - title: Use Amazon FSx for ONTAP
+    - title: Use Amazon FSx for NetApp ONTAP
       links:
         - title: Create or discover a working environment
           url: /use/task-creating-fsx-working-environment.html
-        - title: Manage the working envionment
+        - title: Manage the working environment
           url: /use/task-manage-working-environment.html
         - title: Create and mount volumes
           url: /use/task-add-fsx-volumes.html
