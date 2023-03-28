@@ -115,7 +115,7 @@ image:screenshot-volume-protocol-iscsi.png[A screenshot of the iSCSI configurati
 +
 image:screenshot_fsx_volume_usage_tiering.png[A screenshot of the Usage Profile and Tiering Configuration for FSx for ONTAP volume creation.]
 
-.. If you selected optimization (FlexGroup), you must specify the number of constituents and select one or more aggregates to distribute volume data across. We strongly recommend using an even number of constituents to ensure even data distribution. 
+.. If you selected optimization (FlexGroup), you must specify the number of constituents to distribute volume data across. We strongly recommend using an even number of constituents to ensure even data distribution. Best practice is 8 constituents.
 +
 image:screenshot-constituents.png[A screenshot of the field to specify the number of constituents to  distribute volume data across.]
 
