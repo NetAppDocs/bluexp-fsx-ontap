@@ -16,17 +16,22 @@ summary: Learn what's new in Amazon FSx for NetApp ONTAP.
 Learn what's new in Amazon FSx for NetApp ONTAP.
 
 //tag::whats-new[]
+== 02 April 2023
+* You can now link:https://docs.netapp.com/us-en/cloud-manager-fsx-ontap/use/task-add-fsx-volumes.html#create-volumes[create a FlexGroup on FSx for ONTAP^] volumes to distribute volume data across the cluster.  
+
+* The IOPS limit is increased to allow manual or automatic provisioning up to 160,000. 
+
 == 05 March 2023
 User interface improvements have been made and screenshots have been updated in the documentation. 
 
 == 01 January 2023
 You can now choose to enable link:https://docs.netapp.com/us-en/cloud-manager-fsx-ontap/use/task-manage-working-environment.html#manage-automatic-capacity[automatic capacity management^] to add incremental storage based on demand. Automatic capacity management polls the cluster at regular intervals to assess demand and automatically increases storage capacity in increments of 10% up to 80% of the the cluster’s maximum capacity.
 
+//end::whats-new[]
 == 18 September 2022
 
 You can now link:https://docs.netapp.com/us-en/cloud-manager-fsx-ontap/use/task-manage-working-environment.html#change-storage-capacity-and-IOPS[change the storage capacity and IOPS^] at any time after you create the FSx for ONTAP working environment. 
 
-//end::whats-new[]
 == 31 July 2022
 
 * If you previously provided your AWS credentials to Cloud Manager, the new *My Opportunities* feature can automatically discover and suggest FSx for ONTAP file systems to add and manage using Cloud Manager. You can also review available data services through the *My Opportunities* tab. 
