@@ -21,7 +21,7 @@ You can create and manage NFS, CIFS, and iSCSI volumes from your FSx for ONTAP w
 
 .What you'll need
 
-* An active https://docs.netapp.com/us-en/cloud-manager-setup-admin/task-creating-connectors-aws.html[Connector in AWS^].
+* An active https://docs.netapp.com/us-en/cloud-manager-setup-admin/task-quick-start-connector-aws.html[Connector in AWS^].
 
 * If you want to use SMB, you must have set up DNS and Active Directory. For more information on DNS and Active Directory network configuration, see link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/self-manage-prereqs.html[AWS: Prerequisites for using a self-managed Microsoft AD^].
 
