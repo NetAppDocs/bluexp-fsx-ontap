@@ -64,7 +64,7 @@ Select route tables that include routes to the floating IP addresses. If you hav
 
 . *Data Encryption*
 +
-Accept the default AWS master key or click *Change Key* to select a different AWS Customer Master Key (CMK). For more information on CMK, see link:https://docs.netapp.com/us-en/occm/task-setting-up-kms.html[Setting up the AWS KMS^].  
+Accept the default AWS master key or click *Change Key* to select a different AWS Customer Master Key (CMK). For more information on CMK, see link:https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/task-setting-up-kms.html[Setting up the AWS KMS^].  
 
 . *Storage Configuration*
 
