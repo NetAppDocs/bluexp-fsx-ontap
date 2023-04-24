@@ -91,7 +91,7 @@ Change the tiering policy for the volume.
 
 You can replicate data between storage environments using BlueXP. To configure FSx for ONTAP replication, see https://docs.netapp.com/us-en/cloud-manager-replication/task-replicating-data.html[replicating data between systems^].
 
-You can create sync relationships using Cloud Sync in BlueXP. To configure sync relationships, see https://docs.netapp.com/us-en/cloud-manager-sync/task-creating-relationships.html[create sync relationships^].
+You can create sync relationships using BlueXP  copy and sync. To configure sync relationships, see https://docs.netapp.com/us-en/cloud-manager-sync/task-creating-relationships.html[create sync relationships^].
 
 == Delete volumes
 
