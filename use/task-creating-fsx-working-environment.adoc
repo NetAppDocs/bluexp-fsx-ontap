@@ -19,7 +19,7 @@ Using BlueXP you can create or discover an FSx for ONTAP working environment to 
 
 The first step is to create an FSx for ONTAP working environment. If you already created an FSx for ONTAP file system in the AWS Management Console, you can link:task-creating-fsx-working-environment.html#discover-an-existing-fsx-for-ontap-file-system[discover it using BlueXP].
 
-.What you'll need
+.Before you begin
 
 Before creating your FSx for ONTAP working environment in BlueXP, you will need:
 
@@ -42,7 +42,7 @@ image:screenshot_add_fsx_working_env.png[A screenshot of adding a working enviro
 . *Details and Credentials*
 
 .. Enter the working environment name you want to use.
-.. Optionally, you can create tags by clicking the plus sign and entering a tag name and value.
+.. Optionally, you can create tags to categorize your working environment by clicking the plus sign and entering a tag name and value.
 .. Enter and confirm the ONTAP Cluster password you want to use.
 .. Optionally, deselect the option to use the same password for your SVM user and set a different password.
 
