@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar
 permalink: use/task-creating-fsx-working-environment.html
-keywords: Amazon FSx for NetApp ONTAP, fsx, volumes, create working environment, delete working environment, access key, secret key, region, working environment, availability zones, discover, storage capacity, iops, throughput
+keywords: Amazon FSx for NetApp ONTAP, fsx, volumes, create working environment, delete working environment, access key, secret key, region, working environment, availability zones, discover, storage capacity, iops, throughput, security group, security
 summary: Using BlueXP you can create or discover an FSx for ONTAP working environments to add and manage volumes and additional data services.
 ---
 
@@ -46,13 +46,15 @@ image:screenshot_add_fsx_working_env.png[A screenshot of adding a working enviro
 .. Enter and confirm the ONTAP Cluster password you want to use.
 .. Optionally, deselect the option to use the same password for your SVM user and set a different password.
 
-. *Region and VPC*
+. *HA deployment model*
 
 .. Select a *Single Availability Zone* or *Multiple Availability Zones* HA deployment model. For multiple Availability Zones, select subnets in at least two Availability Zones so each node is in a dedicated Availability Zone.
-+
-image:screenshot_add_fsx_region.png[A screenshot of adding region and VPC for FSx for ONTAP]
 
-.. Accept the default security group or select a different one. link:https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/security-group-rules.html[AWS security groups^] control inbound and outbound traffic. These are configured by your AWS admin and are associated with your link:https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/using-eni.html[AWS elastic network interface (ENI)^].
+.. Select the Virtual Private Cloud (VPC) you want to associate with your file system.
+
+.. Use an existing security group or select *Generated security group* to enable BlueXP to generate a security group that allows traffic within the selected VPC only. 
++
+NOTE: link:https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/security-group-rules.html[AWS security groups^] control inbound and outbound traffic. These are configured by your AWS admin and are associated with your link:https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/using-eni.html[AWS elastic network interface (ENI)^].
 
 . *Floating IP* (Multiple Availability Zones only)
 +
@@ -64,15 +66,13 @@ Select route tables that include routes to the floating IP addresses. If you hav
 
 . *Data Encryption*
 +
-Accept the default AWS master key or click *Change Key* to select a different AWS Customer Master Key (CMK). For more information on CMK, see https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/https://docs.netapp.com/us-en/occm/task-setting-up-kms.html[Setting up the AWS KMS^].  
+Accept the default AWS master key or click *Change Key* to select a different AWS Customer Master Key (CMK). For more information on CMK, see link:https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/task-setting-up-kms.html[Setting up the AWS KMS^].  
 
 . *Storage Configuration*
 
 .. Select the throughput, capacity, and unit. You can change throughput, storage capacity, and IOPS at any time. 
 
 .. You can optionally specify an IOPS value. If you don't specify an IOPS value, BlueXP will set a default value based on 3 IOPS per GiB of the total capacity entered. For example, if you enter 2000 GiB for the total capacity and no value for the IOPS, the effective IOPS value will be set to 6000. You can change the IOPS value at any time. 
-+
-image:screenshot-storage-config.png[A screenshot of setting storage configuration for FSx for ONTAP]
 +
 NOTE: If you specify an IOPS value that does not meet the minimum requirements, you’ll receive an error when adding the working environment.
 
@@ -92,7 +92,7 @@ image:screenshot_add_fsx_cloud.png[A screenshot of Amazon FSx for NetApp ONTAP o
 If you previously provided your AWS credentials to BlueXP, *My Opportunities* can automatically discover and suggest FSx for ONTAP file systems to add and manage using BlueXP. You can also review available data services. 
 
 .About this task
-You can discover FSx for ONTAP file systems by link:/task-creating-fsx-working-environment.html#create-an-amazon-fsx-for-ontap-working-environment[creating a new working environment] or using the *My Opportunities* page. This task describes discovery using *My Opportunities*
+You can discover FSx for ONTAP file systems when you <<Create an Amazon FSx for NetApp ONTAP working environment>> or by using the *My Opportunities* page. This task describes discovery using *My Opportunities*
 
 .Steps
 

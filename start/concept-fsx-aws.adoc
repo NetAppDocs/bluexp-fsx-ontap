@@ -25,17 +25,17 @@ link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/what-is-fsx-ontap.html[Am
 
 == Additional features in BlueXP
 
-* Using link:https://docs.netapp.com/us-en/cloud-manager-family/[BlueXP^] (formerly Cloud Manager) and a Connector in AWS, you can create and manage volumes, replicate data, and integrate FSx for ONTAP with NetApp cloud services, such as Data Sense and Cloud Sync.
+* Using link:https://docs.netapp.com/us-en/cloud-manager-family/[BlueXP^] (Cloud Manager) and a Connector in AWS, you can create and manage volumes, replicate data, and integrate FSx for ONTAP with NetApp cloud services, such as BlueXP classification and BlueXP copy and sync (Cloud Sync).
 
-* Using Artificial Intelligence (AI) driven technology, Cloud Data Sense can help you understand data context and identify sensitive data that resides in your FSx for ONTAP accounts. https://docs.netapp.com/us-en/cloud-manager-data-sense/concept-cloud-compliance.html[Learn more^].
+* Using Artificial Intelligence (AI) driven technology, BlueXP classification (Cloud Data Sense) can help you understand data context and identify sensitive data that resides in your FSx for ONTAP accounts. https://docs.netapp.com/us-en/cloud-manager-data-sense/concept-cloud-compliance.html[Learn more^].
 
-* Using NetApp Cloud Sync, you can automate data migration to any target in the cloud or on premises. https://docs.netapp.com/us-en/cloud-manager-sync/concept-cloud-sync.html[Learn more^]
+* Using BlueXP copy and sync, you can automate data migration to any target in the cloud or on premises. https://docs.netapp.com/us-en/cloud-manager-sync/concept-cloud-sync.html[Learn more^]
 
 == Cost
 
 Your FSx for ONTAP account is maintained by AWS and not by BlueXP. Refer to https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/what-is-fsx-ontap.html[Amazon FSx for NetApp ONTAP getting started guide^].
 
-There is an additional cost associated with using the Connector in AWS and the optional data services such as Cloud Sync and Data Sense.
+There is an additional cost associated with using the Connector in AWS and the optional data services such as BlueXP copy and sync and BlueXP classification.
 
 == Supported regions
 

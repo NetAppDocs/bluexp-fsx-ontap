@@ -35,4 +35,4 @@ You must have a https://docs.netapp.com/us-en/cloud-manager-setup-admin/concept-
 You can link:../use/task-add-fsx-volumes.html[create and mount FSx for ONTAP volumes] using BlueXP.
 
 .What's next
-You can now use BlueXP to manage your volumes and configure additional services such as replication, Cloud Sync, and Data Sense.
+You can now use BlueXP to manage your volumes and configure additional services such as replication, copy and sync, and classification.
