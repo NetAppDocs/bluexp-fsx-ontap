@@ -27,12 +27,11 @@ You can manage automatic capacity without an active Connector in AWS.
 
 .Steps
 
-. Select the FSx for ONTAP working environment on the Canvas. 
-
-. In the *Details* panel, use the three dots icon (image:icon-three-dots.png[icon of three dots]) to open the options menu. Click *Manage Automatic Capacity*.
+. Select the working environment on the canvas and select *Enter Working Environment*. 
+. Select the pencil icon (image:icon-pencil.png[Image of the pencil edit icon.]) to open the *Automatic capacity management* page.
 +
-image:screenshot-auto-capacity-no-connector.png[Screenshot of the Manage Automatic Capacity menu.]
-. On the *Automatic capacity management* page: 
+NOTE: All other options require a Connector and are disabled. 
+
 * Select the box to enable automatic capacity management. 
 * Deselect the box to disable automatic capacity management if it was previously enabled.
 . Select *Apply*.
@@ -64,8 +63,6 @@ You need an active https://docs.netapp.com/us-en/cloud-manager-setup-admin/task-
 . Open the FSx for ONTAP working environment. 
 . From the *Overview* tab, select *Features*. 
 . Select the pencil icon (image:icon-pencil.png[Image of the pencil edit icon.]) to open the *Throughput Capacity* edit page.
-+
-image:screenshot-change-thruput.png[A screenshot of the location of the change throughput capacity menu.]
 . Select a new throughput capacity from the dropdown and select *Update*. This change can take up to 25 minutes to take effect and does not disrupt data access.
 
 == Change storage capacity and IOPS
@@ -81,8 +78,6 @@ You need an active https://docs.netapp.com/us-en/cloud-manager-setup-admin/task-
 . Open the FSx for ONTAP working environment. 
 . From the *Overview* tab, select *Features*. 
 . Select the pencil icon (image:icon-pencil.png[Image of the pencil edit icon.]) to open the *Storage Capacity & IOPS* edit page.
-+
-image:screenshot-change-iops.png[A screenshot of the location of the change storage capacity and IOPS menu.]
 . You can change the storage capacity and IOPS once every six hours. If you attempt to make changes more frequently, you will receive an error.
 +
 image:screenshot-configure-iops.png[A screenshot of the page to change the storage capacity and IOPS values.]

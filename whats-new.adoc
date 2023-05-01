@@ -32,6 +32,7 @@ You can now choose to enable link:https://docs.netapp.com/us-en/cloud-manager-fs
 
 You can now link:https://docs.netapp.com/us-en/cloud-manager-fsx-ontap/use/task-manage-working-environment.html#change-storage-capacity-and-IOPS[change the storage capacity and IOPS^] at any time after you create the FSx for ONTAP working environment. 
 
+//end::whats-new[]
 == 31 July 2022
 
 * If you previously provided your AWS credentials to Cloud Manager, the new *My Opportunities* feature can automatically discover and suggest FSx for ONTAP file systems to add and manage using Cloud Manager. You can also review available data services through the *My Opportunities* tab. 

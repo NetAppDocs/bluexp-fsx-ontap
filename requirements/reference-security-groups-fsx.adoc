@@ -157,9 +157,9 @@ The security group for the Connector requires both inbound and outbound rules.
 | Purpose
 
 | SSH | 22 | Provides SSH access to the Connector host
-| HTTP | 80 |	Provides HTTP access from client web browsers to the local user interface and connections from Cloud Data Sense
+| HTTP | 80 |	Provides HTTP access from client web browsers to the local user interface and connections from BlueXP classification instance
 | HTTPS |	443 |	Provides HTTPS access from client web browsers to the local user interface
-| TCP | 3128 | Provides the Cloud Data Sense instance with internet access, if your AWS network doesn’t use a NAT or proxy
+| TCP | 3128 | Provides the BlueXP classification instance with internet access, if your AWS network doesn’t use a NAT or proxy
 
 |===
 
@@ -210,5 +210,5 @@ NOTE: The source IP address is the Connector host.
 | API calls and AutoSupport | HTTPS | 443 | Outbound internet and ONTAP cluster management LIF | API calls to AWS and ONTAP, and sending AutoSupport messages to NetApp
 | API calls | TCP | 8088 | Backup to S3 | API calls to Backup to S3
 | DNS | UDP	| 53 | DNS | Used for DNS resolve by BlueXP
-| Cloud Data Sense | HTTP | 80 | Cloud Data Sense instance | Cloud Data Sense for Cloud Volumes ONTAP
+| BlueXP classification | HTTP | 80 | BlueXP classification | BlueXP classification for Cloud Volumes ONTAP
 |===

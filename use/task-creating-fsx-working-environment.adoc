@@ -64,7 +64,7 @@ Select route tables that include routes to the floating IP addresses. If you hav
 
 . *Data Encryption*
 +
-Accept the default AWS master key or click *Change Key* to select a different AWS Customer Master Key (CMK). For more information on CMK, see https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/https://docs.netapp.com/us-en/occm/task-setting-up-kms.html[Setting up the AWS KMS^].  
+Accept the default AWS master key or click *Change Key* to select a different AWS Customer Master Key (CMK). For more information on CMK, see link:https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/task-setting-up-kms.html[Setting up the AWS KMS^].  
 
 . *Storage Configuration*
 
@@ -92,7 +92,7 @@ image:screenshot_add_fsx_cloud.png[A screenshot of Amazon FSx for NetApp ONTAP o
 If you previously provided your AWS credentials to BlueXP, *My Opportunities* can automatically discover and suggest FSx for ONTAP file systems to add and manage using BlueXP. You can also review available data services. 
 
 .About this task
-You can discover FSx for ONTAP file systems by link:/task-creating-fsx-working-environment.html#create-an-amazon-fsx-for-ontap-working-environment[creating a new working environment] or using the *My Opportunities* page. This task describes discovery using *My Opportunities*
+You can discover FSx for ONTAP file systems when you <<Create an Amazon FSx for NetApp ONTAP working environment>> or by using the *My Opportunities* page. This task describes discovery using *My Opportunities*
 
 .Steps
 
