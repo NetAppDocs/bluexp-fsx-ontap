@@ -22,9 +22,7 @@ Learn what's new in Amazon FSx for NetApp ONTAP.
 * You can optionally link:https://docs.netapp.com/us-en/cloud-manager-fsx-ontap/use/task-add-fsx-volumes.html#create-volumes[add^] and link:https://docs.netapp.com/us-en/cloud-manager-fsx-ontap/use/task-manage-fsx-volumes.html#manage-volume-tags[modify^] tags to categorize volumes. 
 
 == 02 April 2023
-* You can now link:https://docs.netapp.com/us-en/cloud-manager-fsx-ontap/use/task-add-fsx-volumes.html#create-volumes[create a FlexGroup on FSx for ONTAP^] volumes to distribute volume data across the cluster.  
-
-* The IOPS limit is increased to allow manual or automatic provisioning up to 160,000. 
+The IOPS limit is increased to allow manual or automatic provisioning up to 160,000. 
 
 == 05 March 2023
 User interface improvements have been made and screenshots have been updated in the documentation. 
