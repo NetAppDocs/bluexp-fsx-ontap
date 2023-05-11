@@ -13,7 +13,7 @@ summary: Using BlueXP, you can get started with FSx for ONTAP in just a few step
 :imagesdir: ../media/
 
 [.lead]
-Using link:https://docs.netapp.com/us-en/cloud-manager-family/[BlueXP^], you can get started with FSx for ONTAP in just a few steps.
+Using link:https://docs.netapp.com/us-en/bluexp-family/[BlueXP^], you can get started with FSx for ONTAP in just a few steps.
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-1.png[One] Set up an IAM role in AWS
 [role="quick-margin-para"]
@@ -27,7 +27,7 @@ You must link:../use/task-creating-fsx-working-environment.html[create an Amazon
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-3.png[Three] Create a Connector for AWS
 
 [role="quick-margin-para"]
-You must have a https://docs.netapp.com/us-en/cloud-manager-setup-admin/concept-connectors.html#how-to-create-a-connector[Connector for AWS^] to open the FSx for ONTAP working environment, create volumes, or perform other actions. When a Connector is required, BlueXP will prompt you if one is not already active.
+You must have a https://docs.netapp.com/us-en/bluexp-setup-admin/concept-connectors.html#how-to-create-a-connector[Connector for AWS^] to open the FSx for ONTAP working environment, create volumes, or perform other actions. When a Connector is required, BlueXP will prompt you if one is not already active.
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-4.png[Four] Add and mount a volume
 
