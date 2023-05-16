@@ -5,7 +5,7 @@ keywords: Amazon FSx for NetApp ONTAP, volumes, aws, access key, secret key, clo
 summary: Amazon FSx for NetApp ONTAP is a fully managed service allowing customers to launch and run file systems powered by NetApp’s ONTAP storage operating system. FSx for ONTAP provides the same features, performance, and administrative capabilities NetApp customers use on premises today, with the simplicity, agility, security, and scalability of a native AWS service.
 ---
 
-= Learn about Amazon FSx for NetApp ONTAP
+= Learn about Amazon FSx for NetApp ONTAP 
 :hardbreaks:
 :nofooter:
 :icons: font
@@ -28,21 +28,20 @@ link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/what-is-fsx-ontap.html[Am
 * Amazon FSx for NetApp ONTAP is supported when using BlueXP in _standard_ or _restricted_ mode.  
 ** Standard mode leverages the BlueXP SaaS layer to provide full functionality. 
 ** Restricted mode is available for organizations that have connectivity restrictions. 
-
 +
 Refer to link:https://docs.netapp.com/us-en/cloud-manager-setup-admin/concept-modes.html[BlueXP deployment modes^] for more information. 
 
-* Using link:https://docs.netapp.com/us-en/cloud-manager-family/[BlueXP^] (formerly Cloud Manager) and a Connector in AWS, you can create and manage volumes, replicate data, and integrate FSx for ONTAP with NetApp cloud services, such as Data Sense and Cloud Sync.
+* Using link:https://docs.netapp.com/us-en/cloud-manager-family/[BlueXP^] (Cloud Manager) and a Connector in AWS, you can create and manage volumes, replicate data, and integrate FSx for ONTAP with NetApp cloud services, such as BlueXP classification and BlueXP copy and sync (Cloud Sync).
 
-* Using Artificial Intelligence (AI) driven technology, Cloud Data Sense can help you understand data context and identify sensitive data that resides in your FSx for ONTAP accounts. https://docs.netapp.com/us-en/cloud-manager-data-sense/concept-cloud-compliance.html[Learn more^].
+* Using Artificial Intelligence (AI) driven technology, BlueXP classification (Cloud Data Sense) can help you understand data context and identify sensitive data that resides in your FSx for ONTAP accounts. https://docs.netapp.com/us-en/cloud-manager-data-sense/concept-cloud-compliance.html[Learn more^].
 
-* Using NetApp Cloud Sync, you can automate data migration to any target in the cloud or on premises. https://docs.netapp.com/us-en/cloud-manager-sync/concept-cloud-sync.html[Learn more^]
+* Using BlueXP copy and sync, you can automate data migration to any target in the cloud or on premises. https://docs.netapp.com/us-en/cloud-manager-sync/concept-cloud-sync.html[Learn more^]
 
 == Cost
 
 Your FSx for ONTAP account is maintained by AWS and not by BlueXP. Refer to https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/what-is-fsx-ontap.html[Amazon FSx for NetApp ONTAP getting started guide^].
 
-There is an additional cost associated with using the Connector in AWS and the optional data services such as Cloud Sync and Data Sense.
+There is an additional cost associated with using the Connector in AWS and the optional data services such as BlueXP copy and sync and BlueXP classification.
 
 == Supported regions
 
