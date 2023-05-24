@@ -27,7 +27,7 @@ link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/what-is-fsx-ontap.html[Am
 
 * Using link:https://docs.netapp.com/us-en/bluexp-family/[BlueXP^] and a Connector in AWS, you can create and manage volumes, replicate data, and integrate FSx for ONTAP with NetApp cloud services, such as BlueXP classification and BlueXP copy and sync.
 
-* Using Artificial Intelligence (AI) driven technology, BlueXP classification (Cloud Data Sense) can help you understand data context and identify sensitive data that resides in your FSx for ONTAP accounts. https://docs.netapp.com/us-en/bluexp-classification/concept-cloud-compliance.html[Learn more^].
+* Using Artificial Intelligence (AI) driven technology, BlueXP classification can help you understand data context and identify sensitive data that resides in your FSx for ONTAP accounts. https://docs.netapp.com/us-en/bluexp-classification/concept-cloud-compliance.html[Learn more^].
 
 * Using BlueXP copy and sync, you can automate data migration to any target in the cloud or on premises. https://docs.netapp.com/us-en/bluexp-copy-sync/concept-cloud-sync.html[Learn more^]
 
