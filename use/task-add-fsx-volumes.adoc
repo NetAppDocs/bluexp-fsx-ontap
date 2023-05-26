@@ -19,11 +19,10 @@ After you set up your working environment, you can create and mount FSx for ONTA
 
 You can create and manage NFS, CIFS, and iSCSI volumes from your FSx for ONTAP working environment in BlueXP. Volumes created using ONTAP CLI will also be visible in your FSx for ONTAP working environment.
 
-.What you'll need
+.Before you begin
+Before creating a new volume you'll need an active https://docs.netapp.com/us-en/cloud-manager-setup-admin/task-creating-connectors-aws.html[Connector in AWS^].
 
-* An active https://docs.netapp.com/us-en/cloud-manager-setup-admin/task-creating-connectors-aws.html[Connector in AWS^].
-
-* If you want to use SMB, you must have set up DNS and Active Directory. For more information on DNS and Active Directory network configuration, see link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/self-manage-prereqs.html[AWS: Prerequisites for using a self-managed Microsoft AD^].
+If you want to use SMB, you must have set up DNS and Active Directory. For more information on DNS and Active Directory network configuration, see link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/self-manage-prereqs.html[AWS: Prerequisites for using a self-managed Microsoft AD^].
 
 .About this task
 You can add volumes by opening the working environment and selecting the *Volumes* tab or simply using working environment *Details* panel from the Canvas. This task describes adding volumes using the *Details* panel. 
@@ -36,12 +35,13 @@ You can add volumes by opening the working environment and selecting the *Volume
 +
 image:screenshot-add-volume.png[A screenshot of the add volume option on the Details panel.]
 
-. *Volume Details and Protection*
+. *Volume details, protection, & tags*
 
 .. Enter a name for your new volume.
-.. The Storage VM (SVM) fields auto-populates the SVM based on the name of your working environment.
+.. The Storage VM (SVM) field auto-populates the SVM based on the name of your working environment.
 .. Enter the volume size and select a unit (GiB or TiB). Note that the volume size will grow with usage.
 .. Select a snapshot policy. By default, a snapshot is taken every hour (keeping the last six copies), every day (keeping the last two copies), and every week (keeping the last two copies).
+.. Optionally, you can create tags to categorize your volumes by clicking the plus sign and entering a tag name and value. 
 
 . *Volumes Protocol*: 
 .. Select an NFS, CIFS, or iSCSI volume protocol.
@@ -113,7 +113,6 @@ image:screenshot-volume-protocol-iscsi.png[A screenshot of the iSCSI configurati
 image:screenshot_fsx_volume_usage_tiering.png[A screenshot of the Usage Profile and Tiering Configuration for FSx for ONTAP volume creation.]
 
 . *Review*: Review your volume configuration. Click *Previous* to change settings or *Add* to create the volume.
-
 
 .Result
 

@@ -16,9 +16,18 @@ summary: Learn what's new in Amazon FSx for NetApp ONTAP.
 Learn what's new in Amazon FSx for NetApp ONTAP.
 
 //tag::whats-new[]
+== 07 May 2023
+* When creating a working environment, you can now have BlueXP link:https://docs.netapp.com/us-en/cloud-manager-fsx-ontap/use/task-creating-fsx-working-environment.html#create-an-amazon-fsx-for-netapp-ontap-working-environment[generate a security group^] that allows traffic within the selected VPC only. This feature link:https://docs.netapp.com/us-en/cloud-manager-fsx-ontap/requirements/task-setting-up-permissions-fsx.html[requires additional permissions^]. 
+
+* You can optionally link:https://docs.netapp.com/us-en/cloud-manager-fsx-ontap/use/task-add-fsx-volumes.html#create-volumes[add^] and link:https://docs.netapp.com/us-en/cloud-manager-fsx-ontap/use/task-manage-fsx-volumes.html#manage-volume-tags[modify^] tags to categorize volumes. 
+
+== 02 April 2023
+The IOPS limit is increased to allow manual or automatic provisioning up to 160,000. 
+
 == 05 March 2023
 User interface improvements have been made and screenshots have been updated in the documentation. 
 
+//end::whats-new[]
 == 01 January 2023
 You can now choose to enable link:https://docs.netapp.com/us-en/cloud-manager-fsx-ontap/use/task-manage-working-environment.html#manage-automatic-capacity[automatic capacity management^] to add incremental storage based on demand. Automatic capacity management polls the cluster at regular intervals to assess demand and automatically increases storage capacity in increments of 10% up to 80% of the the cluster’s maximum capacity.
 

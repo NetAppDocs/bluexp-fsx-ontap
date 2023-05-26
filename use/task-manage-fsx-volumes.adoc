@@ -56,6 +56,19 @@ After you create a volume, you can create a new read-write volume from a new Sna
 
 . Select *Clone*.
 
+== Manage volume tags
+You can add, modify, or delete volume tags. Tags added in BlueXP are reflected in the AWS Console. It can take up to an hour to synchronize tags with the AWS Console. 
+
+.Steps
+
+. Open the working environment.
+
+. Open the volume tab and select *Manage Volume* to open the *Volume Actions* menu.
+
+. Select *Manage volume tags*.
+
+. Select *Save* to apply your changes. 
+
 == Manage Snapshot copies
 
 Snapshot copies provide a point-in-time copy of your volume. Create Snapshot copies and restore the data to a new volume.
@@ -91,7 +104,7 @@ Change the tiering policy for the volume.
 
 You can replicate data between storage environments using BlueXP. To configure FSx for ONTAP replication, see https://docs.netapp.com/us-en/cloud-manager-replication/task-replicating-data.html[replicating data between systems^].
 
-You can create sync relationships using Cloud Sync in BlueXP. To configure sync relationships, see https://docs.netapp.com/us-en/cloud-manager-sync/task-creating-relationships.html[create sync relationships^].
+You can create sync relationships using BlueXP  copy and sync. To configure sync relationships, see https://docs.netapp.com/us-en/cloud-manager-sync/task-creating-relationships.html[create sync relationships^].
 
 == Delete volumes
 
