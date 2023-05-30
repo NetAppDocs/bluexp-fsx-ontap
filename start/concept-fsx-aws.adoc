@@ -25,6 +25,12 @@ link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/what-is-fsx-ontap.html[Am
 
 == Additional features in BlueXP
 
+* Amazon FSx for NetApp ONTAP is supported when using BlueXP in _standard_ or _restricted_ mode.  
+** Standard mode leverages the BlueXP SaaS layer to provide full functionality. 
+** Restricted mode is available for organizations that have connectivity restrictions. 
++
+Refer to link:https://docs.netapp.com/us-en/bluexp-setup-admin/concept-modes.html[BlueXP deployment modes^] for more information. 
+
 * Using link:https://docs.netapp.com/us-en/bluexp-family/[BlueXP^] and a Connector in AWS, you can create and manage volumes, replicate data, and integrate FSx for ONTAP with NetApp cloud services, such as BlueXP classification and BlueXP copy and sync.
 
 * Using Artificial Intelligence (AI) driven technology, BlueXP classification can help you understand data context and identify sensitive data that resides in your FSx for ONTAP accounts. https://docs.netapp.com/us-en/bluexp-classification/concept-cloud-compliance.html[Learn more^].

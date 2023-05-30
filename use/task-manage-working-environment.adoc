@@ -56,7 +56,7 @@ You can change the throughput capacity at any time after you create the FSx for 
 
 .Before you begin
 
-You need an active https://docs.netapp.com/us-en/bluexp-setup-admin/task-creating-connectors-aws.html[Connector in AWS^].
+You need an active https://docs.netapp.com/us-en/bluexp-setup-admin/task-quick-start-connector-aws.html[Connector in AWS^].
 
 .Steps
 
@@ -71,7 +71,7 @@ You can change the storage capacity and IOPS at any time after you create the FS
 
 .Before you begin
 
-You need an active https://docs.netapp.com/us-en/bluexp-setup-admin/task-creating-connectors-aws.html[Connector in AWS^].
+You need an active https://docs.netapp.com/us-en/bluexp-setup-admin/task-quick-start-connector-aws.html[Connector in AWS^].
 
 .Steps
 
