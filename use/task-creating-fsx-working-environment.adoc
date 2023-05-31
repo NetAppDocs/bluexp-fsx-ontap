@@ -71,14 +71,13 @@ Leave _CIDR Range_ empty to automatically set an available range. Optionally, yo
 * 240.0.0.0/4
 * 255.255.255.255/32
 ====
-
 . *Route Tables* (Multiple Availability Zones only)
 +
 Select route tables that include routes to the floating IP addresses. If you have just one route table for the subnets in your VPC (the main route table), BlueXP automatically adds the floating IP addresses to that route table. 
 
 . *Data Encryption*
 +
-Accept the default AWS master key or click *Change Key* to select a different AWS Customer Master Key (CMK). For more information on CMK, see link:https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/task-setting-up-kms.html[Setting up the AWS KMS^].  
+Accept the default AWS master key or click *Change Key* to select a different AWS Customer Master Key (CMK). For more information on CMK, see link:https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/task-setting-up-kms.html[Setting up the AWS KMS^].  
 
 . *Storage Configuration*
 
