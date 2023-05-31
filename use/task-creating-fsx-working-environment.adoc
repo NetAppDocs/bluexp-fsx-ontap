@@ -42,7 +42,8 @@ image:screenshot_add_fsx_working_env.png[A screenshot of adding a working enviro
 . *Details and Credentials*
 
 .. Enter the working environment name you want to use.
-.. Optionally, you can create tags to categorize your working environment by clicking the plus sign and entering a tag name and value.
+.. Optionally, you can create tags by clicking the plus sign and entering a tag name and value.
+.. Optionally, you can specify the start time for Amazon FSx for NetApp ONTAP to perform 30-minute weekly maintenance. This can be used to ensure maintenance does not coincide with critical business activities. If you select *No preference*, a random start time will be assigned. You can change this at any time. 
 .. Enter and confirm the ONTAP Cluster password you want to use.
 .. Optionally, deselect the option to use the same password for your SVM user and set a different password.
 
@@ -58,8 +59,18 @@ NOTE: link:https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/security-group-ru
 
 . *Floating IP* (Multiple Availability Zones only)
 +
-Leave _CIDR Range_ empty to automatically set an available range. Optionally, you can use https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/task-setting-up-transit-gateway.html[AWS Transit Gateway^] to manually configure a range.
-
+Leave _CIDR Range_ empty to automatically set an available range. Optionally, you can use https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/task-setting-up-transit-gateway.html[AWS Transit Gateway^] to manually configure a range.
++
+[WARNING]
+====
+.IPs in the following ranges are not supported:
+* 0.0.0.0/8
+* 127.0.0.0/8
+* 198.19.0.0/20
+* 224.0.0.0/4
+* 240.0.0.0/4
+* 255.255.255.255/32
+====
 . *Route Tables* (Multiple Availability Zones only)
 +
 Select route tables that include routes to the floating IP addresses. If you have just one route table for the subnets in your VPC (the main route table), BlueXP automatically adds the floating IP addresses to that route table. 
