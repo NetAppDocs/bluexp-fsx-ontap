@@ -126,5 +126,5 @@ You can now use the credentials when creating an FSx for ONTAP working environme
 
 == Related links
 
-* https://docs.netapp.com/us-en/cloud-manager-setup-admin/concept-accounts-aws.html[AWS credentials and permissions^]
-* https://docs.netapp.com/us-en/cloud-manager-setup-admin/task-adding-aws-accounts.html[Managing AWS credentials for BlueXP^]
+* https://docs.netapp.com/us-en/bluexp-setup-admin/concept-accounts-aws.html[AWS credentials and permissions^]
+* https://docs.netapp.com/us-en/bluexp-setup-admin/task-adding-aws-accounts.html[Managing AWS credentials for BlueXP^]

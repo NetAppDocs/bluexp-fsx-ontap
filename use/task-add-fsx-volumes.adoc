@@ -20,7 +20,7 @@ After you set up your working environment, you can create and mount FSx for ONTA
 You can create and manage NFS, CIFS, and iSCSI volumes from your FSx for ONTAP working environment in BlueXP. Volumes created using ONTAP CLI will also be visible in your FSx for ONTAP working environment.
 
 .Before you begin
-Before creating a new volume you'll need an active https://docs.netapp.com/us-en/cloud-manager-setup-admin/task-creating-connectors-aws.html[Connector in AWS^].
+Before creating a new volume you'll need an active https://docs.netapp.com/us-en/bluexp-setup-admin/task-creating-connectors-aws.html[Connector in AWS^].
 
 If you want to use SMB, you must have set up DNS and Active Directory. For more information on DNS and Active Directory network configuration, see link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/self-manage-prereqs.html[AWS: Prerequisites for using a self-managed Microsoft AD^].
 
@@ -87,7 +87,7 @@ The listed DNS server must contain the service location records (SRV) needed to 
 
 | DNS Domain | The DNS domain for the storage virtual machine (SVM). In most cases, the domain is the same as the AD domain.
 
-| NTP Server | Select *Enable NTP Server Configuration* to configure an NTP server using the Active Directory DNS. If you need to configure an NTP server using a different address, then you should use the API. See the https://docs.netapp.com/us-en/cloud-manager-automation/index.html[BlueXP automation docs^] for details.
+| NTP Server | Select *Enable NTP Server Configuration* to configure an NTP server using the Active Directory DNS. If you need to configure an NTP server using a different address, then you should use the API. See the https://docs.netapp.com/us-en/bluexp-automation/index.html[BlueXP automation docs^] for details.
 |===
 --
 .iSCSI
@@ -98,7 +98,7 @@ To create a new initiator group:
 
 . Select **Create new**.
 . Select your operating system.
-. Click to add one or more host iSCSI qualified names (IQN). You can select existing IQNs or add new IQNs. For details on how to find the IQN for a volume, see link:https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/task-connect-lun.html[Connect a host to a LUN^].
+. Click to add one or more host iSCSI qualified names (IQN). You can select existing IQNs or add new IQNs. For details on how to find the IQN for a volume, see link:https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/task-connect-lun.html[Connect a host to a LUN^].
 . Enter an **Initiator Group Name**.
 +
 image:screenshot-volume-protocol-iscsi.png[A screenshot of the iSCSI configuration FSx for ONTAP volume creation.]
