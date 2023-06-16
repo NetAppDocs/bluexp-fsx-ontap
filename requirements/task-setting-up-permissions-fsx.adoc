@@ -60,7 +60,7 @@ The following minimum permissions are required to allow BlueXP to create your FS
 --
 .Automatic capacity
 --
-The following additional permissions are required to enable link:../use/task-manage-fsx-working-environment.html[automatic capacity management].
+The following additional permissions are required to enable link:../use/task-manage-working-environment.html[automatic capacity management].
 [source,json]
 "cloudwatch:GetMetricData",
 "cloudwatch:GetMetricStatistics"
