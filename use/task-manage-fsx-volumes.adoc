@@ -32,12 +32,8 @@ After you create a volume, you can modify it at any time.
 .Steps
 
 . Open the working environment.
-
 . Open the volume tab and select *Manage Volume* to open the *Volume Actions* menu.
 . Select *Edit volume settings*.
-.. For NFS, you can modify the size and tags.
-.. For CIFS, you can modify the share name, users, permissions, and Snapshot policy as needed.
-
 . Select *Apply*.
 
 == Clone volumes
@@ -57,7 +53,9 @@ After you create a volume, you can create a new read-write volume from a new Sna
 . Select *Clone*.
 
 == Manage volume tags
-You can add, modify, or delete volume tags. Tags added in BlueXP are reflected in the AWS Console. It can take up to an hour to synchronize tags with the AWS Console. 
+You can add, modify, or delete volume tags. Tags added in BlueXP are reflected in the AWS Console. It can take up to an hour to synchronize tags with the AWS Console.
+
+NOTE: You cannot edit volume tags you created in BlueXP until they sync with AWS. This can take up to an hour. If the *Manage volume tags* option is grayed out, AWS has not yet synced the volume tags. 
 
 .Steps
 
