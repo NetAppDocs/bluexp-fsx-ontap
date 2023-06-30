@@ -1,0 +1,47 @@
+---
+sidebar: sidebar
+permalink: use/task-add-fsx-svm.html
+keywords: fsx for ontap, fsx, aws, storage vm, storage virtual machine, svm, add svm, virtual machine
+summary: After you set up your working environment, you can view existing SVMs that are managed on the cluster or add a new SVM to the Amazon FSx for NetApp ONTAP cluster. 
+---
+
+= Add a storage VM for Amazon FSx for NetApp ONTAP
+:hardbreaks:
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ../media/
+
+[.lead]
+After you set up your working environment, you can view existing storage virtual machines (VMs) on a managed cluster or add a new storage VM to the Amazon FSx for NetApp ONTAP cluster. 
+
+== Add an SVM
+Using BlueXP, you can add storage VMs to the Amazon FSx for ONTAP file system up to the maximum number allowed. Refer to link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/managing-svms.html[AWS: Managing FSx for ONTAP storage virtual machines^] for details.
+
+.Before you begin
+* You need an active https://docs.netapp.com/us-en/bluexp-setup-admin/task-creating-connectors-aws.html[Connector in AWS^].
+
+* Create one or more storage VMs. Refer to link:https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/task-managing-svms.html[Manage storage VMs in BlueXP^] for details. 
+
+.About this task
+You can add an SVM by opening the working environment and selecting the *Storage VMs* tab or from the working environment *Overview* panel. This task describes adding volumes using the *Storage VMs* panel. 
+
+.Steps
+
+. Select the FSx for ONTAP working environment on the Canvas. If you don't have a Connector enabled, you'll be prompted to add one.
+
+. Select the *Storage VMs* panel. Existing SVMs are displayed. Select **Add SVM** to add a new SVM. 
++
+image:svm-add.png[A screenshot of the Storage VMs panel.]
+
+. *Add storage virtual machine*
+
+.. Enter the name of your storage VM.
+.. Select the configured storage VM root volume security style. Valid values are **UNIX**, **NTFS**, or **Mixed**. 
+.. Optionally, specify a storage VM administrative password.
+.. Optionally, create up to fifty tags to categorize your volumes by clicking the plus sign and entering a tag name and value. 
+.. Select **Add** to add the storage VM.  
+
+.Result
+
+The new storage VM is added to the working environment and the Amazon FSx for NetApp ONTAP file system. 
