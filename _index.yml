@@ -27,7 +27,7 @@ indexpage:
         - title: Manage volumes
           url: /use/task-manage-fsx-volumes.html
         - title: Add a storage virtual machine
-          url: /use/task-add-fsx-volumes.html
+          url: /use/task-add-fsx-svm.html
         - title: NVMe and iSCSI Host Configuration
           url: https://docs.netapp.com/us-en/ontap-sanhost/
     - title: Knowledge and support
