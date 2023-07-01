@@ -13,7 +13,7 @@ summary: After you create up your working environment, you can add, view, and ma
 :imagesdir: ../media/
 
 [.lead]
-After you create your working environment, you can add, view, and manage a storage virtual machine (VM)---also referred to as an _SVM_---on a managed Amazon FSx for NetApp ONTAP cluster. 
+After you create your working environment, you can add, view, and manage a storage virtual machine (VM)--also referred to as an _SVM_--on a managed Amazon FSx for NetApp ONTAP cluster. 
 
 == Add a storage VM
 Using BlueXP, you can add storage VMs to the Amazon FSx for ONTAP file system up to the maximum number allowed. Refer to link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/managing-svms.html[AWS: Managing FSx for ONTAP storage virtual machines^] for details.
