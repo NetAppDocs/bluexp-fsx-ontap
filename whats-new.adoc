@@ -16,6 +16,11 @@ summary: Learn what's new in Amazon FSx for NetApp ONTAP.
 Learn what's new in Amazon FSx for NetApp ONTAP.
 
 //tag::whats-new[]
+== 02 July 2023
+* You can now link:https://docs.netapp.com/us-en/cloud-manager-fsx-ontap/use/task-add-fsx-svm.html[add a storage VM] to the Amazon FSx for NetApp ONTAP file system using BlueXP. 
+
+* The **My Opportunities** tab is now **My estate**. The documentation is updated to reflect the new name. 
+
 == 04 June 2023
 * When link:https://docs.netapp.com/us-en/cloud-manager-fsx-ontap/use/task-creating-fsx-working-environment.html#create-an-amazon-fsx-for-netapp-ontap-working-environment[creating a working environment], you can specify the start time for the weekly 30-minute maintenance window to ensure maintenance does not conflict with critical business activities. 
 
@@ -26,15 +31,15 @@ Learn what's new in Amazon FSx for NetApp ONTAP.
 
 * You can optionally link:https://docs.netapp.com/us-en/bluexp-fsx-ontap/use/task-add-fsx-volumes.html#create-volumes[add^] and link:https://docs.netapp.com/us-en/bluexp-fsx-ontap/use/task-manage-fsx-volumes.html#manage-volume-tags[modify^] tags to categorize volumes. 
 
+//end::whats-new[]
 == 02 April 2023
 The IOPS limit is increased to allow manual or automatic provisioning up to 160,000. 
 
-//end::whats-new[]
 == 05 March 2023
 User interface improvements have been made and screenshots have been updated in the documentation. 
 
 == 01 January 2023
-You can now choose to enable link:https://docs.netapp.com/us-en/bluexp-fsx-ontap/use/task-manage-working-environment.html#manage-automatic-capacity[automatic capacity management^] to add incremental storage based on demand. Automatic capacity management polls the cluster at regular intervals to assess demand and automatically increases storage capacity in increments of 10% up to 80% of the the cluster’s maximum capacity.
+You can now choose to enable link:https://docs.netapp.com/us-en/bluexp-fsx-ontap/use/task-manage-working-environment.html#manage-automatic-capacity[automatic capacity management^] to add incremental storage based on demand. Automatic capacity management polls the cluster at regular intervals to assess demand and automatically increases storage capacity in increments of 10% up to 80% of the the cluste's maximum capacity.
 
 == 18 September 2022
 
