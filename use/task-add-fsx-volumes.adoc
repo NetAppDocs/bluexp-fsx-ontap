@@ -19,13 +19,13 @@ After you set up your working environment, you can create and mount FSx for ONTA
 
 You can create and manage NFS, CIFS, and iSCSI volumes from your FSx for ONTAP working environment in BlueXP. Volumes created using ONTAP CLI will also be visible in your FSx for ONTAP working environment.
 
-.Before you begin
-Before creating a new volume you'll need an active https://docs.netapp.com/us-en/bluexp-setup-admin/task-creating-connectors-aws.html[Connector in AWS^].
-
-If you want to use SMB, you must have set up DNS and Active Directory. For more information on DNS and Active Directory network configuration, see link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/self-manage-prereqs.html[AWS: Prerequisites for using a self-managed Microsoft AD^].
-
 .About this task
-You can add volumes by opening the working environment and selecting the *Volumes* tab or simply using working environment *Details* panel from the Canvas. This task describes adding volumes using the *Details* panel. 
+You can add volumes by opening the working environment and selecting the *Volumes* tab or simply using working environment *Details* panel from the Canvas. This task describes adding volumes using the *Details* panel.
+
+.Before you begin
+* You need an active https://docs.netapp.com/us-en/bluexp-setup-admin/task-creating-connectors-aws.html[Connector in AWS^].
+
+* If you want to use SMB, you must have set up DNS and Active Directory. For more information on DNS and Active Directory network configuration, see link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/self-manage-prereqs.html[AWS: Prerequisites for using a self-managed Microsoft AD^].
 
 .Steps
 
