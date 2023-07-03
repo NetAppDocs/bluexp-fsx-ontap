@@ -1,0 +1,101 @@
+---
+sidebar: sidebar
+permalink: use/task-add-fsx-svm.html
+keywords: fsx for ontap, fsx, aws, storage vm, storage virtual machine, svm, add svm, virtual machine, delete svm, tags, smb, cifs, delete
+summary: After you create up your working environment, you can add, view, and manage storage virtual machines (VMs) on a managed Amazon FSx for NetApp ONTAP cluster.
+---
+
+= Add and manage storage VMs for Amazon FSx for NetApp ONTAP
+:hardbreaks:
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ../media/
+
+[.lead]
+After you create your working environment, you can add, view, and manage a storage virtual machine (VM)--also referred to as an _SVM_--on a managed Amazon FSx for NetApp ONTAP cluster. 
+
+== Add a storage VM
+Using BlueXP, you can add storage VMs to the Amazon FSx for ONTAP file system up to the maximum number allowed. Refer to link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/managing-svms.html[AWS: Managing FSx for ONTAP storage virtual machines^] for details.
+
+.About this task
+You can add a storage VM by opening the working environment and selecting the *Storage VMs* tab or from the working environment *Overview* panel. This task describes adding a storage VM using the *Storage VMs* panel. 
+
+.Before you begin
+* You need an active https://docs.netapp.com/us-en/bluexp-setup-admin/task-creating-connectors-aws.html[Connector in AWS^].
+
+* Create one or more storage VMs. Refer to link:https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/task-managing-svms.html[Manage storage VMs in BlueXP^] for details. 
+
+.Steps
+
+. Select the FSx for ONTAP working environment on the Canvas. If you don't have a Connector enabled, you'll be prompted to add one.
+
+. Select the *Storage VMs* panel. Existing SVMs are displayed. Select **Add SVM** to add a new SVM. 
++
+image:svm-add.png[A screenshot of the Storage VMs panel.]
+
+. *Add storage virtual machine*
+
+.. Enter the name of your storage VM.
+.. Select the configured storage VM root volume security style. Valid values are **UNIX**, **NTFS**, or **Mixed**. 
+.. Optionally, specify a storage VM administrative password.
+.. Optionally, create up to fifty tags to categorize your SVM by clicking the plus sign and entering a tag name and value. 
+.. Select **Add** to add the storage VM.  
+
+.Result
+
+The new storage VM is added to the working environment and the Amazon FSx for NetApp ONTAP file system. 
+
+== Manage a storage VM
+You can view storage VM details, manage tags, set up an SMB/CIFS connection, or delete a storage SVM.
+
+.Before you begin
+You need an active https://docs.netapp.com/us-en/bluexp-setup-admin/task-creating-connectors-aws.html[Connector in AWS^].
+
+.Steps
+
+. Select the FSx for ONTAP working environment on the Canvas. If you don't have a Connector enabled, you'll be prompted to add one.
+
+. Select the *Storage VMs* panel. 
+
+. Use the three dots (image:icon-three-dots.png[icon of three dots]) to open the options menu for the storage VM. 
++
+image:svm-manage.png[A screenshot of the manage storage VM option menu from the storage VMs panel.]
+
+. Select a menu option to view or manage the storage VM settings. 
+* **View SVM details**: You can review details including root volume, security style, allowed protocols, Active Directory domain, and tags. 
+* **Manage SVM tags**: You can add, edit, or remove storage VM tags. Changes you make will sync with the AWS Console.  
+* **Set up SMB/CIFS**: If this is the first CIFS connection for this working environment, you will be prompted to configure CIFS connectivity using an _Active Directory_ or _Workgroup_ setup.
+
+** If you select a Workgroup setup, enter the server and workgroup name for a workgroup configured for CIFS.
+** If you select an Active Directory setup, you'll need to provide the following configuration information.
++
+.Active Directory configuration
+[%collapsible%open]
+====
+[collapsible]
+[cols=2*,options="header",cols="25,75"]
+|===
+| Field
+| Description
+
+| DNS Primary IP Address | The IP addresses of the DNS servers that provides name resolution for the CIFS server.
+The listed DNS server must contain the service location records (SRV) needed to locate the Active Directory LDAP servers and domain controllers for the domain the CIFS server will join.
+
+| Active Directory Domain to join | The FQDN of the Active Directory (AD) domain you want the CIFS server to join.
+
+| Credentials authorized to join the domain | The name and password of a Windows account with sufficient privileges to add computers to the specified Organizational Unit (OU) within the AD domain.
+
+| CIFS server NetBIOS name | A CIFS server name that is unique in the AD domain.
+
+| Organizational Unit | The organizational unit within the AD domain to associate with the CIFS server. The default is CN=Computers.
+
+| DNS Domain | The DNS domain for the storage virtual machine (SVM). In most cases, the domain is the same as the AD domain.
+
+| NTP Server | Select *Enable NTP Server Configuration* to configure an NTP server using the Active Directory DNS. If you need to configure an NTP server using a different address, then you should use the API. See the https://docs.netapp.com/us-en/bluexp-automation/index.html[BlueXP automation docs^] for details.
+|=== 
+====
+
+* **Delete SVM**: You can delete the storage VM. You must verify the storage VM name to delete it. 
++
+NOTE: You must delete all volumes on the storage VM before deleting the storage VM. 

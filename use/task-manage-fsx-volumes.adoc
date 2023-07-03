@@ -98,12 +98,6 @@ Change the tiering policy for the volume.
 
 . Select a new volume tiering policy and click *Change*.
 
-== Replicate and sync data
-
-You can replicate data between storage environments using BlueXP. To configure FSx for ONTAP replication, see https://docs.netapp.com/us-en/bluexp-replication/task-replicating-data.html[replicating data between systems^].
-
-You can create sync relationships using BlueXP  copy and sync. To configure sync relationships, see https://docs.netapp.com/us-en/bluexp-copy-sync/task-creating-relationships.html[create sync relationships^].
-
 == Delete volumes
 
 Delete the volumes that you no longer need.
