@@ -16,6 +16,11 @@ summary: Learn what's new in Amazon FSx for NetApp ONTAP.
 Learn what's new in Amazon FSx for NetApp ONTAP.
 
 //tag::whats-new[]
+== 30 July 2023
+Customers can now create Amazon FSx for NetApp ONTAP file systems in three new AWS Regions: Europe (Zurich), Europe (Spain), and Asia Pacific (Hyderabad). 
+
+Refer to link:https://aws.amazon.com/about-aws/whats-new/2023/04/amazon-fsx-netapp-ontap-three-regions/#:~:text=Customers%20can%20now%20create%20Amazon,file%20systems%20in%20the%20cloud[Amazon FSx for NetApp ONTAP is now available in three additional regions^] for full details. 
+
 == 02 July 2023
 * You can now link:https://docs.netapp.com/us-en/cloud-manager-fsx-ontap/use/task-add-fsx-svm.html[add a storage VM] to the Amazon FSx for NetApp ONTAP file system using BlueXP. 
 
@@ -26,12 +31,12 @@ Learn what's new in Amazon FSx for NetApp ONTAP.
 
 * When link:https://docs.netapp.com/us-en/cloud-manager-fsx-ontap/use/task-add-fsx-volumes.html[creating a volume], you can enable data optimization by creating a FlexGroup to distribute data across volumes. 
 
+//end::whats-new[]
 == 07 May 2023
 * When creating a working environment, you can now have BlueXP link:https://docs.netapp.com/us-en/bluexp-fsx-ontap/use/task-creating-fsx-working-environment.html#create-an-amazon-fsx-for-netapp-ontap-working-environment[generate a security group^] that allows traffic within the selected VPC only. This feature link:https://docs.netapp.com/us-en/bluexp-fsx-ontap/requirements/task-setting-up-permissions-fsx.html[requires additional permissions^]. 
 
 * You can optionally link:https://docs.netapp.com/us-en/bluexp-fsx-ontap/use/task-add-fsx-volumes.html#create-volumes[add^] and link:https://docs.netapp.com/us-en/bluexp-fsx-ontap/use/task-manage-fsx-volumes.html#manage-volume-tags[modify^] tags to categorize volumes. 
 
-//end::whats-new[]
 == 02 April 2023
 The IOPS limit is increased to allow manual or automatic provisioning up to 160,000. 
 
