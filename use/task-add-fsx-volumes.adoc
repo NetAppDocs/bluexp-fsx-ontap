@@ -5,7 +5,7 @@ keywords: fsx for ontap, fsx, aws, create volumes, create nfs volumes, delete nf
 summary: After you set up your working environment, you can create and manage Amazon FSx for NetApp ONTAP volumes, clones and snapshots, change tiering policies, and remove or delete FSx for ONTAP.
 ---
 
-= Create volumes for Amazon FSx for NetApp ONTAP
+= Create volumes for FSx for ONTAP
 :hardbreaks:
 :nofooter:
 :icons: font

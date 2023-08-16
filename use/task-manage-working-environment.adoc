@@ -5,7 +5,7 @@ keywords: amazon fsx for netapp ontap, fsx, manage working environment, delete w
 summary: BlueXP enables you to manage your FSx for ONTAP working environment. You can enable automatic capacity management, change throughput and storage capacity and IOPS, remove or delete the working environment, and manage data services such as backup and recovery, copy and sync, classification, replication, and volume caching. 
 ---
 
-= Manage an Amazon FSx for NetApp ONTAP working environment
+= Manage an FSx for ONTAP working environment
 :hardbreaks:
 :nofooter:
 :icons: font
@@ -93,7 +93,7 @@ image:screenshot-configure-iops.png[A screenshot of the page to change the stora
 
 == Remove FSx for ONTAP from the workspace
 
-You can remove FSx for ONTAP from BlueXP without deleting your FSx for ONTAP account or volumes. You can add the FSx for ONTAP working environment back to BlueXP at any time.
+You can remove FSx for ONTAP from BlueXP without deleting your account or volumes. You can add the FSx for ONTAP working environment back to BlueXP at any time.
 
 .Steps
 
@@ -130,7 +130,7 @@ image:screenshot_fsx_working_environment_delete.png[A screenshot of delete optio
 . Enter the name of the working environment and select *Delete*.
 
 == Manage data services
-You can manage additional data services from the Amazon FSx for NetApp ONTAP working environment. 
+You can manage additional data services from the FSx for ONTAP working environment. 
 
 image:data-services.png[A screenshot of the data services tab on the working environment]
 

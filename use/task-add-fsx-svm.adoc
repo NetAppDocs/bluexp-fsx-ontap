@@ -5,7 +5,7 @@ keywords: fsx for ontap, fsx, aws, storage vm, storage virtual machine, svm, add
 summary: After you create up your working environment, you can add, view, and manage storage virtual machines (VMs) on a managed Amazon FSx for NetApp ONTAP cluster.
 ---
 
-= Add and manage storage VMs for Amazon FSx for NetApp ONTAP
+= Add and manage storage VMs for FSx for ONTAP
 :hardbreaks:
 :nofooter:
 :icons: font
@@ -13,10 +13,10 @@ summary: After you create up your working environment, you can add, view, and ma
 :imagesdir: ../media/
 
 [.lead]
-After you create your working environment, you can add, view, and manage a storage virtual machine (VM)--also referred to as an _SVM_--on a managed Amazon FSx for NetApp ONTAP cluster. 
+After you create your working environment, you can add, view, and manage a storage virtual machine (VM)--also referred to as an _SVM_--on a managed FSx for ONTAP cluster. 
 
 == Add a storage VM
-Using BlueXP, you can add storage VMs to the Amazon FSx for ONTAP file system up to the maximum number allowed. Refer to link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/managing-svms.html[AWS: Managing FSx for ONTAP storage virtual machines^] for details.
+Using BlueXP, you can add storage VMs to the FSx for ONTAP file system up to the maximum number allowed. Refer to link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/managing-svms.html[AWS: Managing FSx for ONTAP storage virtual machines^] for details.
 
 .About this task
 You can add a storage VM by opening the working environment and selecting the *Storage VMs* tab or from the working environment *Overview* panel. This task describes adding a storage VM using the *Storage VMs* panel. 
@@ -44,7 +44,7 @@ image:svm-add.png[A screenshot of the Storage VMs panel.]
 
 .Result
 
-The new storage VM is added to the working environment and the Amazon FSx for NetApp ONTAP file system. 
+The new storage VM is added to the working environment and the FSx for ONTAP file system. 
 
 == Manage a storage VM
 You can view storage VM details, manage tags, set up an SMB/CIFS connection, or delete a storage SVM.
@@ -64,7 +64,7 @@ image:svm-manage.png[A screenshot of the manage storage VM option menu from the 
 
 . Select a menu option to view or manage the storage VM settings. 
 * **View SVM details**: You can review details including root volume, security style, allowed protocols, Active Directory domain, and tags. 
-* **Manage SVM tags**: You can add, edit, or remove storage VM tags. Changes you make will sync with the AWS Console.  
+* **Manage SVM tags**: You can add, edit, or remove storage VM tags. Changes you make will sync with the AWS Management Console.  
 * **Set up SMB/CIFS**: If this is the first CIFS connection for this working environment, you will be prompted to configure CIFS connectivity using an _Active Directory_ or _Workgroup_ setup.
 
 ** If you select a Workgroup setup, enter the server and workgroup name for a workgroup configured for CIFS.
