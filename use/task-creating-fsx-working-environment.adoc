@@ -5,7 +5,7 @@ keywords: Amazon FSx for NetApp ONTAP, fsx, volumes, create working environment,
 summary: Using BlueXP you can create or discover an FSx for ONTAP working environments to add and manage volumes and additional data services.
 ---
 
-= Create or discover an Amazon FSx for NetApp ONTAP working environment
+= Create or discover an FSx for ONTAP working environment
 :hardbreaks:
 :nofooter:
 :icons: font
@@ -15,7 +15,7 @@ summary: Using BlueXP you can create or discover an FSx for ONTAP working enviro
 [.lead]
 Using BlueXP you can create or discover an FSx for ONTAP working environment to add and manage volumes and additional data services.
 
-== Create an Amazon FSx for NetApp ONTAP working environment
+== Create an FSx for ONTAP working environment
 
 The first step is to create an FSx for ONTAP working environment. If you already created an FSx for ONTAP file system in the AWS Management Console, you can link:task-creating-fsx-working-environment.html#discover-an-existing-fsx-for-ontap-file-system[discover it using BlueXP].
 
@@ -31,7 +31,7 @@ Before creating your FSx for ONTAP working environment in BlueXP, you will need:
 
 . In BlueXP, add a new Working Environment, select *Amazon Web Services*, and click *Add new* for Amazon FSx for NetApp ONTAP.
 +
-image:screenshot_add_fsx_working_env.png[A screenshot of adding a working environment for Amazon FSx for NetApp ONTAP]
+image:screenshot_add_fsx_working_env.png[A screenshot of adding a working environment for FSx for ONTAP]
 
 . *FSx for ONTAP Authentication* 
 
@@ -43,7 +43,7 @@ image:screenshot_add_fsx_working_env.png[A screenshot of adding a working enviro
 
 .. Enter the working environment name you want to use.
 .. Optionally, you can create tags by clicking the plus sign and entering a tag name and value.
-.. Optionally, you can specify the start time for Amazon FSx for NetApp ONTAP to perform 30-minute weekly maintenance. This can be used to ensure maintenance does not coincide with critical business activities. If you select *No preference*, a random start time will be assigned. You can change this at any time. 
+.. Optionally, you can specify the start time for FSx for ONTAP to perform 30-minute weekly maintenance. This can be used to ensure maintenance does not coincide with critical business activities. If you select *No preference*, a random start time will be assigned. You can change this at any time. 
 .. Enter and confirm the ONTAP Cluster password you want to use.
 .. Optionally, deselect the option to use the same password for your SVM user and set a different password.
 
@@ -96,14 +96,14 @@ NOTE: If you specify an IOPS value that does not meet the minimum requirements, 
 
 BlueXP displays your FSx for ONTAP configuration on the Canvas. You can now add volumes to your FSx for ONTAP working environment using BlueXP.
 
-image:screenshot_add_fsx_cloud.png[A screenshot of Amazon FSx for NetApp ONTAP on the working environments page.]
+image:screenshot_add_fsx_cloud.png[A screenshot of FSx for ONTAP on the working environments page.]
 
 == Discover an existing FSx for ONTAP file system 
 
 If you previously provided your AWS credentials to BlueXP, *My estate* can automatically discover and suggest FSx for ONTAP file systems to add and manage using BlueXP. You can also review available data services. 
 
 .About this task
-You can discover FSx for ONTAP file systems when you <<Create an Amazon FSx for NetApp ONTAP working environment>> or by using the *My estate* page. This task describes discovery using *My estate*
+You can discover FSx for ONTAP file systems when you <<Create an FSx for ONTAP working environment>> or by using the *My estate* page. This task describes discovery using *My estate*
 
 .Steps
 

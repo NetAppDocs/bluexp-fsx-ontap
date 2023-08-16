@@ -2,7 +2,7 @@
 sidebar: sidebar
 permalink: requirements/task-setting-up-permissions-fsx.html
 keywords: fsx for ontap, iam, user role, permissions, aws govcloud, govcloud, credentials
-summary: In order to create or manage your Amazon FSx for NetApp ONTAP working environment, you need to have an AWS access key and secret key for an IAM user role with FSx for ONTAP permissions.
+summary: To create or manage an FSx for ONTAP working environment, you need to add AWS credentials to BlueXP by providing the ARN of an IAM role that gives BlueXP the permissions needed to create an FSx for ONTAP working environment.
 ---
 
 = Set up permissions for FSx for ONTAP
@@ -13,7 +13,7 @@ summary: In order to create or manage your Amazon FSx for NetApp ONTAP working e
 :imagesdir: ../media/
 
 [.lead]
-To create or manage an Amazon FSx for NetApp ONTAP working environment, you need to add AWS credentials to BlueXP by providing the ARN of an IAM role that gives BlueXP the permissions needed to create an FSx for ONTAP working environment.
+To create or manage an FSx for ONTAP working environment, you need to add AWS credentials to BlueXP by providing the ARN of an IAM role that gives BlueXP the permissions needed to create an FSx for ONTAP working environment.
 
 == Set up the IAM role
 
