@@ -13,7 +13,7 @@ summary: Learn what's new in Amazon FSx for NetApp ONTAP.
 :imagesdir: ./media/
 
 [.lead]
-Learn what's new in Amazon FSx for NetApp ONTAP.
+Learn what's new in FSx for ONTAP.
 
 //tag::whats-new[]
 == 30 July 2023
