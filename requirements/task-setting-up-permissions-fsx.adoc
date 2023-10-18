@@ -23,13 +23,15 @@ Set up an IAM role that enables BlueXP to assume the role.
 
 . Go to the IAM console in the target account.
 
-. Under Access Management, click *Roles > Create Role* and follow the steps to create the role.
+. Grant BlueXP access to the AWS account. Under Access Management, click *Roles > Create Role* and follow the steps to create the role.
 +
 * Under *Trusted entity type*, select *AWS account*.
-* Select *Another AWS account* and enter the ID of BlueXP. 
+* Select *Another AWS account* and enter the BlueXP *Account ID*: 
 ** For BlueXP SaaS: 952013314444
 ** For AWS GovCloud (US): 033442085313
-* Create a policy that includes the following required minimum permissions and optional permissions, as needed.
++
+NOTE: For increased security, we suggest you specify an link:https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_create_for-user_externalid.html[_External ID_^]. To access your AWS account, BlueXP will have to provide the role ARN (Amazon Resource Name) and the external ID you specified. This prevents the link:https://docs.aws.amazon.com/IAM/latest/UserGuide/confused-deputy.html[confused deputy problem^]. 
+. Create a policy that includes the following required minimum permissions and optional permissions, as needed.
 +
 [role="tabbed-block"]
 ====
@@ -84,7 +86,7 @@ The following additional permissions are required to allow BlueXP to link:../use
 
 ====
 
-. Copy the Role ARN of the IAM role so that you can paste it in BlueXP in the next step.
+. Copy the role ARN of the IAM role so that you can paste it in BlueXP in the next step.
 
 .Result
 
@@ -96,7 +98,7 @@ After you provide the IAM role with the required permissions, add the role ARN t
 
 .Before you get started
 
-If you just created the IAM role, it might take a few minutes until they are available for use. Wait a few minutes before you add the credentials to BlueXP.
+If you just created the IAM role, wait a few minutes for the new credentials to become available. 
 
 .Steps
 
@@ -108,7 +110,7 @@ image:screenshot_settings_icon.gif[A screenshot that shows the Settings icon in 
 
 .. *Credentials Location*: Select *Amazon Web Services > BlueXP*.
 
-.. *Define Credentials*: Provide the ARN (Amazon Resource Name) of the IAM role.
+.. *Define Credentials*: Provide a *Credentials name* and the *Role ARN* and *External ID* (if specified) you created when you <<Set up the IAM role>>. 
 +
 [NOTE]
 ==============
