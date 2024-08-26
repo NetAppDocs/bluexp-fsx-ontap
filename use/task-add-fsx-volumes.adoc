@@ -49,18 +49,28 @@ NOTE: FlexGroup distribution is available for NFS and CIFS volume protocols only
 . *Volumes protocol*: 
 .. Select an NFS, CIFS, or iSCSI volume protocol.
 +
+// start tabbed area
++
 [role="tabbed-block"]
+
 ====
+
 .NFS
+
 --
+
 . Select an Access Control policy.
 . Select the NFS versions.
 . Select a Custom Export Policy. Click the information icon for valid value criteria.
 +
 image:screenshot_fsx_volume_protocol_nfs.png[A screenshot of the NFS configuration FSx for ONTAP volume creation.]
+
 --
+
 .CIFS
+
 --
+
 . Enter a Share Name.
 . Enter users or groups separated by a semicolon.
 . Select the permission level for the volume.
@@ -91,10 +101,15 @@ The listed DNS server must contain the service location records (SRV) needed to 
 | DNS Domain | The DNS domain for the storage virtual machine (SVM). In most cases, the domain is the same as the AD domain.
 
 | NTP Server | Select *Enable NTP Server Configuration* to configure an NTP server using the Active Directory DNS. If you need to configure an NTP server using a different address, then you should use the API. See the https://docs.netapp.com/us-en/bluexp-automation/index.html[BlueXP automation docs^] for details.
+
 |===
+
 --
+
 .iSCSI
+
 --
+
 You can connect your LUN using an existing initiator group or by creating a new one. To map an existing initiator group, select your operating system and one or more initiator groups. 
 
 To create a new initiator group:
@@ -105,8 +120,11 @@ To create a new initiator group:
 . Enter an **Initiator Group Name**.
 +
 image:screenshot-volume-protocol-iscsi.png[A screenshot of the iSCSI configuration FSx for ONTAP volume creation.]
+
 --
+
 ====
+// end tabbed area 
 . *Usage Profile and Tiering*
 
 .. By default, *Storage Efficiency* is disabled. You can change this setting to enable deduplication and compression.
