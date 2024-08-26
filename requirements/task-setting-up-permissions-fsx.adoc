@@ -33,10 +33,16 @@ Set up an IAM role that enables BlueXP to assume the role.
 NOTE: For increased security, we suggest you specify an link:https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_create_for-user_externalid.html[_External ID_^]. To access your AWS account, BlueXP will have to provide the role ARN (Amazon Resource Name) and the external ID you specified. This prevents the link:https://docs.aws.amazon.com/IAM/latest/UserGuide/confused-deputy.html[confused deputy problem^]. 
 . Create a policy that includes the following required minimum permissions and optional permissions, as needed.
 +
+// start tabbed area
++
 [role="tabbed-block"]
+
 ====
+
 .Required permissions
+
 --
+
 The following minimum permissions are required to allow BlueXP to create your FSx for NetApp ONTAP file system.
 [source,json]
 {
@@ -60,9 +66,13 @@ The following minimum permissions are required to allow BlueXP to create your FS
 }
 
 --
+
 .Automatic capacity
+
 --
+
 The following additional permissions are required to enable link:../use/task-manage-working-environment.html[automatic capacity management].
+
 [source,json]
 "cloudwatch:GetMetricData",
 "cloudwatch:GetMetricStatistics"
@@ -70,8 +80,11 @@ The following additional permissions are required to enable link:../use/task-man
 --
 
 .Security groups
+
 --
-The following additional permissions are required to allow BlueXP to link:../use/task-creating-fsx-working-environment.html[generate security groups]. 
+
+The following additional permissions are required to allow BlueXP to link:../use/task-creating-fsx-working-environment.html[generate security groups].
+
 [source,json]
 "ec2:AuthorizeSecurityGroupEgress",
 "ec2:AuthorizeSecurityGroupIngress",
@@ -84,7 +97,10 @@ The following additional permissions are required to allow BlueXP to link:../use
 "cloudformation:DescribeStacks",
 "cloudformation:DescribeStackEvents"
 
+--
+
 ====
+// end tabbed area 
 
 . Copy the role ARN of the IAM role so that you can paste it in BlueXP in the next step.
 
