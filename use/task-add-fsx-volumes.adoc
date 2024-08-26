@@ -124,9 +124,7 @@ image:screenshot-volume-protocol-iscsi.png[A screenshot of the iSCSI configurati
 --
 
 ====
-
 // end tabbed area 
-
 . *Usage Profile and Tiering*
 
 .. By default, *Storage Efficiency* is disabled. You can change this setting to enable deduplication and compression.
