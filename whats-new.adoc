@@ -4,7 +4,6 @@ permalink: whats-new.html
 keywords: what's new, features, new, release notes, bugs, limitations, known issues, enhancements, fixes, cloud manager
 summary: Learn what's new in Amazon FSx for NetApp ONTAP.
 ---
-
 = What's new with Amazon FSx for NetApp ONTAP
 :hardbreaks:
 :nofooter:
@@ -15,23 +14,15 @@ summary: Learn what's new in Amazon FSx for NetApp ONTAP.
 [.lead]
 Learn what's new in FSx for ONTAP.
 
-//tag::whats-new[]
 == 30 July 2023
-Customers can now create Amazon FSx for NetApp ONTAP file systems in three new AWS Regions: Europe (Zurich), Europe (Spain), and Asia Pacific (Hyderabad). 
-
-Refer to link:https://aws.amazon.com/about-aws/whats-new/2023/04/amazon-fsx-netapp-ontap-three-regions/#:~:text=Customers%20can%20now%20create%20Amazon,file%20systems%20in%20the%20cloud[Amazon FSx for NetApp ONTAP is now available in three additional regions^] for full details. 
+include::_whatsnew/2023-07-30.adoc[]
 
 == 02 July 2023
-* You can now link:https://docs.netapp.com/us-en/cloud-manager-fsx-ontap/use/task-add-fsx-svm.html[add a storage VM] to the Amazon FSx for NetApp ONTAP file system using BlueXP. 
-
-* The **My Opportunities** tab is now **My estate**. The documentation is updated to reflect the new name. 
+include::_whatsnew/2023-07-02.adoc[]
 
 == 04 June 2023
-* When link:https://docs.netapp.com/us-en/cloud-manager-fsx-ontap/use/task-creating-fsx-working-environment.html#create-an-amazon-fsx-for-netapp-ontap-working-environment[creating a working environment], you can specify the start time for the weekly 30-minute maintenance window to ensure maintenance does not conflict with critical business activities. 
+include::_whatsnew/2023-06-04.adoc[]
 
-* When link:https://docs.netapp.com/us-en/cloud-manager-fsx-ontap/use/task-add-fsx-volumes.html[creating a volume], you can enable data optimization by creating a FlexGroup to distribute data across volumes. 
-
-//end::whats-new[]
 == 07 May 2023
 * When creating a working environment, you can now have BlueXP link:https://docs.netapp.com/us-en/bluexp-fsx-ontap/use/task-creating-fsx-working-environment.html#create-an-amazon-fsx-for-netapp-ontap-working-environment[generate a security group^] that allows traffic within the selected VPC only. This feature link:https://docs.netapp.com/us-en/bluexp-fsx-ontap/requirements/task-setting-up-permissions-fsx.html[requires additional permissions^]. 
 
