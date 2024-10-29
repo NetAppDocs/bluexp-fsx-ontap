@@ -53,4 +53,4 @@ Amazon FSx for NetApp ONTAP is an AWS first-party solution. For questions or tec
 
 For general questions about BlueXP or BlueXP storage solutions and services, you can start with the in-line BlueXP chat.
 
-For technical support issues specific to BlueXP or BlueXP storage solutions and services,  you can open a NetApp support ticket using your BlueXP account level serial number. You will need to link:https://docs.netapp.com/us-en/bluexp-fsx-ontap/support/task-support-registration.html[register your BlueXP account^] to activate support.
+For technical support issues specific to BlueXP or BlueXP storage solutions and services,  you can open a NetApp support ticket using your BlueXP organization level serial number. You will need to link:https://docs.netapp.com/us-en/bluexp-fsx-ontap/support/task-support-registration.html[register your BlueXP organization^] to activate support.
