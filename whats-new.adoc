@@ -14,6 +14,7 @@ summary: Learn what's new in Amazon FSx for NetApp ONTAP.
 [.lead]
 Learn what's new in FSx for ONTAP.
 
+// tag::whats-new[]
 == 30 July 2023
 include::_whatsnew/2023-07-30.adoc[]
 
@@ -22,6 +23,7 @@ include::_whatsnew/2023-07-02.adoc[]
 
 == 04 June 2023
 include::_whatsnew/2023-06-04.adoc[]
+// end::whats-new[]
 
 == 07 May 2023
 === Generate a security group
