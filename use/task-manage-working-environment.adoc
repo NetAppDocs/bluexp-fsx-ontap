@@ -21,7 +21,7 @@ When you open an FSx for ONTAP working environment from the BlueXP canvas, you'r
 
 https://docs.netapp.com/us-en/workload-fsx-ontap/index.html[Learn how to manage a file system using BlueXP workload factory^]
 
-=== Manage a file system using ONTAP System Manager
+== Manage a file system using ONTAP System Manager
 
 If you're familiar with ONTAP System Manager, you can manage an FSx for ONTAP file system directly from BlueXP by using the ONTAP System Manager interface.
 

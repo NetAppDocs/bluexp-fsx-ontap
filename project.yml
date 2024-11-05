@@ -24,7 +24,7 @@ sidebar:
           url: /requirements/task-setting-up-permissions-fsx.html
         - title: Create or discover a working environment
           url: /use/task-creating-fsx-working-environment.html
-    - title: Use Amazon FSx for NetApp ONTAP
+    - title: Manage an FSx for ONTAP file system
       url: /use/task-manage-working-environment.html
     - title: Knowledge and support
       entries:
