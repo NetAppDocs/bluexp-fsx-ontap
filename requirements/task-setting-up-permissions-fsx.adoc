@@ -19,7 +19,7 @@ To create or manage an FSx for ONTAP working environment, you need to add AWS cr
 
 BlueXP FSx for ONTAP uses the same set of AWS credentials and permissions as in BlueXP workloads. Credentials and permissions are managed via the workloads user interface. 
 
-The main difference for BlueXP FSx for ONTAP users are the options to enable workload capabilities like Storage, VMware, Databases, and GenAI, and to select permissions for the workloads. For FSx for ONTAP, also known as _Storage_ in BlueXP workloads, you'll need to decide which level of permissions, or _operational mode_, you'd like to operate in. link:https://docs.netapp.com/us-en/workload-setup-admin/operational-modes.html.html[Learn more about operational modes]. BlueXP FSx for ONTAP will operate in _basic_ mode unless you add AWS account credentials. You can add credentials to enable other operational modes, such as Read mode and Automate mode.
+The main difference for BlueXP FSx for ONTAP users are the options to enable workload capabilities like Storage, VMware, Databases, and GenAI, and to select permissions for the workloads. For FSx for ONTAP, also known as _Storage_ in BlueXP workload factory, you'll need to decide which level of permissions, or _operational mode_, you'd like to operate in. link:https://docs.netapp.com/us-en/workload-setup-admin/operational-modes.html.html[Learn more about operational modes]. BlueXP FSx for ONTAP will operate in _basic_ mode unless you add AWS account credentials. You can add credentials to enable other operational modes, such as Read mode and Automate mode.
 
 NOTE: Existing AWS credentials are available from BlueXP settings > *Credentials* page. Newly added credentials are displayed from Workloads user interface within BlueXP. A link is provided in the BlueXP settings credentials page to help you navigate to the Workloads credentials page. 
 
@@ -40,7 +40,7 @@ There are three parts to creating the credentials:
 
 * Select the services and permissions level that you would like to use and then create IAM policies from the AWS Management Console.
 * Create an IAM role from the AWS Management Console.
-* From Workloads in BlueXP, enter a name and add the credentials.
+* From workloads in BlueXP, enter a name and add the credentials.
 
 To create or manage an FSx for ONTAP working environment, you need to add AWS credentials to BlueXP by providing the ARN of an IAM role that gives BlueXP the permissions needed to create an FSx for ONTAP working environment.
 
