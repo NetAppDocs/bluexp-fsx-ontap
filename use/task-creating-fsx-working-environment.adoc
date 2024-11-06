@@ -42,7 +42,7 @@ NOTE: When using Terraform from Codebox, the code you copy or download hides `fs
 Quick create enables you to use a recommended best-practice configuration. You can change most settings after you create an FSx for ONTAP file system. 
 
 .Steps
-. In BlueXP, add a new Working Environment, select *Amazon Web Services*, and click *Add new* for Amazon FSx for NetApp ONTAP. 
+. In BlueXP, add a new Working Environment, select *Amazon Web Services*, and select *Add new* for Amazon FSx for NetApp ONTAP. 
 . On the Create FSx for ONTAP page, select *Quick create*. 
 +
 You can also load a saved configuration.
@@ -94,7 +94,7 @@ If you created the file system, BlueXP displays your FSx for ONTAP configuration
 With Advanced create, you set all of the configuration options, including availability, security, backups, and maintenance. 
 
 .Steps
-. In BlueXP, add a new Working Environment, select *Amazon Web Services*, and click *Add new* for Amazon FSx for NetApp ONTAP. 
+. In BlueXP, add a new Working Environment, select *Amazon Web Services*, and select *Add new* for Amazon FSx for NetApp ONTAP. 
 . On the Create FSx for ONTAP page, select *Advanced create*. 
 +
 You can also load a saved configuration.
@@ -176,11 +176,11 @@ You can discover FSx for ONTAP file systems when you <<Create an FSx for ONTAP w
 --
 .Steps
 
-. In BlueXP, add a new Working Environment, select *Amazon Web Services*, and click *Discover Existing* for Amazon FSx for NetApp ONTAP. 
+. In BlueXP, add a new Working Environment, select *Amazon Web Services*, and select *Discover Existing* for Amazon FSx for NetApp ONTAP. 
 
 . Select the credentials and region to display existing file systems. 
 
-. Select one or more file systems and click *Discover* to add them to the Canvas. 
+. Select one or more file systems and select *Discover* to add them to the Canvas. 
 
 [NOTE]
 ===============================
@@ -196,13 +196,13 @@ You can discover FSx for ONTAP file systems when you <<Create an FSx for ONTAP w
 
 .Steps
 
-. In BlueXP, click the *My estate* tab. 
+. In BlueXP, select the *My estate* tab. 
 
-. The count of discovered FSx for ONTAP file systems displays. Click *Discover*.  
+. The count of discovered FSx for ONTAP file systems displays. Select *Discover*.  
 +
 image:screenshot-opportunities.png[A screenshot of the My estate page for FSx for ONTAP.]
 
-. Select one or more file systems and click *Discover* to add them to the Canvas. 
+. Select one or more file systems and select *Discover* to add them to the Canvas. 
 
 [NOTE]
 ===============================
