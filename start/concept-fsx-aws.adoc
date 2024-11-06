@@ -15,6 +15,11 @@ summary: Amazon FSx for NetApp ONTAP is a fully managed service allowing custome
 [.lead]
 link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/what-is-fsx-ontap.html[Amazon FSx for NetApp ONTAP^] is a fully managed service allowing customers to launch and run file systems powered by the NetApp ONTAP storage operating system. FSx for ONTAP provides the same features, performance, and administrative capabilities NetApp customers use on premises, with the simplicity, agility, security, and scalability of a native AWS service.
 
+== Using FSx for ONTAP in BlueXP
+You can use the BlueXP Canvas to create, discover, and manage FSx for ONTAP file systems from within NetApp BlueXP. If you instead want to manage workloads that use FSx for ONTAP file systems, use https://docs.netapp.com/us-en/workload-fsx-ontap/index.html[BlueXP workload factory^].
+
+link:../use/task-creating-fsx-working-environment.html[Learn more about using FSx for ONTAP in BlueXP^].
+
 == Features
 
 * No need to configure or manage storage devices, software, or backups.
@@ -22,11 +27,6 @@ link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/what-is-fsx-ontap.html[Am
 * Low cost, virtually unlimited data storage capacity using available Infrequently Accessed (IA) storage tier.
 * Certified to run on latency-sensitive applications including Oracle RAC.
 * Choice of bundled and pay-as-you-go pricing.
-
-== Using FSx for ONTAP in BlueXP
-You can use the BlueXP Canvas to create, discover, and manage FSx for ONTAP file systems from within NetApp BlueXP. If you instead want to manage workloads that use FSx for ONTAP file systems, you can do so from within https://docs.netapp.com/us-en/workload-fsx-ontap/index.html[BlueXP workload factory^].
-
-link:../use/task-creating-fsx-working-environment.html[Learn more about using FSx for ONTAP in BlueXP^].
 
 == Additional features in BlueXP
 
