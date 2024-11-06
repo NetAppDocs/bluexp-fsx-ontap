@@ -60,7 +60,7 @@ https://aws.amazon.com/about-aws/global-infrastructure/regional-product-services
 
 == Getting help
 
-Amazon FSx for NetApp ONTAP is an AWS first-party solution. For questions or technical support issues associated with your FSx for ONTAP file system, infrastructure, or any solution using this service, use the Support Center in your AWS Management Console to open a support case with AWS. Select the “FSx for ONTAP” service and appropriate category. Provide the remaining information required to create your AWS support case.
+Amazon FSx for NetApp ONTAP is an AWS first-party solution. For questions or technical support issues associated with your FSx for ONTAP file system, infrastructure, or any solution using this service, use the Support Center in your AWS Management Console to open a support case with AWS. Select the "FSx for ONTAP" service and appropriate category. Provide the remaining information required to create your AWS support case.
 
 For general questions about BlueXP or BlueXP storage solutions and services, you can start with the in-line BlueXP chat.
 
