@@ -85,7 +85,8 @@ If you are joining to a self-managed AD, use the name of the group in your AD. T
 . Open the *Summary* to review the configuration that you defined. If needed, you can change any setting at this time before saving or creating the file system. 
 . Save or create the file system. 
 
-If you created the file system, you can now view the FSx for ONTAP file system in the *Inventory* page.
+.Result
+If you created the file system, BlueXP displays your FSx for ONTAP configuration on the Canvas. You can now link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-volume.html[add volumes^] to your FSx for ONTAP working environment using BlueXP workload factory.
 --
 
 .Advanced create
@@ -153,7 +154,7 @@ If you are joining to a self-managed AD, use the name of the group in your AD. T
 
 .Result
 
-BlueXP displays your FSx for ONTAP configuration on the Canvas. You can now add volumes to your FSx for ONTAP working environment using BlueXP.
+If you created the file system, BlueXP displays your FSx for ONTAP configuration on the Canvas. You can now link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-volume.html[add volumes^] to your FSx for ONTAP working environment using BlueXP workload factory.
 
 image:screenshot_add_fsx_cloud.png[A screenshot of FSx for ONTAP on the working environments page.]
 --
