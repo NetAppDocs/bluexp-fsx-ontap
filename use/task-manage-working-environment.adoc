@@ -13,7 +13,7 @@ summary: After you create or discover an FSx for ONTAP working environment in Bl
 :imagesdir: ../media/
 
 [.lead]
-After you create or discover an FSx for ONTAP working environment in BlueXP, you can manage the file system by creating volumes, creating storage VMs, and protecting your data. BlueXP also enables you to use data services that provide capabilities like backup and recovery, data classification, data synchronization, and more.
+After you create or discover an FSx for ONTAP working environment in BlueXP, you can manage the file system by creating volumes, managing storage VMs, protecting data, and administering the file system. BlueXP also enables you to use data services that provide capabilities like backup and recovery, data classification, data synchronization, and more.
 
 == Manage a file system using BlueXP workload factory
 
