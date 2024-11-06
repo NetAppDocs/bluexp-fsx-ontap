@@ -182,13 +182,6 @@ You can discover FSx for ONTAP file systems when you <<Create an FSx for ONTAP w
 
 . Select one or more file systems and select *Discover* to add them to the Canvas. 
 
-[NOTE]
-===============================
-* If you select an un-named cluster, you will receive a prompt to enter a name for the cluster.
-
-* If you select a cluster that doesn't have the credentials required to allow BlueXP to manage the FSx for ONTAP file system, you'll receive a prompt to select credentials with the required permissions. 
-===============================
-
 --
 
 .Discover by using the *My estate* page
