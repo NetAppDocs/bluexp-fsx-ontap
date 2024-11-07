@@ -56,6 +56,7 @@ You'll need to have credentials to log in to your AWS account.
 . Select *Add credentials*. 
 
 . Select *Amazon Web Services*, then *FSx for ONTAP*, and then *Next*. 
++
 You're now on the *Add Credentials* page in BlueXP workload factory. 
 
 . Select *Add manually* and then follow the steps below to fill out the three sections under _Permissions configuration_. 
@@ -73,7 +74,7 @@ image:screenshot-create-policies-manual.png[A screenshot showing which types of 
 . From the *Create policies* section, enable each of the workload capabilities that you want to include in these credentials. Enable *Storage* to create and manage file systems. 
 +
 You can add additional capabilities later, so just select the workloads that you currently want to deploy and manage.
-. For those workload capabilities that offer a choice of permission levels (automate or read), select the type of permissions that will be available with these credentials. link:https://docs.netapp.com/us-en/workload-setup-admin/operational-modes.html[Learn about the permissions, or operational modes^]. 
+. For those workload capabilities that offer a choice of permission levels (automate or read), select the type of permissions that will be available with these credentials. link:https://docs.netapp.com/us-en/workload-setup-admin/operational-modes.html[Learn about the permissions, also known as operational modes^]. 
 
 . In the Codebox window, copy the permissions for the first IAM policy.
 
