@@ -16,7 +16,7 @@ summary: Amazon FSx for NetApp ONTAP is a fully managed service allowing custome
 link:https://docs.aws.amazon.com/fsx/latest/ONTAPGuide/what-is-fsx-ontap.html[Amazon FSx for NetApp ONTAP^] is a fully managed service allowing customers to launch and run file systems powered by the NetApp ONTAP storage operating system. FSx for ONTAP provides the same features, performance, and administrative capabilities NetApp customers use on premises, with the simplicity, agility, security, and scalability of a native AWS service.
 
 == Using FSx for ONTAP in BlueXP
-You can use the BlueXP Canvas to create, discover, and manage FSx for ONTAP working environments from within NetApp BlueXP. If you instead want to manage workloads that use FSx for ONTAP file systems, use https://docs.netapp.com/us-en/workload-fsx-ontap/index.html[BlueXP workload factory^].
+From the BlueXP Canvas, you can create and discover FSx for ONTAP working environments, use System Manager and other BlueXP services, and view credentials. If instead you want to manage credentials and workloads that use FSx for ONTAP file systems, use https://docs.netapp.com/us-en/workload-fsx-ontap/index.html[BlueXP workload factory^].
 
 link:../use/task-creating-fsx-working-environment.html[Learn more about using FSx for ONTAP in BlueXP^].
 
@@ -41,9 +41,7 @@ Refer to link:https://docs.netapp.com/us-en/bluexp-setup-admin/concept-modes.htm
 * Using BlueXP copy and sync, you can automate data migration to any target in the cloud or on premises. https://docs.netapp.com/us-en/bluexp-copy-sync/concept-cloud-sync.html[Learn more^]
 
 == Connectors and links unlock all FSX for ONTAP features
-Connectors and links enable connectivity and trust relationships between BlueXP accounts and Amazon FSx for NetApp ONTAP working environments. A connector is NetApp software that runs in your cloud or on-premises network, and a link uses AWS Lambda to execute NetApp code. You don't need a connector or link to get started with BlueXP or create FSx for ONTAP working environments, but you do need to use a connector or link to make full use of FSx for ONTAP features.
-
-Connectors and links enable connectivity and trust relationships between BlueXP and Amazon FSx for NetApp ONTAP file systems. A BlueXP Connector is NetApp software that runs in your cloud or on-premises network, and a link uses AWS Lambda to execute NetApp code. You don't need a Connector or link to get started with BlueXP or create FSx for ONTAP file systems, but you do need to use a Connector or link to make full use of FSx for ONTAP features.
+Connectors and links enable connectivity and trust relationships between BlueXP and Amazon FSx for NetApp ONTAP working environments. A BlueXP Connector is NetApp software that runs in your cloud or on-premises network, and a link uses AWS Lambda to execute NetApp code. You don't need a Connector or link to get started with BlueXP or create FSx for ONTAP working environments, but you do need to use a Connector or link to make full use of FSx for ONTAP features.
 
 Learn more about Connectors and links and when you should use them:
 
