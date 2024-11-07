@@ -15,17 +15,18 @@ summary: To create or manage an FSx for ONTAP working environment, you need to a
 [.lead]
 To create or manage an FSx for ONTAP working environment, you need to add AWS credentials to BlueXP by providing the ARN of an IAM role that gives BlueXP the permissions needed to create an FSx for ONTAP working environment.
 
-== Overview
+== Why AWS credentials are required
 
-AWS credentials are required to create and manage FSx for ONTAP working environments in BlueXP. You can create new AWS credentials or add AWS credentials to an existing BlueXP account. Credentials provide BlueXP with the permissions needed to manage resources and processes within your AWS cloud environment. 
+AWS credentials are required to create and manage FSx for ONTAP working environments in BlueXP. You can create new AWS credentials or add AWS credentials to an existing BlueXP organization. Credentials provide BlueXP with the permissions needed to manage resources and processes within your AWS cloud environment. 
 
-Credentials and permissions are managed via BlueXP workload factory. BlueXP workload factory is a life-cycle management platform designed to help users optimize workloads using Amazon FSx for NetApp ONTAP file systems. BlueXP FSx for ONTAP uses the same set of AWS credentials and permissions as BlueXP workload factory. 
+Credentials and permissions are managed via BlueXP workload factory. BlueXP workload factory is a life-cycle management platform designed to help users optimize workloads using Amazon FSx for NetApp ONTAP file systems. BlueXP uses the same set of AWS credentials and permissions as BlueXP workload factory. 
 
-The workload factory interface provides BlueXP FSx for ONTAP users with options to enable workload capabilities like Storage, VMware, Databases, and GenAI, and to select permissions for the workloads. _Storage_ is the storage management capability in workload factory and it is the only capability you need to enable and add credentials for to create and manage your FSx for ONTAP file systems. 
+The workload factory interface provides BlueXP users with options to enable workload capabilities like Storage, VMware, Databases, and GenAI, and to select permissions for the workloads. _Storage_ is the storage management capability in workload factory and it is the only capability you need to enable and add credentials for to create and manage your FSx for ONTAP file systems. 
 
-.About this task
+== Choose an operational mode 
 When adding new credentials for FSx for ONTAP from Storage in BlueXP workload factory, you'll need to decide which level of permissions, or _operational mode_, you'd like to operate in. To discover and deploy AWS resources like FSx for ONTAP file systems, you'll need _read_ or _automate_ permissions. BlueXP FSx for ONTAP will operate in _basic_ mode unless you select _read_ mode or _automate_ mode. link:https://docs.netapp.com/us-en/workload-setup-admin/operational-modes.html.html[Learn more about operational modes]. 
 
+.About this task
 New and existing AWS credentials are viewable from BlueXP settings > *Credentials* page. 
 
 You can add credentials using two methods:
