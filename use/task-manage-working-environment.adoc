@@ -23,7 +23,7 @@ https://docs.netapp.com/us-en/workload-fsx-ontap/index.html[Learn how to manage 
 
 == Manage a file system using ONTAP System Manager
 
-If you're familiar with ONTAP System Manager, you can manage an FSx for ONTAP file system directly from BlueXP by using the ONTAP System Manager interface.
+You can manage an FSx for ONTAP file system directly from BlueXP by using the ONTAP System Manager interface. A Connector is required to use System Manager.
 
 image:screenshot-system-manager.png[A screenshot of the right panel on the BlueXP Canvas after selecting a working environment which shows the System Manager option.]
 
