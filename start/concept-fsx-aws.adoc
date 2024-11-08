@@ -43,6 +43,18 @@ Refer to link:https://docs.netapp.com/us-en/bluexp-setup-admin/concept-modes.htm
 == Connectors and links unlock all FSx for ONTAP features
 Connectors and links enable connectivity and trust relationships between BlueXP and Amazon FSx for NetApp ONTAP working environments. A BlueXP Connector is NetApp software that runs in your cloud or on-premises network, and a link uses AWS Lambda to execute NetApp code. You don't need a Connector or link to get started with BlueXP or create FSx for ONTAP working environments, but you do need to use a Connector or link to make full use of FSx for ONTAP features.
 
+You need a Connector or link to use the following features:
+
+* Display the version of ONTAP that is installed on an FSx for ONTAP file system
+* Manage iSCSI volumes on the system
+* Enable and disable the autogrow feature for volumes
+* Create and manage snapshot policies
+* Configure replication relationships and replicate volumes between file systems
+* Configure backup relationships and back up volume data to cloud storage
+* Clone volumes within a file system
+* Display additional metrics directly from ONTAP (default metrics are collected by Amazon CloudWatch)
+* Management of NFS export policies
+
 Learn more about Connectors and links and when you should use them:
 
 * https://docs.netapp.com/us-en/bluexp-setup-admin/concept-connectors.html[Learn more about Connectors^].
