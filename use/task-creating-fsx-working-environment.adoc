@@ -17,103 +17,185 @@ Using BlueXP you can create or discover an FSx for ONTAP working environment to 
 
 == Create an FSx for ONTAP working environment
 
-The first step is to create an FSx for ONTAP working environment. If you already created an FSx for ONTAP file system in the AWS Management Console, you can link:task-creating-fsx-working-environment.html#discover-an-existing-fsx-for-ontap-file-system[discover it using BlueXP].
+The first step is to create an FSx for ONTAP working environment, or file system. If you already created an FSx for ONTAP file system in the AWS Management Console, you can link:task-creating-fsx-working-environment.html#discover-an-existing-fsx-for-ontap-file-system[discover it using BlueXP].
+
+.About this task
+A storage VM is created when you create a file system. 
 
 .Before you begin
+Before creating your FSx for ONTAP file system, you will need:
 
-Before creating your FSx for ONTAP working environment in BlueXP, you will need:
+* The ARN of an IAM role that gives Workload Factory the permissions needed to create an FSx for ONTAP file system. link:task-setting-up-permissions-fsx.html[Learn how to grant permissions to an AWS account^].
 
-* The ARN of an IAM role that gives BlueXP the permissions needed to create an FSx for ONTAP working environment. See link:../requirements/task-setting-up-permissions-fsx.html[adding AWS credentials to BlueXP] for details.
+* The region and VPC information for where you will create the FSx for ONTAP instance.
 
-* The region and VPN information for where you will create the FSx for ONTAP instance.
+== Create an FSx for ONTAP file system
+You can create an FSx for ONTAP file system using _Quick create_ or _Advanced create_. You can also use the following tools available in the Codebox: REST API, CloudFormation, and Terraform. link:https://docs.netapp.com/us-en/workload-setup-admin/use-codebox.html#how-to-use-codebox[Learn how to use Codebox for automation^]. 
+
+NOTE: When using Terraform from Codebox, the code you copy or download hides `fsxadmin` and `vsadmin` passwords. You'll need to re-enter the passwords when you run the code.  
+
+[role="tabbed-block"]
+====
+
+.Quick create
+--
+Quick create enables you to use a recommended best-practice configuration. You can change most settings after you create an FSx for ONTAP file system. 
 
 .Steps
-
-. In BlueXP, add a new Working Environment, select *Amazon Web Services*, and click *Add new* for Amazon FSx for NetApp ONTAP.
+. In BlueXP, add a new Working Environment, select *Amazon Web Services*, and select *Add new* for Amazon FSx for NetApp ONTAP. 
+. On the Create FSx for ONTAP page, select *Quick create*. 
 +
-image:screenshot_add_fsx_working_env.png[A screenshot of adding a working environment for FSx for ONTAP]
-
-. *FSx for ONTAP Authentication* 
-
-.. If there is an existing IAM role in your account with the correct AWS permissions for FSx for ONTAP, select it from the dropdown.
-
-.. If there is no IAM role in your account, click *Credentials* and follow the steps in the wizard to add an ARN for an AWS IAM role with FSx for ONTAP credentials. See link:../requirements/task-setting-up-permissions-fsx.html[adding AWS credentials to BlueXP] for details.
-
-. *Details and Credentials*
-
-.. Enter the working environment name you want to use.
-.. Optionally, you can create tags by clicking the plus sign and entering a tag name and value.
-.. Optionally, you can specify the start time for FSx for ONTAP to perform 30-minute weekly maintenance. This can be used to ensure maintenance does not coincide with critical business activities. If you select *No preference*, a random start time will be assigned. You can change this at any time. 
-.. Enter and confirm the ONTAP Cluster password you want to use.
-.. Optionally, deselect the option to use the same password for your SVM user and set a different password.
-
-. *HA deployment model*
-
-.. Select a *Single Availability Zone* or *Multiple Availability Zones* HA deployment model. For multiple Availability Zones, select subnets in at least two Availability Zones so each node is in a dedicated Availability Zone.
-
-.. Select the Virtual Private Cloud (VPC) you want to associate with your file system.
-
-.. Use an existing security group or select *Generated security group* to enable BlueXP to generate a security group that allows traffic within the selected VPC only. 
+You can also load a saved configuration.
+. Under File system general configuration, provide the following: 
+.. *AWS credentials*: Select to add AWS credentials or continue without credentials. Without credentials, you can copy and download the partially complete code from the Codebox. The code can be used like a template where you can fill in missing information (for example, credentials) or customize certain data before running the code.
+.. *File system name*: Enter a name for the file system. 
+.. *Deployment topology*: Select a deployment topology. 
 +
-NOTE: link:https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/security-group-rules.html[AWS security groups^] control inbound and outbound traffic. These are configured by your AWS admin and are associated with your link:https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/using-eni.html[AWS elastic network interface (ENI)^].
-
-. *Floating IP* (Multiple Availability Zones only)
+* Scale-up topology is where one file system is used for data distribution and can increase in size to accommodate data growth.
+* Scale-out topology is where more than one file system is used for data distribution. 
+.. *HA pairs*: Enter the number of HA pairs.
 +
-Leave _CIDR Range_ empty to automatically set an available range. Optionally, you can use https://docs.netapp.com/us-en/cloud-manager-cloud-volumes-ontap/task-setting-up-transit-gateway.html[AWS Transit Gateway^] to manually configure a range.
+* For scale-up deployments, you can only have one HA pair. 
+* For scale-out deployments, you can have between two and twelve HA pairs.
+.. *Deployment type*: Select a deployment type.
 +
-[WARNING]
-====
-.IPs in the following ranges are not supported:
-* 0.0.0.0/8
-* 127.0.0.0/8
-* 198.19.0.0/20
-* 224.0.0.0/4
-* 240.0.0.0/4
-* 255.255.255.255/32
-====
-. *Route Tables* (Multiple Availability Zones only)
+* Single Availability Zone (Single-AZ) deployment: ensures availability by monitoring for hardware failures and automatically replacing infrastructure components in the event of a failure. Achieves high durability by automatically replicating your data within an Availability Zone to protect it from component failure.
 +
-Select route tables that include routes to the floating IP addresses. If you have just one route table for the subnets in your VPC (the main route table), BlueXP automatically adds the floating IP addresses to that route table. 
-
-. *Data Encryption*
+* Multiple Availability Zones (Multi-AZ) deployment: provides continuous availability to data even when an Availability Zone is unavailable. Multi-AZ file systems support all the availability and durability features of Single-AZ file systems. A Multi-AZ file system is designed for business-critical production workloads that require high availability to shared ONTAP file data and need storage with built-in replication across Availability Zones.
+.. *Tags*: Optionally, you can add up to 50 tags. 
+. Under *Network & security*, in the *Region & VPC* field, select the region and VPC for the file system. 
+. Under *File system details*, provide the following: 
+.. *SSD storage capacity*: Enter the storage capacity and select the storage capacity unit. 
+.. *ONTAP credentials*: Enter your ONTAP user name and password.  
+.. *SMB/CIFS setup*: Optional. If you plan to use SMB/CIFS protocol to access volumes, you must configure the Active Directory for the storage VM during file system creation. Provide the following details for the storage VM that is created for this file system. 
+... *Active Directory domain to join*: Enter the fully qualified domain name (FQDN) for the Active Directory.
+... *DNS IP addresses*: Enter up to three DNS IP addresses separated by commas. 
+... *SMB server NetBIOS name*: Enter the SMB server NetBIOS name of the Active Directory computer object to create for your storage VM. This is the name of this storage VM in the Active Directory.
+... *User name*: Enter the user name of the service account in your existing Active Directory. 
 +
-Accept the default AWS master key or click *Change Key* to select a different AWS Customer Master Key (CMK). For more information on CMK, see link:https://docs.netapp.com/us-en/bluexp-cloud-volumes-ontap/task-setting-up-kms.html[Setting up the AWS KMS^].  
-
-. *Storage Configuration*
-
-.. Select the throughput, capacity, and unit. You can change throughput, storage capacity, and IOPS at any time. 
-
-.. You can optionally specify an IOPS value. If you don't specify an IOPS value, BlueXP will set a default value based on 3 IOPS per GiB of the total capacity entered. For example, if you enter 2000 GiB for the total capacity and no value for the IOPS, the effective IOPS value will be set to 6000. You can change the IOPS value at any time. 
+Do not include a domain prefix or suffix. For `EXAMPLE\ADMIN`, use `ADMIN`.
+... *Password*: Enter the password for the service account. 
+... *Organization unit*: Optionally, enter the name of the Organizational Unit where you intend to create the computer account for FSx for ONTAP. The OU is the distinguished path name of the organizational unit to which you want to join the file system. 
+... *Delegated administrators group*: Optionally, enter the name of the group in your Active Directory that can administer your file system.
 +
-NOTE: If you specify an IOPS value that does not meet the minimum requirements, you’ll receive an error when adding the working environment.
+If you are using AWS Managed Microsoft AD, you must specify a group such as AWS Delegated FSx Administrators, AWS Delegated Administrators, or a custom group with delegated permissions to the OU.
++
+If you are joining to a self-managed AD, use the name of the group in your AD. The default group is `Domain Admins`.
 
-. *Review*
+. Open the *Summary* to review the configuration that you defined. If needed, you can change any setting at this time before saving or creating the file system. 
+. Save or create the file system. 
 
-.. Click the tabs to review your ONTAP properties, provider properties, and networking configuration.
-.. Click *Previous* to make changes to any settings or *Add* to accept the settings and create your Working Environment.
+.Result
+If you created the file system, BlueXP displays your FSx for ONTAP configuration on the Canvas. You can now link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-volume.html[add volumes^] to your FSx for ONTAP working environment using BlueXP workload factory.
+--
+
+.Advanced create
+--
+With Advanced create, you set all of the configuration options, including availability, security, backups, and maintenance. 
+
+.Steps
+. In BlueXP, add a new Working Environment, select *Amazon Web Services*, and select *Add new* for Amazon FSx for NetApp ONTAP. 
+. On the Create FSx for ONTAP page, select *Advanced create*. 
++
+You can also load a saved configuration.
+. Under File system general configuration, provide the following: 
+.. *AWS credentials*: Select to add AWS credentials in Workload Factory or continue without credentials. 
+.. *File system name*: Enter a name for the file system. 
+.. *Deployment topology*: Select a deployment topology. 
++
+* Scale-up topology is where one file system is used for data distribution and can increase in size to accommodate data growth.
+* Scale-out topology is where more than one file system is used for data distribution. 
+.. *HA pairs*: Enter the number of HA pairs.
++
+* For scale-up deployments, you can only have one HA pair. 
+* For scale-out deployments, you can have between two and twelve HA pairs.
+.. *Deployment type*: Select a deployment type.
++
+* Single Availability Zone (Single-AZ) deployment: ensures availability by monitoring for hardware failures and automatically replacing infrastructure components in the event of a failure. Achieves high durability by automatically replicating your data within an Availability Zone to protect it from component failure.
++
+* Multiple Availability Zones (Multi-AZ) deployment: provides continuous availability to data even when an Availability Zone is unavailable. Multi-AZ file systems support all the availability and durability features of Single-AZ file systems. A Multi-AZ file system is designed for business-critical production workloads that require high availability to shared ONTAP file data and need storage with built-in replication across Availability Zones.
+.. *Tags*: Optionally, you can add up to 50 tags. 
+. Under Network & security, provide the following: 
+.. *Region & VPC*: Select the region and VPC for the file system. 
+.. *Security group*: Create or use an existing security group.
+.. *Availability Zones*: Select availability zones and subnets.
++
+* For Cluster configuration node 1: Select an availability zone and subnet. 
+* For Cluster configuration node 2: Select an availability zone and subnet. 
+.. *VPC route tables*: Select the VPC route table to enable client access to volumes. 
+.. *Endpoint IP address range*: Select *Floating IP address range outside your VPC* or *Enter an IP address range* and enter an IP address range. 
+.. *Encryption*: Select the encryption key name from the dropdown.
+. Under File system details, provide the following: 
+.. *SSD storage capacity*: Enter the storage capacity and select the storage capacity unit. 
+.. *Provisioned IOPS*: Select *Automatic* or *User-provisioned*. 
+.. *Throughput capacity per HA pair*: Select throughput capacity per HA pair. 
+.. *ONTAP credentials*: Enter your ONTAP user name and password.
+.. *Storage VM Credentials*: Enter your user name. Password can be specific to this file system or you case use the same password entered for ONTAP credentials.
+.. *SMB/CIFS setup*: Optional. If you plan to use SMB/CIFS protocol to access volumes, you must configure the Active Directory for the storage VM during file system creation. Provide the following details for the storage VM that is created for this file system. 
+... *Active Directory domain to join*: Enter the fully qualified domain name (FQDN) for the Active Directory.
+... *DNS IP addresses*: Enter up to three DNS IP addresses separated by commas. 
+... *SMB server NetBIOS name*: Enter the SMB server NetBIOS name of the Active Directory computer object to create for your storage VM. This is the name of this storage VM in the Active Directory.
+... *User name*: Enter the user name of the service account in your existing Active Directory. 
++
+Do not include a domain prefix or suffix. For `EXAMPLE\ADMIN`, use `ADMIN`.
+... *Password*: Enter the password for the service account. 
+... *Organization unit*: Optionally, enter the name of the Organizational Unit where you intend to create the computer account for FSx for ONTAP. The OU is the distinguished path name of the organizational unit to which you want to join the file system. 
+... *Delegated administrators group*: Optionally, enter the name of the group in your Active Directory that can administer your file system.
++
+If you are using AWS Managed Microsoft AD, you must specify a group such as AWS Delegated FSx Administrators, AWS Delegated Administrators, or a custom group with delegated permissions to the OU.
++
+If you are joining to a self-managed AD, use the name of the group in your AD. The default group is `Domain Admins`.
+. Under Backup and maintenance, provide the following: 
+.. *FSx for ONTAP Backup*: Daily automatic backups are enabled by default. Disable if desired. 
+... *Automatic backup retention period*: Enter the number of days to retain automatic backups. 
+... *Daily automatic backup window*: Select either *No preference* (a daily backup start time is selected for you) or *Select start time for daily backups* and specify a start time. 
+... *Weekly maintenance window*: Select either *No preference* (a weekly maintenance window start time is selected for you) or *Select start time for 30-minute weekly maintenance window* and specify a start time.  
+. Save or create the file system. 
 
 .Result
 
-BlueXP displays your FSx for ONTAP configuration on the Canvas. You can now add volumes to your FSx for ONTAP working environment using BlueXP.
+If you created the file system, BlueXP displays your FSx for ONTAP configuration on the Canvas. You can now link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-volume.html[add volumes^] to your FSx for ONTAP working environment using BlueXP workload factory.
 
 image:screenshot_add_fsx_cloud.png[A screenshot of FSx for ONTAP on the working environments page.]
+--
+
+====
+
 
 == Discover an existing FSx for ONTAP file system 
 
 If you previously provided your AWS credentials to BlueXP, *My estate* can automatically discover and suggest FSx for ONTAP file systems to add and manage using BlueXP. You can also review available data services. 
 
 .About this task
-You can discover FSx for ONTAP file systems when you <<Create an FSx for ONTAP working environment>> or by using the *My estate* page. This task describes discovery using *My estate*
+You can discover FSx for ONTAP file systems when you <<Create an FSx for ONTAP working environment>> or by using the *My estate* page. 
+
+[role="tabbed-block"]
+====
+
+.Discover via adding a working environment
+--
+.Steps
+
+. In BlueXP, add a new Working Environment, select *Amazon Web Services*, and select *Discover Existing* for Amazon FSx for NetApp ONTAP. 
+
+. Select the credentials and region to display existing file systems. 
+
+. Select one or more file systems and select *Discover* to add them to the Canvas. 
+
+--
+
+.Discover by using the *My estate* page
+--
 
 .Steps
 
-. In BlueXP, click the *My estate* tab. 
+. In BlueXP, select the *My estate* tab. 
 
-. The count of discovered FSx for ONTAP file systems displays. Click *Discover*.  
+. The count of discovered FSx for ONTAP file systems displays. Select *Discover*.  
 +
 image:screenshot-opportunities.png[A screenshot of the My estate page for FSx for ONTAP.]
 
-. Select one or more file systems and click *Discover* to add them to the Canvas. 
+. Select one or more file systems and select *Discover* to add them to the Canvas. 
 
 [NOTE]
 ===============================
@@ -122,8 +204,12 @@ image:screenshot-opportunities.png[A screenshot of the My estate page for FSx fo
 * If you select a cluster that doesn't have the credentials required to allow BlueXP to manage the FSx for ONTAP file system, you'll receive a prompt to select credentials with the required permissions. 
 ===============================
 
+--
+
+====
+
 .Result
 
-BlueXP displays your discovered FSx for ONTAP file system on the Canvas. You can now add volumes to your FSx for ONTAP working environment using BlueXP.
+BlueXP displays your discovered FSx for ONTAP file system on the Canvas. You can now link:https://docs.netapp.com/us-en/workload-fsx-ontap/create-volume.html[add volumes^] to your FSx for ONTAP working environment and manage your FSx for ONTAP file system via Storage in BlueXP workloads.
 
-image:screenshot_fsx_working_environment_select.png[A screenshot of selecting the AWS region and working environment]
+image:screenshot_fsx_working_environment_select.png[A screenshot of a working environment cloud in canvas]

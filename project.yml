@@ -20,24 +20,12 @@ sidebar:
           url: /start/concept-fsx-aws.html
         - title: Quick start
           url: /start/task-getting-started-fsx.html
-    - title: Requirements
-      entries:
         - title: Set up permissions
           url: /requirements/task-setting-up-permissions-fsx.html
-        - title: Security group rules
-          url: /requirements/reference-security-groups-fsx.html
-    - title: Use Amazon FSx for NetApp ONTAP
-      entries:
         - title: Create or discover a working environment
           url: /use/task-creating-fsx-working-environment.html
-        - title: Manage a working environment
-          url: /use/task-manage-working-environment.html
-        - title: Create and mount a volume
-          url: /use/task-add-fsx-volumes.html
-        - title: Manage volumes
-          url: /use/task-manage-fsx-volumes.html
-        - title: Add and manage a storage VM
-          url: /use/task-add-fsx-svm.html
+    - title: Manage an FSx for ONTAP file system
+      url: /use/task-manage-working-environment.html
     - title: Knowledge and support
       entries:
         - title: Register for support
