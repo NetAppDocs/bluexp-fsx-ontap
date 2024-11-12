@@ -36,7 +36,7 @@ include::_whatsnew/2023-06-04.adoc[]
 When creating a working environment, you can now have BlueXP link:https://docs.netapp.com/us-en/bluexp-fsx-ontap/use/task-creating-fsx-working-environment.html#create-an-amazon-fsx-for-netapp-ontap-working-environment[generate a security group] that allows traffic within the selected VPC only. This feature link:https://docs.netapp.com/us-en/bluexp-fsx-ontap/requirements/task-setting-up-permissions-fsx.html[requires additional permissions]. 
 
 === Add or modify tags
-You can optionally link:https://docs.netapp.com/us-en/bluexp-fsx-ontap/use/task-add-fsx-volumes.html#create-volumes[add] and link:https://docs.netapp.com/us-en/bluexp-fsx-ontap/use/task-manage-fsx-volumes.html#manage-volume-tags[modify] tags to categorize volumes. 
+You can optionally add and modify tags to categorize volumes. 
 
 == 02 April 2023
 === Increase in IOPS limit
@@ -64,10 +64,10 @@ link:https://docs.netapp.com/us-en/bluexp-fsx-ontap/use/task-creating-fsx-workin
 You can now link:https://docs.netapp.com/us-en/bluexp-fsx-ontap/use/task-manage-working-environment.html#change-throughput-capacity[change throughput capacity] at any time after you create the FSx for ONTAP working environment.
 
 === Replicate and sync data
-You can now link:https://docs.netapp.com/us-en/bluexp-fsx-ontap/use/task-manage-fsx-volumes.html#replicate-and-sync-data[replicate and sync data] to on-premises and other FSx for ONTAP systems using FSx for ONTAP as the source. 
+You can now replicate and sync data to on-premises and other FSx for ONTAP systems using FSx for ONTAP as the source. 
 
 === Create iSCSI volume
-You can now link:https://docs.netapp.com/us-en/bluexp-fsx-ontap/use/task-add-fsx-volumes.html#creating-volumes[create iSCSI volumes in FSx for ONTAP using Cloud Manager]. 
+You can now create iSCSI volumes in FSx for ONTAP using Cloud Manager. 
 
 == 3 July 2022
 === Support for single or multiple Availability Zon
@@ -91,14 +91,14 @@ link:https://docs.netapp.com/us-en/bluexp-fsx-ontap/requirements/task-setting-up
 You can create iSCSI volumes for FSx for ONTAP using the Cloud Manager API and manage them in your working environment.
 
 === Select volume units when creating volumes
-You can link:https://docs.netapp.com/us-en/bluexp-fsx-ontap/use/task-add-fsx-volumes.html#creating-volumes[select volume units (GiB or TiB) when creating volumes] in FSx for ONTAP.
+You can elect volume units (GiB or TiB) when creating volumes in FSx for ONTAP.
 
 == 4 October 2021
 === Create CIFS volumes using Cloud Manager
-Now you can link:https://docs.netapp.com/us-en/bluexp-fsx-ontap/use/task-add-fsx-volumes.html#creating-volumes[create CIFS volumes in FSx for ONTAP using Cloud Manager].
+Now you can create CIFS volumes in FSx for ONTAP using Cloud Manager.
 
 === Edit volumes using Cloud Manager
-Now you can link:https://docs.netapp.com/us-en/bluexp-fsx-ontap/use/task-manage-fsx-volumes.html#editing-volumes[edit FSx for ONTAP volumes using Cloud Manager].
+Now you can edit FSx for ONTAP volumes using Cloud Manager.
 
 == 2 September 2021
 === Support for Amazon FSx for NetApp ONTAP
