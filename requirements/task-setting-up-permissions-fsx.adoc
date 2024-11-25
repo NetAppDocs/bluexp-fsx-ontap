@@ -87,14 +87,14 @@ The storage permissions can also be copied from the following tabs.
 --
 
 [source,json]
-            "fsx:Describe*",
-            "fsx:ListTagsForResource",
-            "ec2:Describe*",
-            "kms:Describe*",
-            "elasticfilesystem:Describe*",
-            "kms:List*",
-            "cloudwatch:GetMetricData",
-            "cloudwatch:GetMetricStatistics"
+        "fsx:Describe*",
+        "fsx:ListTagsForResource",
+        "ec2:Describe*",
+        "kms:Describe*",
+        "elasticfilesystem:Describe*",
+        "kms:List*",
+        "cloudwatch:GetMetricData",
+        "cloudwatch:GetMetricStatistics"
 --
 
 .Automate permissions
