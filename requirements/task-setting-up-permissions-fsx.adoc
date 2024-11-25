@@ -24,7 +24,7 @@ Credentials and permissions are managed via BlueXP workload factory. BlueXP work
 The workload factory interface provides BlueXP users with options to enable workload capabilities like Storage, VMware, Databases, and GenAI, and to select permissions for the workloads. _Storage_ is the storage management capability in workload factory and it is the only capability you need to enable and add credentials for to create and manage your FSx for ONTAP file systems. 
 
 == About this task 
-When adding new credentials for FSx for ONTAP from Storage in BlueXP workload factory, you'll need to decide which level of permissions, or _operational mode_, you'd like to operate in. To discover and deploy AWS resources like FSx for ONTAP file systems, you'll need _read_ or _automate_ permissions. BlueXP FSx for ONTAP will operate in _basic_ mode unless you select _read_ mode or _automate_ mode. link:https://docs.netapp.com/us-en/workload-setup-admin/operational-modes.html[Learn more about operational modes]. 
+When adding new credentials for FSx for ONTAP from Storage in BlueXP workload factory, you'll need to decide which level of permissions, or _operational mode_, you'd like to operate in. To discover and deploy AWS resources like FSx for ONTAP file systems, you'll need _read_ or _automate_ permissions. BlueXP FSx for ONTAP will operate in _basic_ mode unless you select _read_ mode or _automate_ mode. _Read_ are the same as view permissions. _Automate_ are the same as operate permissions. link:https://docs.netapp.com/us-en/workload-setup-admin/operational-modes.html[Learn more about operational modes]. 
 
 New and existing AWS credentials are viewable from BlueXP settings > *Credentials* page. 
 
@@ -63,9 +63,9 @@ You're now on the *Add Credentials* page in BlueXP workload factory.
 +
 image:screenshot-add-credentials-manually.png[A screenshot showing the items that you need to define manually for each set of credentials.]
 
-=== Step 1: Select the workload capabilities and create the IAM policies
+=== Step 1: Select the storage capability and create the IAM policy
 
-In this section you'll choose which types of workload capabilities will be manageable as part of these credentials, and the permissions enabled for each workload. You'll need to copy the policy permissions for each selected workload from the Codebox and add them into the AWS Management Console within your AWS account to create the policies.
+In this section, you'll choose the storage capability to be managed as part of these credentials, and the permissions enabled for storage. You also have the option to select other workloads like Databases, GenAI, or VMware. Once you've made your selections, you'll need to copy the policy permissions for each selected workload from the Codebox and add them into the AWS Management Console within your AWS account to create the policies.
 
 image:screenshot-create-policies-manual.png[A screenshot showing which types of workload capabilities will be manageable as part of the policies in these credentials.]
 
@@ -77,6 +77,50 @@ You can add additional capabilities later, so just select the workloads that you
 . For those workload capabilities that offer a choice of permission levels (automate or read), select the type of permissions that will be available with these credentials. link:https://docs.netapp.com/us-en/workload-setup-admin/operational-modes.html[Learn about the permissions, also known as operational modes^]. 
 
 . In the Codebox window, copy the permissions for the first IAM policy.
++
+The storage permissions can also be copied from the following tabs. 
++
+[role="tabbed-block"]
+====
+
+.Read permissions
+--
+
+[source,json]
+            "fsx:Describe*",
+            "fsx:ListTagsForResource",
+            "ec2:Describe*",
+            "kms:Describe*",
+            "elasticfilesystem:Describe*",
+            "kms:List*",
+            "cloudwatch:GetMetricData",
+            "cloudwatch:GetMetricStatistics"
+--
+
+.Automate permissions
+--
+
+[source,json]
+        "fsx:*",
+        "ec2:Describe*",
+        "ec2:CreateTags",
+        "ec2:CreateSecurityGroup",
+        "iam:CreateServiceLinkedRole",
+        "kms:Describe*",
+        "elasticfilesystem:Describe*",
+        "kms:List*",
+        "kms:CreateGrant",
+        "cloudwatch:PutMetricData",
+        "cloudwatch:GetMetricData",
+        "iam:SimulatePrincipalPolicy",
+        "cloudwatch:GetMetricStatistics"
+        "ec2:AuthorizeSecurityGroupEgress",
+        "ec2:AuthorizeSecurityGroupIngress",
+        "ec2:RevokeSecurityGroupEgress",
+        "ec2:RevokeSecurityGroupIngress",
+        "ec2:DeleteSecurityGroup"
+--
+====
 
 . Open another browser window and log in to your AWS account in the AWS Management Console.
 
