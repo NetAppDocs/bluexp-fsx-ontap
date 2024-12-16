@@ -27,6 +27,12 @@ You can manage an FSx for ONTAP file system directly from BlueXP by using the ON
 
 image:screenshot-system-manager.png[A screenshot of the right panel on the BlueXP Canvas after selecting a working environment which shows the System Manager option.]
 
+== Manage a file system using Amazon CloudFormation
+
+You can manage an FSx for ONTAP file system using Amazon CloudFormation. 
+
+link:
+
 == Use BlueXP data services with a file system
 
 Use BlueXP data services with your FSx for ONTAP file systems to back up and recover your data, transfer and synchronize data, scan and classify your data, replicate data, and speed up access or offload traffic.
