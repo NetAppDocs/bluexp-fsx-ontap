@@ -1,0 +1,32 @@
+---
+sidebar: sidebar
+permalink: use/task-remove-filesystem.html
+keywords: amazon fsx for netapp ontap, fsx for ontap, fsx, remove fsx for ontap file system, remove file system, workspace, file system, disassociate file system
+summary: "Remove an FSx for ONTAP file system from a workspace in the BlueXP canvas." 
+---
+
+= Remove an FSx for ONTAP file system from a workspace in BlueXP
+:hardbreaks:
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ../media/
+
+[.lead]
+Remove an FSx for ONTAP file system from a workspace in the BlueXP canvas. This operation dissociates the file system from one workspace so that you can associate it with another workspace within the same account. 
+
+.About this task
+Removing an FSx for ONTAP file system from a workspace removes it from BlueXP. It does not delete the FSx for ONTAP file system. You can later rediscover the working environment in the same or in a different workspace from within the same account. 
+
+.Steps
+. Open the BlueXP canvas.
+. Select the working environment that contains the file system you want to remove.
+. Select *Enter Working Environment*.
+. From the FSx for ONTAP tab in Storage, select the three-dot menu and then select *Remove from workspace*. 
++
+image:screenshot-remove-file-system.png[A screenshot of the open menu in the file system. The option to remove from workspace is highlighted.]
++
+. Select *Remove* to confirm the removal of the file system from the workspace.
+
+.Result
+The file system is removed from the workspace. You can now associate the file system with another workspace within the same account.
