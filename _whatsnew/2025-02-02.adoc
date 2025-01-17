@@ -1,4 +1,4 @@
-=== File system removal possible from BlueXP canvas 
+=== File system removal from BlueXP canvas 
 You can now remove an FSx for ONTAP file system from a workspace in the BlueXP canvas. This operation dissociates the file system from one workspace so that you can associate it with another workspace within the same account. 
 
 link:https://docs.netapp.com/us-en/bluexp-fsx-ontap/use/task-remove-filesystem.html[Learn how to remove an FSx for ONTAP file system from a workspace in BlueXP^]
