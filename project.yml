@@ -26,7 +26,7 @@ sidebar:
           url: /use/task-creating-fsx-working-environment.html
     - title: Manage an FSx for ONTAP file system
       url: /use/task-manage-working-environment.html
-    - title: Remove an FSx for ONTAP file system from a workspace
+    - title: Remove a file system from a workspace
       url: /use/task-remove-fsx-working-environment.html  
     - title: Knowledge and support
       entries:
