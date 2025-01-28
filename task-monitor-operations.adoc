@@ -40,7 +40,7 @@ Track and monitor operations in BlueXP with Tracker.
 . In Storage, select *Go to Storage inventory*.
 . From storage inventory, select the account settings menu and then select *Tracker*.
 +
-image:screenshot-menu-tracker-option.png[A screenshot of the menu with the Tracker option highlighted.] 
+image:screenshot-menu-tracker-option.png["A screenshot of the menu with the Tracker option highlighted."] 
 . In Tracker, view tasks or use the filters or search to narrow  results. You can also download a report of all operations by selecting to *Export CSV*. 
 
 == View API request
