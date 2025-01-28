@@ -51,16 +51,18 @@ View the API request in the Codebox for a task in Tracker.
 . Select the three-dot menu and then select *View API request*.
 
 == Retry a failed operation
-Retry a failed operation in Tracker. You can also copy the error message of a failed operation. 
+Retry a failed operation in Tracker. Retrying the failed operation starts a new task that you can monitor in Tracker. 
 
-NOTE: Only x number of retries are allowed for a failed operation.
+You can also copy the error message of a failed operation. 
+
+NOTE: You can retry the failed operation only once. 
 
 .Steps
 . In Tracker, select a failed operation.
 . Select the three-dot menu and then select *Retry*. 
 
 .Result
-The operation is re-initiated.
+The operation is re-initiated and appears as a new task in Tracker.
 
 == Edit and retry a failed operation
 Edit the parameters of the failed operation and retry the operation outside Tracker. 
@@ -69,7 +71,7 @@ Edit the parameters of the failed operation and retry the operation outside Trac
 . In Tracker, select a failed operation.
 . Select the three-dot menu and then select *Edit and retry*.
 +
-You are redirected to the operation page where you can edit the parameters and retry the operation.
+You are redirected to the operation page, volume creation for example, where you can edit the parameters and retry the operation. 
 
 .Result
 The operation is re-initiated. Go to Tracker to view the status of the operation.

@@ -1,9 +1,14 @@
+=== Associate FSx for ONTAP file system with a workspace in BlueXP
+After BlueXP integration in November 2024, newly created FSx for ONTAP file systems were not associated with one workspace in BlueXP. Instead, a file system could be managed from any workspace within a BlueXP account. Now when you create FSx for ONTAP file systems, they are associated with one workspace within a BlueXP account. 
+
+If you have existing FSx for ONTAP file systems that are not associated with a workspace, we will help you associate them with a workspace in BlueXP. *Contact details needed* 
+
 === File system removal from BlueXP canvas 
-You can now remove an FSx for ONTAP file system from a workspace in the BlueXP canvas. This operation dissociates the file system from one workspace so that you can associate it with another workspace within the same account. 
+You can now remove an FSx for ONTAP file system from a workspace in the BlueXP canvas. This operation dissociates the file system from one workspace so that you can associate it with another workspace within the same BlueXP account. 
 
 link:https://docs.netapp.com/us-en/bluexp-fsx-ontap/use/task-remove-filesystem.html[Learn how to remove an FSx for ONTAP file system from a workspace in BlueXP^]
 
 === Tracker available for monitoring and tracking operations
-Tracker, a new monitoring capability is available in Storage. You can use Tracker to monitor and track the progress and status of credentials, storage, and link operations, review details for operation tasks and subtasks, diagnose any issues or failures, edit parameters for failed operations, and retry failed operations.
+Tracker, a new monitoring capability, is available in BlueXP Amazon FSx for NetApp ONTAP. You can use Tracker to monitor and track the progress and status of credentials, storage, and link operations, review details for operation tasks and subtasks, diagnose any issues or failures, edit parameters for failed operations, and retry failed operations.
 
 link:https://docs.netapp.com/us-en/bluexp-fsx-ontap/use/task-monitor-operations.html[Learn how to monitor and track FSx for ONTAP operations in BlueXP^]
