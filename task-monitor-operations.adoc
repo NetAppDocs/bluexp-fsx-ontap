@@ -1,6 +1,6 @@
 ---
 sidebar: sidebar
-permalink: monitor-operations.html 
+permalink: use/task-monitor-operations.html 
 keywords: monitor databases, monitor jobs, track database jobs
 summary: "Track FSx for ONTAP operations and monitor operation progress with Tracker in BlueXP."  
 ---
