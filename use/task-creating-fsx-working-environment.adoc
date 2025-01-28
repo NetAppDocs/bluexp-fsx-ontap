@@ -169,7 +169,7 @@ If you previously provided your AWS credentials to BlueXP, *My estate* can autom
 .About this task
 You can discover FSx for ONTAP file systems when you add a working environment or by using the *My estate* page. 
 
-You can discover an FSx for ONTAP file system only once within a BlueXP account and attach it to one workspace. 
+You can discover an FSx for ONTAP file system only once within a BlueXP account and attach it to one workspace. The file system can later be removed and re-associated to a different workspace.
 
 [role="tabbed-block"]
 ====
