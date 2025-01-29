@@ -43,28 +43,28 @@ image:screenshot-data-services.png[A screenshot of the right panel on the BlueXP
 
 The BlueXP backup and recovery service provides efficient, secure, and cost-effective data protection for NetApp ONTAP data, databases, and virtual machines, both on-premises and in the cloud.
 
-https://docs.netapp.com/us-en/bluexp-backup-recovery/index.html[Get started with BlueXP backup and recovery^]
+link:https://docs.netapp.com/us-en/bluexp-backup-recovery/index.html[Get started with BlueXP backup and recovery^]
 
 === Transfer and synchronize data
 
 BlueXP copy and sync is a cloud replication and synchronization service for transferring NAS data between on-premises and cloud object stores.
 
-https://docs.netapp.com/us-en/bluexp-copy-sync/task-quick-start.html[Get started with BlueXP copy and sync^]
+link:https://docs.netapp.com/us-en/bluexp-copy-sync/task-quick-start.html[Get started with BlueXP copy and sync^]
 
 === Scan and classify your data
 
 BlueXP classification enables you to scan and classify data across your organization's hybrid multicloud.
 
-https://docs.netapp.com/us-en/bluexp-classification/index.html[Get started with BlueXP classification^]
+link:https://docs.netapp.com/us-en/bluexp-classification/index.html[Get started with BlueXP classification^]
 
 === Replicate data
 
 BlueXP replication enables you to replicate data between ONTAP storage systems to support backup and disaster recovery to the cloud or between clouds.
 
-https://docs.netapp.com/us-en/bluexp-replication/task-replicating-data.html[Get started with BlueXP replication^]
+link:https://docs.netapp.com/us-en/bluexp-replication/task-replicating-data.html[Get started with BlueXP replication^]
 
 === Speed up access or offload traffic
 
 BlueXP volume caching provides a persistent, writable volume in a remote place. You can use BlueXP volume caching to speed up access to data or to offload traffic from heavily accessed volumes. 
 
-https://docs.netapp.com/us-en/bluexp-volume-caching/get-started/cache-intro.html[Get started with BlueXP volume caching^]
+link:https://docs.netapp.com/us-en/bluexp-volume-caching/get-started/cache-intro.html[Get started with BlueXP volume caching^]
