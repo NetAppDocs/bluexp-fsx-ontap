@@ -6,7 +6,7 @@ summary: "Track FSx for ONTAP operations and monitor operation progress with Tra
 ---
 = Monitor FSx for ONTAP operations with Tracker in BlueXP
 :icons: font
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 [.lead]
 Monitor and track the execution of FSx for ONTAP operations and monitor job progress with Tracker in BlueXP.
