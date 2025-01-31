@@ -12,3 +12,9 @@ link:https://docs.netapp.com/us-en/bluexp-fsx-ontap/use/task-remove-filesystem.h
 Tracker, a new monitoring capability, is available in BlueXP Amazon FSx for NetApp ONTAP. You can use Tracker to monitor and track the progress and status of credentials, storage, and link operations, review details for operation tasks and subtasks, diagnose any issues or failures, edit parameters for failed operations, and retry failed operations.
 
 link:https://docs.netapp.com/us-en/bluexp-fsx-ontap/use/task-monitor-operations.html[Learn how to monitor and track FSx for ONTAP operations in BlueXP^]
+
+=== CloudShell available in BlueXP Workloads
+
+CloudShell is available when you're in BlueXP Workloads within the BlueXP console. CloudShell allows you to use the AWS and ONTAP credentials you've provided in your BlueXP account and execute AWS CLI commands or ONTAP CLI commands in a shell-like environment.
+
+link:https://docs.netapp.com/us-en/workload-setup-admin/use-cloudshell.html#before-you-begin[Use CloudShell^]
