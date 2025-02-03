@@ -1,0 +1,77 @@
+---
+sidebar: sidebar
+permalink: use/task-monitor-operations.html 
+keywords: monitor databases, monitor jobs, track database jobs
+summary: "Track FSx for ONTAP operations and monitor operation progress with Tracker in BlueXP."  
+---
+= Monitor FSx for ONTAP operations with Tracker in BlueXP
+:icons: font
+:imagesdir: ../media/
+
+[.lead]
+Monitor and track the execution of FSx for ONTAP operations and monitor job progress with Tracker in BlueXP.
+
+.About this task 
+BlueXP provides Tracker, a job monitoring feature, so you can monitor and track the progress and status of credentials, FSx for ONTAP, and link operations, review details for operation tasks and subtasks, diagnose any issues or failures, edit parameters for failed operations, and retry failed operations. 
+
+Several actions are available in Tracker. You can filter jobs by time frame (last 24 hours, 7 days, 14 days, or 30 days), workload, status, and user; find jobs using the search function; and download the jobs table as a CSV file. You can refresh Tracker at any time. And you can quickly retry a failed operation or edit parameters for a failed operation and try the operation again. 
+
+Tracker supports two levels of monitoring. Each task such as creating a file system displays the task description, status, start time, task duration, user, region, proxy resource (link association), task ID, and all related sub tasks.  
+
+Tracker task levels with examples::: 
+
+* Level 1 (parent task): Tracks file system deployment.
+* Level 2 (sub task): Tracks the sub tasks related to file system deployment. 
+
+Operation status:::
+Operation status in Tracker is as follows _in progress_, _success_, and _failed_.
+
+Operation frequency:::
+Operation frequency is based on the task type and schedule.
+
+Events retention:::
+Events are retained in the user interface for 30 days. 
+
+== Track and monitor operations
+Track and monitor operations in BlueXP with Tracker.
+
+.Steps
+. In the BlueXP console, select the *Settings* icon, and select *Tracker*. 
+. In Storage, select *Go to Storage inventory*.
+. From storage inventory, select the account settings menu and then select *Tracker*.
++
+image:screenshot-menu-tracker-option.png[A screenshot of the menu with the Tracker option highlighted.] 
+. In Tracker, view tasks or use the filters or search to narrow  results. You can also download a report of all operations by selecting to *Export CSV*. 
+
+== View API request
+View the API request in the Codebox for a task in Tracker.
+
+.Steps
+. In Tracker, select a task. 
+. Select the three-dot menu and then select *View API request*.
+
+== Retry a failed operation
+Retry a failed operation in Tracker. Retrying the failed operation starts a new task that you can monitor in Tracker. 
+
+You can also copy the error message of a failed operation. 
+
+NOTE: You can retry the failed operation only once. 
+
+.Steps
+. In Tracker, select a failed operation.
+. Select the three-dot menu and then select *Retry*. 
+
+.Result
+The operation is re-initiated and appears as a new task in Tracker.
+
+== Edit and retry a failed operation
+Edit the parameters of the failed operation and retry the operation outside Tracker. 
+
+.Steps
+. In Tracker, select a failed operation.
+. Select the three-dot menu and then select *Edit and retry*.
++
+You are redirected to the operation page, volume creation for example, where you can edit the parameters and retry the operation. 
+
+.Result
+The operation is re-initiated. Go to Tracker to view the status of the operation.
