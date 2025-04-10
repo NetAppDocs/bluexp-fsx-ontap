@@ -67,14 +67,17 @@ image:screenshot-add-credentials-manually.png[A screenshot showing the items tha
 
 In this section, you'll choose the storage capability to be managed as part of these credentials, and the permissions enabled for storage. You also have the option to select other workloads like Databases, GenAI, or VMware. Once you've made your selections, you'll need to copy the policy permissions for each selected workload from the Codebox and add them into the AWS Management Console within your AWS account to create the policies.
 
-image:screenshot-create-policies-manual.png[A screenshot showing which types of workload capabilities will be manageable as part of the policies in these credentials.]
+image:screenshot-create-policies-manual-permissions-check.png[A screenshot showing which types of workload capabilities will be manageable as part of the policies in these credentials.]
 
 .Steps
 
 . From the *Create policies* section, enable each of the workload capabilities that you want to include in these credentials. Enable *Storage* to create and manage file systems. 
 +
 You can add additional capabilities later, so just select the workloads that you currently want to deploy and manage.
+
 . For those workload capabilities that offer a choice of permission levels (automate or read), select the type of permissions that will be available with these credentials. link:https://docs.netapp.com/us-en/workload-setup-admin/operational-modes.html[Learn about the permissions, also known as operational modes^]. 
+
+. Optional: Select *Enable automatic permissions check* to check if you have the required AWS account permissions to complete workload operations. Enabling the check adds the `iam:SimulatePrincipalPolicy permission` to your permission policies. The purpose of this permission is to confirm permissions only. You can remove the permission after adding credentials, but we recommend keeping it to prevent resource creation for partially successful operations and to save you from any required manual resource cleanup.
 
 . In the Codebox window, copy the permissions for the first IAM policy.
 +
@@ -119,51 +122,50 @@ The storage permissions can also be copied from the following tabs.
 
 [source,json]
 {
-    "Version": "2012-10-17",
-    "Statement": [
-        {
-            "Effect": "Allow",
-            "Action": [
-                "fsx:*",
-                "ec2:Describe*",
-                "ec2:CreateTags",
-                "ec2:CreateSecurityGroup",
-                "iam:CreateServiceLinkedRole",
-                "kms:Describe*",
-                "elasticfilesystem:Describe*",
-                "kms:List*",
-                "kms:CreateGrant",
-                "cloudwatch:PutMetricData",
-                "cloudwatch:GetMetricData",
-                "iam:SimulatePrincipalPolicy",
-                "cloudwatch:GetMetricStatistics"
-            ],
-            "Resource": "*"
-        },
-        {
-            "Effect": "Allow",
-            "Action": [
-                "ec2:AuthorizeSecurityGroupEgress",
-                "ec2:AuthorizeSecurityGroupIngress",
-                "ec2:RevokeSecurityGroupEgress",
-                "ec2:RevokeSecurityGroupIngress",
-                "ec2:DeleteSecurityGroup"
-            ],
-            "Resource": "*",
-            "Condition": {
-                "StringLike": {
-                    "ec2:ResourceTag/AppCreator": "NetappFSxWF"
-                }
-            }
-        },
-        {
-            "Effect": "Allow",
-            "Action": [
-                "iam:SimulatePrincipalPolicy"
-            ],
-            "Resource": "*"
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Effect": "Allow",
+      "Action": [
+        "fsx:*",
+        "ec2:Describe*",
+        "ec2:CreateTags",
+        "ec2:CreateSecurityGroup",
+        "iam:CreateServiceLinkedRole",
+        "kms:Describe*",
+        "elasticfilesystem:Describe*",
+        "kms:List*",
+        "kms:CreateGrant",
+        "cloudwatch:PutMetricData",
+        "cloudwatch:GetMetricData",
+        "cloudwatch:GetMetricStatistics"
+      ],
+      "Resource": "*"
+    },
+    {
+      "Effect": "Allow",
+      "Action": [
+        "ec2:AuthorizeSecurityGroupEgress",
+        "ec2:AuthorizeSecurityGroupIngress",
+        "ec2:RevokeSecurityGroupEgress",
+        "ec2:RevokeSecurityGroupIngress",
+        "ec2:DeleteSecurityGroup"
+      ],
+      "Resource": "*",
+      "Condition": {
+        "StringLike": {
+          "ec2:ResourceTag/AppCreator": "NetappFSxWF"
         }
-    ]
+      }
+    },
+    {
+      "Effect": "Allow",
+      "Action": [
+        "iam:SimulatePrincipalPolicy"
+      ],
+      "Resource": "*"
+    }
+  ]
 }
 --
 ====
@@ -274,6 +276,8 @@ image:screenshot-add-credentials-cloudformation.png[A screenshot showing the ite
 . Under *Create policies*, enable each of the workload capabilities that you want to include in these credentials and choose a permission level for each workload.
 +
 You can add additional capabilities later, so just select the workloads that you currently want to deploy and manage.
+
+. Optional: Select *Enable automatic permissions check* to check if you have the required AWS account permissions to complete workload operations. Enabling the check adds the `iam:SimulatePrincipalPolicy` permission to your permission policies. The purpose of this permission is to confirm permissions only. You can remove the permission after adding credentials, but we recommend keeping it to prevent resource creation for partially successful operations and to save you from any required manual resource cleanup. 
 
 . Under *Credentials name*, enter the name that you want to use for these credentials.
 
