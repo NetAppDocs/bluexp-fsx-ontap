@@ -18,7 +18,7 @@ Get started with Amazon FSx for NetApp ONTAP in BlueXP by adding credentials, cr
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-1.png[One] link:../requirements/task-setting-up-permissions-fsx.html[Add credentials and permissions]
 
 [role="quick-margin-para"]
-Adding AWS credentials is required to provide BlueXP the permissions needed to create and manage FSx for ONTAP file systems. You can choose between _automate permissions_ and _read permissions_.
+Adding AWS credentials is required to provide BlueXP the permissions needed to create and manage FSx for ONTAP file systems. You can choose between _Read/Write_ permissions and _Read-only_ permissions.
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-2.png[Two] Optional: Create a Connector or a link
 

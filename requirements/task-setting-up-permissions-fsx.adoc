@@ -24,7 +24,7 @@ Credentials and permissions are managed via BlueXP workload factory. BlueXP work
 The workload factory interface provides BlueXP users with options to enable workload capabilities like Storage, VMware, Databases, and GenAI, and to select permissions for the workloads. _Storage_ is the storage management capability in workload factory and it is the only capability you need to enable and add credentials for to create and manage your FSx for ONTAP file systems. 
 
 == About this task 
-When adding new credentials for FSx for ONTAP from Storage in BlueXP workload factory, you'll need to decide which level of permissions, or _operational mode_, you'd like to operate in. To discover and deploy AWS resources like FSx for ONTAP file systems, you'll need _read_ or _automate_ permissions. BlueXP FSx for ONTAP will operate in _basic_ mode unless you select _read_ mode or _automate_ mode. _Read_ are the same as view permissions. _Automate_ are the same as operate permissions. link:https://docs.netapp.com/us-en/workload-setup-admin/operational-modes.html[Learn more about operational modes]. 
+When adding new credentials for FSx for ONTAP from Storage in BlueXP workload factory, you'll need to decide which level of permissions, or _operational mode_, you'd like to operate in. To discover and deploy AWS resources like FSx for ONTAP file systems, you'll need _Read-only_ or _Read/Write_ permissions. BlueXP FSx for ONTAP will operate in _basic_ mode unless you select _Read-only_ mode or _Read/Write_ mode. _Read-only_ are the same as view permissions. _Read/Write_ are the same as operate permissions. link:https://docs.netapp.com/us-en/workload-setup-admin/operational-modes.html[Learn more about operational modes]. 
 
 New and existing AWS credentials are viewable from BlueXP settings > *Credentials* page. 
 
@@ -75,7 +75,7 @@ image:screenshot-create-policies-manual-permissions-check.png[A screenshot showi
 +
 You can add additional capabilities later, so just select the workloads that you currently want to deploy and manage.
 
-. For those workload capabilities that offer a choice of permission levels (automate or read), select the type of permissions that will be available with these credentials. link:https://docs.netapp.com/us-en/workload-setup-admin/operational-modes.html[Learn about the permissions, also known as operational modes^]. 
+. For those workload capabilities that offer a choice of permission levels (Read/Write or Read-only), select the type of permissions that will be available with these credentials. link:https://docs.netapp.com/us-en/workload-setup-admin/operational-modes.html[Learn about the permissions, also known as operational modes^]. 
 
 . Optional: Select *Enable automatic permissions check* to check if you have the required AWS account permissions to complete workload operations. Enabling the check adds the `iam:SimulatePrincipalPolicy permission` to your permission policies. The purpose of this permission is to confirm permissions only. You can remove the permission after adding credentials, but we recommend keeping it to prevent resource creation for partially successful operations and to save you from any required manual resource cleanup.
 
@@ -86,10 +86,10 @@ The storage permissions can also be copied from the following tabs.
 [role="tabbed-block"]
 ====
 
-.Read permissions
+.Read-only permissions
 --
-
 [source,json]
+----
 {
   "Version": "2012-10-17",
   "Statement": [
@@ -116,11 +116,12 @@ The storage permissions can also be copied from the following tabs.
     }
   ]
 }
+----
 --
-.Automate permissions
+.Read/Write permissions
 --
-
 [source,json]
+----
 {
   "Version": "2012-10-17",
   "Statement": [
@@ -167,6 +168,7 @@ The storage permissions can also be copied from the following tabs.
     }
   ]
 }
+----
 --
 ====
 
@@ -231,34 +233,36 @@ You can add AWS credentials to BlueXP workloads using an AWS CloudFormation stac
 * You'll need to have the following permissions in your AWS account when adding credentials using a CloudFormation stack:
 +
 [source,json]
+----
 {
-    "Version": "2012-10-17",
-    "Statement": [
-        {
-            "Effect": "Allow",
-            "Action": [
-                "cloudformation:CreateStack",
-                "cloudformation:UpdateStack",
-                "cloudformation:DeleteStack",
-                "cloudformation:DescribeStacks",
-                "cloudformation:DescribeStackEvents",
-                "cloudformation:DescribeChangeSet",
-                "cloudformation:ExecuteChangeSet",
-                "cloudformation:ListStacks",
-                "cloudformation:ListStackResources",
-                "cloudformation:GetTemplate",
-                "cloudformation:ValidateTemplate",
-                "lambda:InvokeFunction",
-                "iam:PassRole",
-                "iam:CreateRole",
-                "iam:UpdateAssumeRolePolicy",
-                "iam:AttachRolePolicy",
-                "iam:CreateServiceLinkedRole"
-            ],
-            "Resource": "*"
-        }
-    ]
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Effect": "Allow",
+      "Action": [
+        "cloudformation:CreateStack",
+        "cloudformation:UpdateStack",
+        "cloudformation:DeleteStack",
+        "cloudformation:DescribeStacks",
+        "cloudformation:DescribeStackEvents",
+        "cloudformation:DescribeChangeSet",
+        "cloudformation:ExecuteChangeSet",
+        "cloudformation:ListStacks",
+        "cloudformation:ListStackResources",
+        "cloudformation:GetTemplate",
+        "cloudformation:ValidateTemplate",
+        "lambda:InvokeFunction",
+        "iam:PassRole",
+        "iam:CreateRole",
+        "iam:UpdateAssumeRolePolicy",
+        "iam:AttachRolePolicy",
+        "iam:CreateServiceLinkedRole"
+      ],
+      "Resource": "*"
+    }
+  ]
 }
+----
 
 .Steps
 
