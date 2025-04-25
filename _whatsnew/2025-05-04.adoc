@@ -1,0 +1,7 @@
+=== Tracker response support
+
+Tracker now provides API responses so that you can see the REST API output related to the task.
+
+=== Link authentication support for AWS Secrets Manager
+
+You now have the option to use secrets from AWS Secrets Manager to authenticate links so that you don't have to use credentials stored in BlueXP Workloads.
