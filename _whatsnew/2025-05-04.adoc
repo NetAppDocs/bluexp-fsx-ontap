@@ -14,3 +14,7 @@ BlueXP workload factory provides a dashboard where you can review the well-archi
 
 ==== Well-architected notifications in the canvas
 FSx for ONTAP file systems with well-architected issues now display a notification in the Canvas indicating when file systems have issues to fix.  
+
+=== Updated permissions terminology
+
+The workload factory user interface and documentation now use "Read-only" to refer to read permissions and "Read-Write" to refer to automate permissions.
